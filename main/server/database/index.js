@@ -16,6 +16,9 @@ try {
 }
 
 const User = UserModel(connection)
+
+
+
 // connection.sync({force:true}).then(() => console.log("Database & tables created!"))
 
 module.exports = {User};
