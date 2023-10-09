@@ -1,6 +1,6 @@
 const { Sequelize } = require("sequelize");
 const saltRounds = 10;
-const UserModel = require("./model/user.js")
+const PatientModel = require("./model/patient.js")
 const DoctorModel = require("./model/doctor.js")
 const ReviewModel = require("./model/review.js")
 const RoomModel = require("./model/room.js")
@@ -19,7 +19,7 @@ try {
   console.error("Unable to connect to the database:", error);
 }
 
-const User = UserModel(connection)
+const Patient = PatientModel(connection)
 const Doctor = DoctorModel(connection)
 const Review = ReviewModel(connection)
 const Room = RoomModel(connection)
@@ -30,4 +30,6 @@ const Service =ServiceModel(connection)
 
 connection.sync({force:true}).then(() => console.log("Database & tables created!"))
 
+
 module.exports = { User, Doctor, Review, Room, Appointment,Message,Service };
+
