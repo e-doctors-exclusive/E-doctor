@@ -28,8 +28,8 @@ const Message =MessageModel(connection)
 const Service =ServiceModel(connection)
 
 
-connection.sync({force:true}).then(() => console.log("Database & tables created!"))
+// connection.sync({force:true}).then(() => console.log("Database & tables created!"))
 
 
-module.exports = { User, Doctor, Review, Room, Appointment,Message,Service };
+module.exports = { Patient, Doctor, Review, Room, Appointment,Message,Service };
 
