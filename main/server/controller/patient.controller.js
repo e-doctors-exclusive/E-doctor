@@ -1,33 +1,33 @@
 const sequelize = require("sequelize");
-const { User } = require("../database/index");
+const { Patient } = require("../database/index");
 
 module.exports = {
-  getAllUser: async (req, res) => {
+  getAllPatient: async (req, res) => {
     try {
-      const response = await User.findAll();
+      const response = await Patient.findAll();
       res.status(200).send(response);
     } catch (error) {
       throw error;
     }
   },
-  addUser: async (req, res) => {
+  addPatient: async (req, res) => {
     try {
-      const response = await User.create(req.body);
+      const response = await Patient.create(req.body);
       res.status(201).json(response);
     } catch (error) {
 console.log(error);    }
   },
-  deleteUser: async (req, res) => {
+  deletePatient: async (req, res) => {
     try {
-      const response = await User.destroy({ where: { id: req.params.id } });
+      const response = await Patient.destroy({ where: { id: req.params.id } });
       res.json(response);
     } catch (error) {
       throw error;
     }
   },
-  updateUser: async (req, res) => {
+  updatePatient: async (req, res) => {
     try {
-      const response = await User.update(req.body, {
+      const response = await Patient.update(req.body, {
         where: { id: req.params.id },
       });
       res.json(response);
