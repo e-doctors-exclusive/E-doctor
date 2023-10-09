@@ -1,6 +1,6 @@
 const { Sequelize } = require("sequelize");
 const saltRounds = 10;
-const UserModel = require("./model/user.js")
+const PatientModel = require("./model/patient.js")
 const DoctorModel = require("./model/doctor.js")
 const ReviewModel = require("./model/review.js")
 const RoomModel = require("./model/room.js")
@@ -20,19 +20,19 @@ try {
   console.error("Unable to connect to the database:", error);
 }
 
-const User = UserModel(connection)
+const Patient = PatientModel(connection)
 const Doctor = DoctorModel(connection)
 const Review = ReviewModel(connection)
 const Room = RoomModel(connection)
 const Appointment = AppointmentModel(connection)
-const Message =MessageModel(connection)
-const Service =ServiceModel(connection)
+const Message = MessageModel(connection)
+const Service = ServiceModel(connection)
 const Chat = ChatModel(connection)
 
-// A User can have many Reviews, Appointments, and Messages
-User.hasMany(Review);
-User.hasMany(Appointment);
-User.hasMany(Message);
+// A Patient can have many Reviews, Appointments, and Messages
+Patient.hasMany(Review);
+Patient.hasMany(Appointment);
+Patient.hasMany(Message);
 
 // A Doctor can have many Reviews, Appointments, Rooms, Messages, and Services
 Doctor.hasMany(Review);
@@ -41,12 +41,12 @@ Doctor.hasMany(Room);
 Doctor.hasMany(Message);
 Doctor.hasMany(Service);
 
-// A Review belongs to a User and a Doctor
-Review.belongsTo(User);
+// A Review belongs to a Patient and a Doctor
+Review.belongsTo(Patient);
 Review.belongsTo(Doctor);
 
-// An Appointment belongs to a User, a Doctor, and a Room
-Appointment.belongsTo(User);
+// An Appointment belongs to a Patient, a Doctor, and a Room
+Appointment.belongsTo(Patient);
 Appointment.belongsTo(Doctor);
 Appointment.belongsTo(Room);
 
@@ -54,24 +54,24 @@ Appointment.belongsTo(Room);
 Room.belongsTo(Doctor);
 Room.hasMany(Appointment);
 
-// A Message belongs to a User (as sender) and a Doctor (as receiver)
-Message.belongsTo(User);
+// A Message belongs to a Patient (as sender) and a Doctor (as receiver)
+Message.belongsTo(Patient);
 Message.belongsTo(Doctor);
 
 // A Service belongs to a Doctor
 Service.belongsTo(Doctor);
 
-// A User (as a doctor) can have many Chats
+// A Patient (as a doctor) can have many Chats
 Doctor.hasMany(Chat);
 
-// A User (as a patient) can have many Chats
-User.hasMany(Chat);
+// A Patient (as a patient) can have many Chats
+Patient.hasMany(Chat);
 
-// A Chat belongs to a User (as a doctor)
+// A Chat belongs to a Patient (as a doctor)
 Chat.belongsTo(Doctor);
 
-// A Chat belongs to a User (as a patient)
-Chat.belongsTo(User);
+// A Chat belongs to a Patient (as a patient)
+Chat.belongsTo(Patient);
 
 // A Chat can have many Messages
 Chat.hasMany(Message);
@@ -79,6 +79,6 @@ Chat.hasMany(Message);
 // A Message belongs to a Chat
 Message.belongsTo(Chat);
 
-// connection.sync({force:true}).then(() => console.log("Database & tables created!"))
+connection.sync({ force: true }).then(() => console.log("Database & tables created!"))
 
-module.exports = { User, Doctor, Review, Room, Appointment,Message,Service,Chat };
+module.exports = { Patient, Doctor, Review, Room, Appointment, Message, Service, Chat };

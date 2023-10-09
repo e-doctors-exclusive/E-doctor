@@ -1,34 +1,34 @@
 const sequelize = require("sequelize");
-const { User } = require("../database/index");
+const { Room } = require("../database/index.js");
 
 module.exports = {
-  getAllUser: async (req, res) => {
+  getAllRooms: async (req, res) => {
     try {
-      const response = await User.findAll();
+      const response = await Room.findAll();
       res.status(200).send(response);
     } catch (error) {
       throw error;
     }
   },
-  addUser: async (req, res) => {
+  addRoom: async (req, res) => {
     try {
-      const response = await User.create(req.body);
+      const response = await Room.create(req.body);
       res.status(201).json(response);
     } catch (error) {
       throw error;
     }
   },
-  deleteUser: async (req, res) => {
+  deleteRoom: async (req, res) => {
     try {
-      const response = await User.destroy({ where: { id: req.params.id } });
+      const response = await Room.destroy({ where: { id: req.params.id } });
       res.json(response);
     } catch (error) {
       throw error;
     }
   },
-  updateUser: async (req, res) => {
+  updateRomm: async (req, res) => {
     try {
-      const response = await User.update(req.body, {
+      const response = await Room.update(req.body, {
         where: { id: req.params.id },
       });
       res.json(response);
