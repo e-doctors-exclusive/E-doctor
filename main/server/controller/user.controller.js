@@ -15,8 +15,7 @@ module.exports = {
       const response = await User.create(req.body);
       res.status(201).json(response);
     } catch (error) {
-      throw error;
-    }
+console.log(error);    }
   },
   deleteUser: async (req, res) => {
     try {
@@ -33,7 +32,6 @@ module.exports = {
       });
       res.json(response);
     } catch (error) {
-      throw error;
-    }
+console.log(error);    }
   },
 };
