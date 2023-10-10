@@ -5,12 +5,12 @@ export const SignUp = () => {
   const [isSignUp, setIsSignUp] = useState(true);
 
   const toggleSignInUp = () => {
-    setIsSignUp(!isSignUp);
+    setIsSignUp(!isSignUp) 
   };
 
   return (
     <div className='SignContainer'>
-      <h2>Sign in/up !</h2>
+      <h2 >Sign in/up !</h2>
       <div className={`container ${isSignUp ? 'right-panel-active' : ''}`} id="container">
         <div className="form-container sign-up-container">
           <form action="#">
