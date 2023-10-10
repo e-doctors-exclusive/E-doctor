@@ -1,6 +1,248 @@
-.search-user{
-    width:600px;
-    height: 50px;
-    border-radius: 16px;
-    background: #e5e5e5;
+.container-user {
+  width: 100%;
+  height: 100vh;
+  background: #007e85;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+}
+
+.small-back {
+  width: 55px;
+  height: 50px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu {
+  width: 30px;
+  height: 30px;
+  display: flex;
+}
+.small-calendar {
+  width: 30px;
+  height: 30px;
+  display: flex;
+}
+.small-chat {
+  width: 30px;
+  height: 30px;
+  display: flex;
+}
+.small-time {
+  width: 30px;
+  height: 30px;
+  display: flex;
+}
+.small-settings {
+  width: 30px;
+  height: 30px;
+  display: flex;
+}
+.logout {
+  width: 30px;
+  height: 30px;
+  display: flex;
+}
+
+.sid-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+.content-user {
+  width: 93%;
+  height: 99vh;
+  background: white;
+  border-top-left-radius: 70px;
+  border-bottom-left-radius: 70px;
+  margin-left: 30px;
+  margin-right: -15px;
+  margin-top: 3px;
+}
+.nav-user {
+  margin-top: 35px;
+  justify-content: center;
+  display: flex;
+  gap: 10%;
+}
+.search-user-input {
+  margin-right: 18%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 1%;
+}
+
+.search__input {
+  font-family: inherit;
+  font-size: inherit;
+  background: #e5e5e5;
+  border: none;
+  color: #646464;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  width: 700px;
+  height: 30px;
+  transition: all ease-in-out 0.5s;
+  margin-right: -2rem;
+}
+
+.search__input:hover,
+.search__input:focus {
+  box-shadow: 0 0 1em #00000013;
+}
+
+.search__input:focus {
+  outline: none;
+  background-color: #f0eeee;
+}
+
+.search__input::-webkit-input-placeholder {
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  color: #a2a3a4;
+}
+
+.search__input:focus + .search__button {
+  background-color: #f0eeee;
+}
+
+.search__button {
+  border: none;
+  background-color: #e5e5e5;
+  margin-top: 0.1em;
+}
+
+.search__button:hover {
+  cursor: pointer;
+}
+
+.search__icon {
+  height: 20px;
+  width: 20px;
+  fill: #a2a3a4;
+}
+.chat_bell_user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.chat-user {
+  width: 30px;
+  height: 30px;
+  color: #0D0D0D.75%;
+  cursor: pointer;
+}
+.bell {
+  width: 30px;
+  height: 30px;
+  color: #0D0D0D.75%;
+  cursor: pointer;
+}
+.icon-user {
+  width: 144px;
+  height: 55px;
+  border-radius: 16px;
+  border: 1.024px solid #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.name-user-icon {
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--dmv-black, #23262f);
+  cursor: pointer;
+}
+.image-user {
+  width: 36px;
+  height: 36px;
+  border-radius: 36px;
+  cursor: pointer;
+}
+.subContainer {
+  gap: 5px;
+}
+.text_user {
+  margin-top: 2px;
+  margin-bottom: 4px;
+}
+.greeting-user {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  color: black.75%;
+  margin-left: 2%;
+}
+.name-user {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  margin-left: 10px;
+  font-style: normal;
+  font-weight: 700;
+  color: #007e85;
+}
+.container_face_user {
+  width: 815px;
+  height: 260px;
+  border-radius: 16px;
+  background: linear-gradient(
+    66deg,
+    rgba(0, 126, 133, 0.33) -5.25%,
+    rgba(0, 126, 133, 0.34) 35.43%,
+    #007e85 98.77%
+  );
+  margin-left: 2%;
+}
+.face_user_visit {
+  margin-top: 10%;
+  margin-left: 2%;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.face_user_number {
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.face_user_container_percent {
+  color: #007e85;
+}
+.percent {
+width: 219px;
+height: 122px;
+border-radius: 18.019px;
+background: rgba(255, 255, 255, 0.55)
+}
+.new_pointment {
+color: #000;
+text-align: center;
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 0.18px;
+text-transform: capitalize;
 }
