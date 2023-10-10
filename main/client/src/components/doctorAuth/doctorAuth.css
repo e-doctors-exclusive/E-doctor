@@ -177,8 +177,8 @@ input {
 }
 
 .overlay-panel {
-	position: absolute;
 	box-sizing: border-box;
+	position: absolute;
 	display: flex;
 	align-items: center;
 	justify-content: center;
