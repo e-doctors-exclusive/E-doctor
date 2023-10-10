@@ -1,0 +1,90 @@
+* {
+  outline: black;
+}
+
+.Top-Navbar {
+  background-color: #ececec;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.logo img{
+    height: 50px;
+    width: 55px;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo p {
+text-align: center;
+/* font-family: Lexend Tera; */
+font-size: 26px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+/* letter-spacing: -2.34px; */
+text-transform: capitalize;
+}
+
+.Navbar-Links a {
+  margin: 1.2rem;
+  color: #000;
+  text-align: center;
+  font-family: Lexend Tera;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  /* line-height: normal; */
+  /* letter-spacing: -2.8px; */
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.Navbar-Button {
+  display: flex;
+}
+
+.Navbar-Button button {
+  width: 167px;
+  padding: 0.8rem;
+  margin: 1.2rem;
+}
+.login {
+  border: none;
+  background-color: #007e85;
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+  font-family: Lexend Tera;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+  cursor: pointer;
+  outline: none;
+}
+.singup {
+  border: none;
+  outline: none;
+  background: none;
+  color: #007e85;
+  text-align: center;
+  font-family: Lexend Tera;
+  font-size: 20px;
+  font-style: normal;
+  /* font-weight: 900; */
+  font-weight: bold;
+  line-height: normal;
+  /* letter-spacing: -2.8px; */
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.Navbar-Links a:hover{
+    color: #007e85;
+}
+.Navbar-Links a:active{
+    border-bottom: solid 2px #007e85;
+}
