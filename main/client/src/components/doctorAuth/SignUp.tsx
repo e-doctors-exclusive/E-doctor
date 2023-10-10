@@ -25,7 +25,7 @@ import './doctorAuth.css';
             </select>
             <input type="email" placeholder="Email" />
             <input type="password" placeholder="Password" />
-            <button className="ghost">Sign Up</button>
+            <button className="lol">Sign Up</button>
           </form>
         </div>
         <div className={`form-container sign-in-container ${isSignUp ? '' : 'right-panel-active'}`}>
@@ -35,7 +35,7 @@ import './doctorAuth.css';
             <input type="email" placeholder="Email" className='text-signup'/>
             <input type="password" placeholder="Password" className='text-signup'/>
             <a href="#">Forgot your password?</a>
-            <button className="ghost">Sign In</button>
+            <button className="lol">Sign In</button>
           </form>
         </div>
         <div className="overlay-container">
@@ -43,7 +43,7 @@ import './doctorAuth.css';
             <div className={`overlay-panel overlay-left ${isSignUp ? '' : 'right-panel-active'}`}>
               <h1 className='sign-in'>Welcome Back Doctor!</h1>
               <p className='instructions'>To keep connected with us, please log in with your personal info</p>
-              <button className="ghost" onClick={toggleSignInUp}>Sign In</button>
+              <button className="lol" onClick={toggleSignInUp}>Sign In</button>
             </div>
             <div className={`overlay-panel overlay-right ${isSignUp ? 'right-panel-active' : ''}`}>
               <h1 className='sign-in'>Hello, Doctor!</h1>
