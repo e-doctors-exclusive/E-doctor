@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
-.hi {
+.SignContainer {
 	background: #f6f5f7;
 	display: flex;
 	justify-content: center;
@@ -10,16 +10,16 @@
 	margin: -20px 0 50px;
 } */
 
-.sign-in{
+h1 {
 	font-weight: bold;
 	margin: 0;
 }
 
-.hello {
+h2 {
 	text-align: center;
 }
 
-.instructions {
+p {
 	font-size: 14px;
 	font-weight: 100;
 	line-height: 20px;
@@ -27,11 +27,18 @@
 	margin: 20px 0 30px;
 }
 
-.spans {
+span {
 	font-size: 12px;
 }
 
-.ghost {
+a {
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+
+button {
 	border-radius: 20px;
 	border: 1px solid #007E85;
 	background-color: #007E85;
@@ -44,20 +51,20 @@
 	transition: transform 80ms ease-in;
 }
 
-.ghost:active {
+button:active {
 	transform: scale(0.95);
 }
 
-.ghost:focus {
+button:focus {
 	outline: none;
 }
 
-.ghost.ghost {
+button.ghost {
 	background-color: transparent;
 	border-color: #FFFFFF;
 }
 
-.forms {
+form {
 	background-color: #FFFFFF;
 	display: flex;
 	align-items: center;
@@ -68,7 +75,7 @@
 	text-align: center;
 }
 
-.text-signup {
+input {
 	background-color: #eee;
 	border: none;
 	padding: 12px 15px;
@@ -76,7 +83,7 @@
 	width: 100%;
 }
 
-#container-signups {
+.container {
 	background-color: #fff;
 	border-radius: 10px;
   	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
@@ -133,7 +140,6 @@
 
 .overlay-container {
 	position: absolute;
-	
 	top: 0;
 	left: 50%;
 	width: 50%;
@@ -148,7 +154,6 @@
 }
 
 .overlay {
-	
 	background: #007E85;
 	background: -webkit-linear-gradient(to right, #007E85, #007E85);
 	background: linear-gradient(to right, #007E85, #007E85);
@@ -165,7 +170,6 @@
 }
 
 .container.right-panel-active .overlay {
-
   	transform: translateX(50%);
 }
 
