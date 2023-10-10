@@ -108,7 +108,12 @@ const DoctorAccount = () => {
 
         <p className='greetingfr'>Good Morning Dr.!</p>
 
-        <div className='miniCard'></div>
+        <div className='miniCard'>
+          <p className='viSits'>visits for today </p>
+          <h3 className='NumBer'>104</h3>
+        </div>
+
+        <div className='calenDar'></div>
       </div>
 
 
