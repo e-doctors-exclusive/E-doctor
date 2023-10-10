@@ -9,7 +9,8 @@ export const SignUp = () => {
   };
 
   return (
-    <div>
+    <div className='SignContainer'>
+    <div >
       <h2>Sign in/up !</h2>
       <div className={`container ${isSignUp ? 'right-panel-active' : ''}`} id="container">
         <div className="form-container sign-up-container">
@@ -18,7 +19,7 @@ export const SignUp = () => {
             <span>or use your account</span>
             <input type="text" placeholder="Name" />
             <select  id="fields" >
-            <option value="" selected disabled hidden>Choose Your Field</option>
+            <option value="" defaultChecked disabled hidden>Choose Your Field</option>
                 <option value="dentist">Dentist</option>
                 <option value="surgeon">Surgeon</option>
                 <option value="">Psychiatrist</option>
@@ -54,6 +55,7 @@ export const SignUp = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
