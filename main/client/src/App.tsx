@@ -6,7 +6,6 @@ import ContactUs from './components/contactUs/ContactUs';
 import DoctorAccount from './components/doctorAccount/DoctorAccount';
 import HomePage from './components/homePage/HomePage';
 
-import  {SignUp} from './components/doctorAuth/SignUp';
 
 import Service from './components/service/Service';
 import UserSign from './components/userAuth/UserSign';
