@@ -8,7 +8,7 @@ import './doctorAuth.css';
   };
 
   return (
-    <div>
+    <div className='hi'>
       <h2 className='hello'>Sign in/up !</h2>
       <div className={`container-signups ${isSignUp ? 'right-panel-active' : ''}`} id="container-signups">
         <div className="form-container sign-up-container">
@@ -17,7 +17,7 @@ import './doctorAuth.css';
             <span className='spans'>or use your account</span>
             <input type="text" placeholder="Name" />
             <select  id="fields" >
-            <option defaultValue="" selected disabled hidden>Choose Your Field</option>
+            <option defaultValue="" defaultChecked disabled hidden>Choose Your Field</option>
                 <option value="dentist">Dentist</option>
                 <option value="surgeon">Surgeon</option>
                 <option value="">Psychiatrist</option>
@@ -25,7 +25,7 @@ import './doctorAuth.css';
             </select>
             <input type="email" placeholder="Email" />
             <input type="password" placeholder="Password" />
-            <button className='onClick'>Sign Up</button>
+            <button className="ghost">Sign Up</button>
           </form>
         </div>
         <div className={`form-container sign-in-container ${isSignUp ? '' : 'right-panel-active'}`}>
@@ -35,7 +35,7 @@ import './doctorAuth.css';
             <input type="email" placeholder="Email" className='text-signup'/>
             <input type="password" placeholder="Password" className='text-signup'/>
             <a href="#">Forgot your password?</a>
-            <button>Sign In</button>
+            <button className="ghost">Sign In</button>
           </form>
         </div>
         <div className="overlay-container">

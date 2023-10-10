@@ -1,10 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
-* {
-	box-sizing: border-box;
-}
 
-body {
+.hi {
 	background: #f6f5f7;
 	display: flex;
 	justify-content: center;
@@ -36,7 +33,7 @@ body {
 	font-size: 12px;
 }
 
-button {
+.ghost {
 	border-radius: 20px;
 	border: 1px solid #007E85;
 	background-color: #007E85;
@@ -49,15 +46,15 @@ button {
 	transition: transform 80ms ease-in;
 }
 
-button:active {
+.ghost:active {
 	transform: scale(0.95);
 }
 
-button:focus {
+.ghost:focus {
 	outline: none;
 }
 
-button.ghost {
+.ghost.ghost {
 	background-color: transparent;
 	border-color: #FFFFFF;
 }
@@ -138,6 +135,7 @@ button.ghost {
 
 .overlay-container {
 	position: absolute;
+	
 	top: 0;
 	left: 50%;
 	width: 50%;
@@ -152,6 +150,7 @@ button.ghost {
 }
 
 .overlay {
+	
 	background: #007E85;
 	background: -webkit-linear-gradient(to right, #007E85, #007E85);
 	background: linear-gradient(to right, #007E85, #007E85);
@@ -168,10 +167,12 @@ button.ghost {
 }
 
 .container.right-panel-active .overlay {
+
   	transform: translateX(50%);
 }
 
 .overlay-panel {
+	box-sizing: border-box;
 	position: absolute;
 	display: flex;
 	align-items: center;
