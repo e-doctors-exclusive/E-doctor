@@ -79,6 +79,6 @@ Chat.hasMany(Message);
 // A Message belongs to a Chat
 Message.belongsTo(Chat);
 
-connection.sync({ force: true }).then(() => console.log("Database & tables created!"))
+// connection.sync({ force: true }).then(() => console.log("Database & tables created!"))
 
 module.exports = { Patient, Doctor, Review, Room, Appointment, Message, Service, Chat };
