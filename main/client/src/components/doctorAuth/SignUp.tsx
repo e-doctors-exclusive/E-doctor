@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './doctorAuth.css';
 
-export const SignUp = () => {
+ const SignUp = () => {
   const [isSignUp, setIsSignUp] = useState(true);
 
   const toggleSignInUp = () => {
@@ -57,3 +57,5 @@ export const SignUp = () => {
     </div>
   );
 };
+
+export default SignUp

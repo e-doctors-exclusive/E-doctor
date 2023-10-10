@@ -1,0 +1,126 @@
+.fisrt-div {
+  position: relative;
+  width: 100%;
+  height: 50rem;
+}
+.fisrt-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container-first-div {
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  gap: 15rem;
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    /* background-color: blue; */
+    justify-content: center;
+    align-items: center;
+}
+
+.meet-text {
+    width: 35rem;
+    margin-bottom: 2rem;
+}
+.meet-text p {
+    color: var(--light-text-color, #fff);
+    /* font-size: 58px; */
+    font-family: "Montserrat", sans-serif;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100px;
+    letter-spacing: 0.2px;
+    opacity: 1.5;
+}
+
+.weKnow-text {
+    width: 25rem;
+    /* background-color: gainsboro; */
+  margin-left: -140px;
+}
+.weKnow-text p {
+    color: white;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px; /* 150% */
+    letter-spacing: 0.2px;
+}
+.button-first-div-service {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    margin-left: -15%;
+    gap: 1rem;
+}
+
+.button-first-div-service button {
+    padding: 1rem;
+}
+.get-button {
+    color: white;
+    background-color: #007e85;
+    border: none;
+    outline: none;
+    border-radius: 37px;
+    width: 10rem;
+    font-size: 16px;
+}
+.learn-button {
+    background-color: transparent;
+    color: white;
+    border-radius: 10rem;
+    outline: none;
+    border: 1px solid #007e85;
+    width: 10rem;
+    font-size: 16px;
+}
+/* right div first div   */
+.right {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+  width: 21%;
+  height: 63vh;
+  border-radius: 7px;
+  margin-top: 20px;
+  /* border: 10px; */
+  gap: 3rem;
+}
+
+.h1-book {
+    font-family: Montserrat;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 133.333% */
+    letter-spacing: 0.1px;
+}
+.right-inputs{
+    display: flex;
+    flex-direction: column;
+}
+.right-inputs input{
+    width: 15rem;
+    height: 2rem ;
+    margin: 0.7rem;
+}
+.right-inputs select{
+    width: 15rem;
+    height: 2rem ;
+    margin: 0.7rem;
+}
