@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
-* {
-	box-sizing: border-box;
-}
 
 .hi {
 	background: #f6f5f7;
@@ -138,6 +135,7 @@
 
 .overlay-container {
 	position: absolute;
+	
 	top: 0;
 	left: 50%;
 	width: 50%;
@@ -152,6 +150,7 @@
 }
 
 .overlay {
+	
 	background: #007E85;
 	background: -webkit-linear-gradient(to right, #007E85, #007E85);
 	background: linear-gradient(to right, #007E85, #007E85);
@@ -168,10 +167,12 @@
 }
 
 .container.right-panel-active .overlay {
+
   	transform: translateX(50%);
 }
 
 .overlay-panel {
+	box-sizing: border-box;
 	position: absolute;
 	display: flex;
 	align-items: center;
