@@ -129,6 +129,7 @@
   height: 20px;
   width: 20px;
   fill: #a2a3a4;
+  cursor: pointer;
 }
 .chat_bell_user {
   display: flex;
@@ -199,6 +200,7 @@
 .container_face_user {
   width: 815px;
   height: 260px;
+  padding: 1rem;
   border-radius: 16px;
   background: linear-gradient(
     66deg,
@@ -208,9 +210,16 @@
   );
   margin-left: 2%;
 }
+.container_face_user {
+  
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .face_user_visit {
-  margin-top: 10%;
-  margin-left: 2%;
+  margin-top: 1%;
+  
   color: #000;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 24px;
@@ -227,22 +236,40 @@
   line-height: normal;
 }
 .face_user_container_percent {
-  color: #007e85;
+  justify-content:flex-start;
+  display: flex;
+  gap: 10px;
 }
-.percent {
+.pointment-percent {
+padding: 1vh;
 width: 219px;
 height: 122px;
 border-radius: 18.019px;
-background: rgba(255, 255, 255, 0.55)
+background: rgba(255, 255, 255, 0.55);
+flex-direction: column;
+display: flex;
+ gap: 12px;
+ cursor: pointer;
+}
+.pointment-percent:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 .new_pointment {
 color: #000;
 text-align: center;
-font-family: Poppins;
+font-family: Arial, Helvetica, sans-serif;
 font-size: 18px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
 letter-spacing: 0.18px;
 text-transform: capitalize;
+}
+.pointment_number {
+  color: #000;
+font-family:  Arial, Helvetica, sans-serif;
+font-size: 36px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
 }
