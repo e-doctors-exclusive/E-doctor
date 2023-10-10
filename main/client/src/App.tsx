@@ -5,17 +5,22 @@ import UserAccount from './components/userAccount/UserAccount'
 import ContactUs from './components/contactUs/ContactUs';
 import DoctorAccount from './components/doctorAccount/DoctorAccount';
 import HomePage from './components/homePage/HomePage';
+import Navbar from './components/navBar/NavBar'
+import Footer from './components/footer/Footer';
 function App() {
   return (
-    <Routes>  
+    <>  
+      <Navbar/>
+      <Routes>  
+      <Route path="/navbar" element={<Navbar/>}/>
       <Route path="/useraccount" element={<UserAccount/>}/>    
       <Route path="/contactus" element={<ContactUs/>}/>    
       <Route path="/doctor" element={<DoctorAccount/>}/>    
-      <Route path="/homePage" element={<HomePage/>}/>    
-        
-       
+      <Route path="/homePage" element={<HomePage/>}/>   
       </Routes>
-    
+      <Footer/>
+      </>
+
   );
 }
 
