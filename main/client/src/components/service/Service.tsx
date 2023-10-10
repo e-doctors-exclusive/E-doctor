@@ -52,27 +52,24 @@ const Service = () => {
 
       <div className="big-container-after-pict">
         <div className="find-a-doctor">
-          <div>
-            <h1>Find A Doctor</h1>
+          <div className="h1-find-doctor">
+          <h1>Find A Doctor</h1>
           </div>
-          <div className="form-service-find">
-            <input
-              className="name-find-doctor"
-              type="text"
-              placeholder="Name"
-            />
-            <input
-              className="name-find-doctor"
-              type="text"
-              placeholder="Speciality"
-            />
-            <label>Available</label>
+        <div className="form-service-find">
+          <input className="input-find-doctor" type="text" placeholder="Name" />
+          <input className="input-find-doctor" type="text" placeholder="Speciality"/>
+        <div className="available-switch">
+          <label  className="available-find">Available</label>
+          <label className="switch">
+          <input type="checkbox"/>
+            <span className="slider round"></span>
+          </label>
+          </div>
+              <button className="Search-button-find">Search</button>
 
-            <label className="switch">
-              <input type="checkbox" />
-              <span className="slider round"></span>
-            </label>
-          </div>
+        </div>
+
+
         </div>
       </div>
     </>

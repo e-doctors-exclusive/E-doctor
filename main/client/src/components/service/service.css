@@ -156,11 +156,16 @@
 }
 
 .find-a-doctor {
+  /* display: flex; */
+  /* flex-direction: row; */
   display: flex;
-  flex-direction: row;
-  background-color: red;
-  width: 100%;
+  flex-direction: column;
+  background-color: #FAFAFA;
+  width: 80%;
   height: 12rem;
+  margin-left: 10rem;
+  gap: 2px;
+  
   /* margin-top: 5rem; */
 }
 
@@ -229,4 +234,45 @@ input:checked + .slider:before {
 .name-find-doctor{
   width: 10rem;
 
+}
+
+.form-service-find{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 7px;
+}
+.available-find{
+  font-size: 18px;
+}
+
+.available-switch{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem ;
+  align-items: center
+;
+}
+
+.Search-button-find{
+  width:13rem;
+  height: 3rem;
+  border: none;
+  outline: none;
+  background-color: #007E85;
+  color: white;
+  font-size: 17px;
+  border-radius: 5px ;
+}
+.h1-find-doctor{
+  margin-left: 3rem;
+  margin-bottom: 15px ;
+}
+.input-find-doctor{
+  width:17rem ;
+  border: 1px solid  #007E85;
+  outline: none;
+  padding: 1.2rem;
+  border-radius: 7px;
+  font-size: 17px;
 }
