@@ -7,7 +7,7 @@ const RoomModel = require("./model/room.js")
 const AppointmentModel = require("./model/appointment.js")
 const MessageModel = require("./model/message.js")
 const ServiceModel = require("./model/services.js")
-const ChatModel = require("./model/chat.js")
+const ChatRoomModel = require("./model/chat.js")
 const connection = new Sequelize("edoctor", "root", "root", {
   host: "localhost",
   dialect: "mysql",
@@ -27,7 +27,7 @@ const Room = RoomModel(connection)
 const Appointment = AppointmentModel(connection)
 const Message = MessageModel(connection)
 const Service = ServiceModel(connection)
-const Chat = ChatModel(connection)
+const ChatRoom = ChatRoomModel(connection)
 
 // A Patient can have many Reviews, Appointments, and Messages
 Patient.hasMany(Review);
@@ -61,24 +61,24 @@ Message.belongsTo(Doctor);
 // A Service belongs to a Doctor
 Service.belongsTo(Doctor);
 
-// A Patient (as a doctor) can have many Chats
-Doctor.hasMany(Chat);
+// A Patient (as a doctor) can have many ChatRooms
+Doctor.hasMany(ChatRoom);
 
-// A Patient (as a patient) can have many Chats
-Patient.hasMany(Chat);
+// A Patient (as a patient) can have many ChatRooms
+Patient.hasMany(ChatRoom);
 
-// A Chat belongs to a Patient (as a doctor)
-Chat.belongsTo(Doctor);
+// A ChatRoom belongs to a Patient (as a doctor)
+ChatRoom.belongsTo(Doctor);
 
-// A Chat belongs to a Patient (as a patient)
-Chat.belongsTo(Patient);
+// A ChatRoom belongs to a Patient (as a patient)
+ChatRoom.belongsTo(Patient);
 
-// A Chat can have many Messages
-Chat.hasMany(Message);
+// A ChatRoom can have many Messages
+ChatRoom.hasMany(Message);
 
-// A Message belongs to a Chat
-Message.belongsTo(Chat);
+// A Message belongs to a ChatRoom
+Message.belongsTo(ChatRoom);
 
 // connection.sync({ force: true }).then(() => console.log("Database & tables created!"))
 
-module.exports = { Patient, Doctor, Review, Room, Appointment, Message, Service, Chat };
+module.exports = { Patient, Doctor, Review, Room, Appointment, Message, Service, ChatRoom };
