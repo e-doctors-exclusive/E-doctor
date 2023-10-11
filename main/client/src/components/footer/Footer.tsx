@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="logo-footer">
         <div className="logo-health-footer">
         <img src={logo} />
-        <p className="health-footer" >Healtcare</p>
+        <p className="health-footer footer_p" >Healtcare</p>
         </div>
         <p>Copyright © 2022 BRIX Templates </p>
         <p> | All Rights Reserved </p>
@@ -15,46 +15,46 @@ const Footer = () => {
 
       <div className="product">
         <div>
-        <span> Product </span>
+        <span className="footer_span"> Product </span>
         </div>
         <div>
-        <p className="text" > Features </p>
-        <p className="text"> Pricing </p>
-        <p className="text"> Case studies </p>
-        <p className="text"> Reviews </p>
-        <p className="text"> Updates </p>
+        <p className="text footer_p" > Features </p>
+        <p className="text footer_p"> Pricing </p>
+        <p className="text footer_p"> Case studies </p>
+        <p className="text footer_p"> Reviews </p>
+        <p className="text footer_p"> Updates </p>
         </div>
       </div>
 
       <div className="company">
         <div>
-        <span>Company</span>
+        <span className="footer_span">Company</span>
         </div>
         <div>
-        <p className="text"> About </p>
-        <p className="text"> Contact us </p>
-        <p className="text"> Careers </p>
-        <p className="text"> Culture </p>
-        <p className="text"> Blog </p>
+        <p className="text footer_p"> About </p>
+        <p className="text footer_p"> Contact us </p>
+        <p className="text footer_p"> Careers </p>
+        <p className="text footer_p"> Culture </p>
+        <p className="text footer_p"> Blog </p>
       </div>
       </div>
       <div className="support">
         <div>
-        <span>Support</span>
+        <span className="footer_span">Support</span>
         </div>
         <div>
-        <p className="text"> Getting started </p>
-        <p className="text"> Help center </p>
-        <p className="text"> Server status </p>
-        <p className="text"> Report a bug </p>
-        <p className="text"> Chat support </p>
+        <p className="text footer_p"> Getting started </p>
+        <p className="text footer_p"> Help center </p>
+        <p className="text footer_p"> Server status </p>
+        <p className="text footer_p"> Report a bug </p>
+        <p className="text footer_p"> Chat support </p>
       </div>
       </div>
 
       <div className="followus">
-        <span>Follow us </span>
+        <span className="footer_span">Follow us </span>
         <div className="icon-div">
-        <p>
+        <p className="footer_p">
           {" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +81,7 @@ const Footer = () => {
         </div>
         <div className="icon-div">
 
-        <p>
+        <p className="footer_p">
           {" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +108,7 @@ const Footer = () => {
         </div>
         <div className="icon-div">
 
-        <p>
+        <p className="footer_p">
           {" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -136,7 +136,7 @@ const Footer = () => {
         </p>
         </div>
         <div className="icon-div">
-        <p>
+        <p className="footer_p">
           {" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -163,7 +163,7 @@ const Footer = () => {
         </p>
         </div>
         <div className="icon-div">
-        <p>
+        <p className="footer_p">
           {" "}
       
           <svg

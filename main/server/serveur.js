@@ -23,7 +23,6 @@ const roomRouter = require("./router/room.router.js")
 const serviceRouter = require("./router/service.router.js")
 const appointmentRouter = require("./router/appoitment.router.js")
 const chatRoomRouter = require("./router/chat.router.js");
-const chat = require("./database/model/chat.js");
 
 
 //// routers 

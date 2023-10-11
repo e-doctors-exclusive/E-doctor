@@ -1,4 +1,6 @@
 const { Doctor } = require("../database/index");
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 module.exports = {
   getAllDoctor: async (req, res) => {
     try {
