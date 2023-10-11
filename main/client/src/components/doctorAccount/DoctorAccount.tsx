@@ -120,7 +120,7 @@ const DoctorAccount = () => {
     </section>
     <section className="card__body">
       <ul className="card__body--days">
-        <li>mon</li>
+        <p>mon</p>
         <li>tue</li>
         <li>wed</li>
         <li>thu</li>
