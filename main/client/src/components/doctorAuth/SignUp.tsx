@@ -6,7 +6,7 @@ export const SignUp = () => {
   const [isSignUp, setIsSignUp] = useState(true);
   const [img, setImg] = useState(true)
   const toggleSignInUp = () => {
-    setIsSignUp(!isSignUp);
+    setIsSignUp(!isSignUp) 
   };
 
   return (
