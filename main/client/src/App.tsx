@@ -17,12 +17,13 @@ import UserSign from './components/userAuth/UserSign';
 function App() {
   return (
     <>
-
+  
       {/* <Navbar/> */}
       <Routes>  
       {/* <Route path="/navbar" element={<Navbar/>}/> */}
       <Route path="/useraccount" element={<UserAccount/>}/>    
       <Route path="/contactus" element={<ContactUs/>}/>    
+      {/* <Route path="/cards" element={<ServicesCard/>}/>   */}
 
       <Route path="/doctor" element={<DoctorAccount/>}/>  
       <Route path="/docAuth" element={<SignUp/>}/>   
