@@ -1,6 +1,6 @@
-const { Doctor } = require("../database/model/doctor.js");
+const { Doctor } = require("../database/index");
 module.exports = {
-  getAllDoctor: async (req, res, next) => {
+  getAllDoctor: async (req, res) => {
     try {
       const response = await Doctor.findAll();
       res.status(200).send(response);
@@ -8,15 +8,14 @@ module.exports = {
       throw error;
     }
   },
-  addDoctor: async (req, res, next) => {
+  addDoctor: async (req, res,next) => {
     try {
       const doctorInfo = await Doctor.create(req.body);
-      res.json({
+      res.status(201).send({
         status: "success",
         message: "doctor added successfully!!!",
         data: doctorInfo,
       });
-      res.status(201).json(doctorInfo);
     } catch (err) {
       next(err);
     }

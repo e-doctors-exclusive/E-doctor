@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
 import { SingleValue, ActionMeta } from 'react-select';
-import './doctorAuth.css';
+import "../Sign_Up/SignUp.css"
 import img01 from "../../assets/3d-render-little-boy-with-glasses-briefcase-removebg-preview.png";
 import img02 from "../../assets/3d-render-little-boy-with-stethoscope-medicine-bag-removebg-preview.png"
 import Footer from '../footer/Footer';
@@ -48,10 +48,7 @@ export const SignUp = () => {
   const [docEye, setDocEye] = useState(true)
   const [userValues, setUserValues] = useState(UserInitialValues);
   const [doctorValues, setDoctorValues] = useState(DoctorInitialValues);
-  const handleChange = (option: any) => {
-    setSelectedOption(option);
-    console.log(`Option selected:`, option);
-  };
+
   const handleUserInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setUserValues({
@@ -80,6 +77,16 @@ export const SignUp = () => {
 
 
   const TogglePass = () => {
+    const passwordInput = document.querySelector(".user_password_input") as HTMLInputElement;
+    if (passwordInput) {
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+      } else {
+        passwordInput.type = "password";
+      }
+    }
+  };
+  const DoctorTogglePass = () => {
     const passwordInput = document.querySelector(".password_input") as HTMLInputElement;
     if (passwordInput) {
       if (passwordInput.type === "password") {
@@ -92,16 +99,17 @@ export const SignUp = () => {
 
   const SubmitUser = async (e: React.MouseEvent<HTMLButtonElement>, input: object) => {
     e.preventDefault();
-    const check01 = Object.values(input).some(element => {
-      if (element === "") {
-        return false
-      }
-      else {
-        return true
-      }
-    });
+    var res = true
+    const check01 = () => {
+      Object.values(input).some(element => {
+        if (element === "") {
+          res = false
+        }
+      });
+      return res
+    }
 
-    if (check01) {
+    if (check01()) {
 
       try {
         const task = await axios.post("http://localhost:3000/api/patient/addPatient", input);
@@ -114,17 +122,16 @@ export const SignUp = () => {
   const SubmitDoctor = async (e: React.MouseEvent<HTMLButtonElement>, input: object) => {
     e.preventDefault();
     console.log(input);
-
     var res = true
-    const check01 = Object.values(input).some(element => {
-      if (element === "") {
-        res = false
-      }
+    const check01 = () => {
+      Object.values(input).some(element => {
+        if (element === "") {
+          res = false
+        }
+      });
       return res
-    });
-
-    if (check01) {
-
+    }
+    if (check01()) {
       try {
         const task = await axios.post("http://localhost:3000/api/doctor/addDoctor", input);
         console.log(task.data);
@@ -151,7 +158,7 @@ export const SignUp = () => {
               <input className='Sign_input' onChange={(e) => handleUserInputChange(e)} name='lastName' type="text" placeholder="lastName" />
               <input className='Sign_input' onChange={(e) => handleUserInputChange(e)} name='Address' type="text" placeholder="Address" />
               <input className='Sign_input' onChange={(e) => handleUserInputChange(e)} name='email' type="email" placeholder="Email" />
-              <input className='Sign_input password_input' onChange={(e) => handleUserInputChange(e)} name='password' type="password" placeholder="Password" />
+              <input className='Sign_input user_password_input' onChange={(e) => handleUserInputChange(e)} name='password' type="password" placeholder="Password" />
               <div className='password_div' onClick={() => (TogglePass(), setEye(!eye))}>{
                 eye ?
                   eyeOpen : eyeClosed
@@ -193,7 +200,7 @@ export const SignUp = () => {
             </select> */}
               <input className='Sign_input' type="email" onChange={handleDoctorInputChange} name='email' placeholder="Email" />
               <input className='Sign_input password_input' onChange={handleDoctorInputChange} name='password' type="password" placeholder="Password" />
-              <div className='password_div' onClick={() => (TogglePass(), setDocEye(!docEye))}>{
+              <div className='password_div' onClick={() => (DoctorTogglePass(), setDocEye(!docEye))}>{
                 docEye ?
                   eyeOpen : eyeClosed
               }

@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://kit.fontawesome.com/57f00fcee8.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/57f00fcee8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
@@ -14,6 +18,14 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-
+    <script>
+      window.onload = function () {
+        Particles.init({
+          selector: ".background",
+        });
+      };
+    </script>
+    <canvas src="../src/assets/cool-background.png"  class="background"></canvas>
+    <script src="path/to/particles.min.js"></script>
   </body>
 </html>
