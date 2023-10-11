@@ -68,7 +68,9 @@ const Service = () => {
       </div>
 
       <div className="big-container-after-pict">
+        
         {/* find a doctor div */}
+        
         <div className="find-a-doctor">
           <h1>Find A Doctor</h1>
 
@@ -93,6 +95,7 @@ const Service = () => {
             <button className="Search-button-find">Search</button>
           </div>
         </div>
+
         {/* services we provide  */}
 
         <div className="services-we-provide-container">
