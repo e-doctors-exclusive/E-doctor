@@ -1,0 +1,52 @@
+.allreviews_review_card{
+    display: flex;
+    gap:20px
+   }
+   .box_review_card{
+    height: 380px;
+    width: 392px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items:first baseline;
+    text-align:left;
+    border: solid 1px rgb(213, 213, 213);
+    background-color: #f9f9f9;
+    border-radius: 24px;
+    padding :20px;
+   }
+   .box_review_card:hover{
+    box-shadow: 2px 1px 1px rgb(185, 185, 185);
+    transition-duration:0.5s ;
+   }
+   .card-heading_review_card{
+    font-family: "DM Sans", Helvetica;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 22px;
+    font-feature-settings: 'clig' off, 'liga' off;
+    color: #333;
+   }
+   .paragraph_review_card{
+    display: inline-block;
+    line-height: 30px;
+    color: var(--color-dimgray);
+    font-size: 20px;
+   }
+   .description_review_card{
+    color: #007e85;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+   }
+   .work_review_card{
+    color: #555;
+    font-family: "DM Sans", Helvetica;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+   }
+   .signature_review_card{
+    gap:2px
+   }
