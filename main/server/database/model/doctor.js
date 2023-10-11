@@ -8,7 +8,7 @@ module.exports = (connection) => {
         Address: { type: DataTypes.STRING, allowNull: false, trim: true },
         email: { type: DataTypes.STRING, allowNull: false, unique: true, trim: true },
         password: { type: DataTypes.STRING, allowNull: false, trim: true },
-        MedicalInfo:{type:DataTypes.STRING,allowNull:false,trim:true},
+        MedicalInfo:{type:DataTypes.ENUM({values:[]}),allowNull:false,trim:true},
         rating:{type:DataTypes.STRING,allowNull:false,trim:true},
         avatar:{type:DataTypes.STRING,allowNull:false,trim:true},
         bio:{type:DataTypes.STRING,allowNull:false,trim:true}
