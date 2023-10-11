@@ -6,10 +6,9 @@ import ContactUs from './components/contactUs/ContactUs';
 import DoctorAccount from './components/doctorAccount/DoctorAccount';
 import HomePage from './components/homePage/HomePage';
 
-import  {SignUp} from './components/doctorAuth/SignUp';
+import  {SignUp} from './components/Sign_Up/SignUp';
 
 import Service from './components/service/Service';
-import UserSign from './components/userAuth/UserSign';
 // import Navbar from './components/navBar/NavBar'
 // import Footer from './components/footer/Footer';
 
@@ -24,12 +23,10 @@ function App() {
 
       <Route path="/doctor" element={<DoctorAccount/>}/>  
       <Route path="/docAuth" element={<SignUp/>}/>   
-      <Route path="/UserSign" element={<UserSign/>} />
 
       <Route path="/homePage" element={<HomePage/>}/>   
       <Route path="/service" element={<Service/>}/>   
       </Routes>
-      {/* <Footer/> */}
     </>
 
   );
