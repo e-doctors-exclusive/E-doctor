@@ -1,7 +1,12 @@
 import React from "react";
 import "./userAccount.css";
 import doctor from "../../assets/unsplash_7bMdiIqz_J4.png";
+import { useNavigate } from "react-router-dom";
+
+
 const UserAccount = () => {
+
+  const navigate = useNavigate();
   return (
     <div className="container-user">
       <div className="sid-nav">
@@ -40,6 +45,9 @@ const UserAccount = () => {
           height="32"
           viewBox="0 0 31 32"
           fill="none"
+          onClick={()=>{
+            navigate("/calander");
+          }}
         >
           <g clipPath="url(#clip0_221_627)">
             <path
@@ -57,6 +65,7 @@ const UserAccount = () => {
               />
             </clipPath>
           </defs>
+        
         </svg>
 
         <svg
@@ -84,7 +93,7 @@ const UserAccount = () => {
             </clipPath>
           </defs>
         </svg>
-
+      
         <svg
           className="small-time"
           xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +119,7 @@ const UserAccount = () => {
             </clipPath>
           </defs>
         </svg>
-
+       
         <svg
           className="small-settings"
           xmlns="http://www.w3.org/2000/svg"
@@ -162,6 +171,7 @@ const UserAccount = () => {
             </clipPath>
           </defs>
         </svg>
+       
       </div>
 
       <div className="content-user">

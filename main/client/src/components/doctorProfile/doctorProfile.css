@@ -1,0 +1,153 @@
+
+/* css navBar */
+.navBar_doctor_profil {
+    margin-top: 2px;
+    justify-content:flex-start;
+    display: flex;
+    align-items: center;
+  flex-wrap: wrap;
+    gap: 10%;
+    flex-direction: row;
+    padding: 10px ;
+    margin-left: 10px;
+  }
+  .logo_doctor_profil {
+      font-weight: bold;
+      color: black;
+font-family:Arial, Helvetica, sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+  }
+.search_doctor_profil {
+    margin-right: 20%;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between;
+  text-align: center;
+  margin-top: 1%; */
+  }
+  
+  .search__input_doctor_profil {
+    font-family: inherit;
+    font-size: inherit;
+    background-color:#f4f2f2;
+    border: none;
+    color: #646464;
+    padding: 0.7rem 1rem;
+    border-radius: 30px;
+    width: 20em;
+    transition: all ease-in-out .5s;
+    margin-right: 10px;
+  }
+  
+  .search__input_doctor_profil:hover, .search__input_doctor_profil:focus {
+    box-shadow: 0 0 1em #00000013;
+  }
+  
+  .search__input_doctor_profil:focus {
+    outline: none;
+    background-color: #f0eeee;
+  }
+  
+  .search__input_doctor_profil::-webkit-input-placeholder {
+    font-weight: 100;
+    margin-left: 20px;
+    color: #ccc;
+  }
+  
+  .search__input_doctor_profil:focus + .search__button_doctor_profil {
+    background-color: #f0eeee;
+  }
+  
+  .search__button_doctor_profil {
+    border: none;
+    background-color: #f4f2f2;
+    margin-top: .1em;
+  }
+  
+  .search__button_doctor_profil:hover {
+    cursor: pointer;
+
+  }
+  
+  .search__icon_doctor_profil {
+    height: 1.3em;
+    width: 1.3em;
+    fill: #b4b4b4;
+    cursor: pointer;
+   
+  }
+  .right_nav_doctor {
+    flex-direction: row;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    gap: 20%;
+    margin-left: 13%;
+  }
+  .icons_doctor_notify_bell{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.bell_doctor {
+  width: 27px;
+  height: 27px;
+  color: #0D0D0D.75%;
+  cursor: pointer;
+}
+.red_point_doctor {
+   
+        justify-content: center;
+        transform: translate(-11px, -8px);
+  
+}
+.help_doctor {
+    width: 27px;
+  height: 27px;
+  color: #0D0D0D.75%;
+  cursor: pointer;
+}
+  .icon-user_doctor {
+    width: 170px;
+    height: 55px;
+    background-color: #a5adc7;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .name_doctor{
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    padding: 1rem;
+  }
+  .name-user-icon_doctor {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight:bold;
+    line-height: normal;
+    color: var(--dmv-black, #23262f);
+    cursor: pointer;
+  }
+  .MedicalInfo_doctor {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight:500;
+    line-height: normal;
+    color: var(--dmv-black, #23262f);
+    cursor: pointer;
+  }
+  .image-user_doctor {
+    width: 36px;
+    height: 36px;
+    border-radius: 36px;
+    cursor: pointer;
+  }
