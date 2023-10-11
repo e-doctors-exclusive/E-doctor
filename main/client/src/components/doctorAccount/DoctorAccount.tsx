@@ -1,5 +1,6 @@
 import React from 'react'
 import "./doctorAccount.css"
+import doctor from "../../assets/unsplash_7bMdiIqz_J4.png"
 
 
 const DoctorAccount = () => {
@@ -111,34 +112,38 @@ const DoctorAccount = () => {
         <div className='miniCard'>
           <p className='viSits'>visits for today </p>
           <h3 className='NumBer'>104</h3>
+          <img className="unSplShh" alt="Unsplash" src={doctor} />
+          <div className='rates'><p className='patioNess'> new patients</p> <p className="text-wrapper">40</p> <div className='insidePatients'>51%</div></div>
+          <div className='ratesV2' ><p className='OldP'> Old patients</p> <p className='oldN'>64</p> <div className='secoNnd'>20%</div></div>
         </div>
 
         <div className='calenDar'>
+          
         <section className="card__header">
-      <h3>Thursday 7th</h3>
-      <h3>January 2020</h3>
+      <h3>Calendar</h3>
+      <h3>September 2022</h3>
     </section>
     <section className="card__body">
       <ul className="card__body--days">
-        <p>mon</p>
+        <li>sun</li>
+        <li>mon</li>
         <li>tue</li>
         <li>wed</li>
         <li>thu</li>
         <li>fri</li>
         <li>sat</li>
-        <li>sun</li>
       </ul>
       <ul className="card__body--dates">
-        <li className="prev">30</li>
-        <li className="prev">31</li>
+        <li className="prev"></li>
+        <li className="prev"></li>
         <li>1</li>
         <li>2</li>
         <li>3</li>
         <li>4</li>
         <li>5</li>
         <li>6</li>
-        <li className="active">7</li>
-        <li>8</li>
+        <li >7</li>
+        <li className="active">8</li>
         <li>9</li>
         <li>10</li>
         <li>11</li>
@@ -146,10 +151,10 @@ const DoctorAccount = () => {
         <li>13</li>
         <li>14</li>
         <li>15</li>
-        <li className="circle orange">16 <span>5</span></li>
+        <li className="circle orange">16 </li>
         <li>17</li>
         <li>18</li>
-        <li className="circle purple">19 <span>6</span></li>
+        <li className="circle purple">19 </li>
         <li>20</li>
         <li>21</li>
         <li>22</li>
@@ -161,13 +166,26 @@ const DoctorAccount = () => {
         <li>28</li>
         <li>29</li>
         <li>30</li>
-        <li>31</li>
-        <li className="next">1</li>
-        <li className="next">2</li>
       </ul>
     </section>
-
-
+    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none" className='arCc'>
+  <path d="M4.62862 7.80723C4.98442 7.44892 5.56363 7.4479 5.92068 7.80495L8.66853 10.5528C9.10418 10.9884 9.8105 10.9884 10.2461 10.5528L12.994 7.80495C13.351 7.4479 13.9303 7.44892 14.286 7.80723C14.6401 8.16376 14.6391 8.73946 14.2838 9.09474L10.2461 13.1324C9.8105 13.568 9.10418 13.568 8.66853 13.1324L4.6309 9.09474C4.27562 8.73946 4.27461 8.16376 4.62862 7.80723Z" fill="#5F647E"/>
+</svg>
+       <section><p className='Upcoming'>Upcoming</p> <a href="" className='viewAll' >view all</a>  </section>
+        </div>
+        <div className='meetingD'>
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none" className='ecliPse'>
+<circle cx="24.075" cy="24.432" r="23.5551" fill="url(#paint0_linear_221_832)"/>
+<defs>
+<linearGradient id="paint0_linear_221_832" x1="-1.63727" y1="51.1695" x2="57.4776" y2="25.0403" gradientUnits="userSpaceOnUse">
+<stop stop-color="#57B4DE"/>
+<stop offset="0.390995" stop-color="#58B6DD"/>
+<stop offset="1" stop-color="#3B29AB"/>
+</linearGradient>
+</defs>
+</svg>
+<p className='heading-heading-left'>Monthly doctor’s meet</p>
+<p className="DateS">8 April, 2021&nbsp;&nbsp; |&nbsp;&nbsp; 04:00 PM</p>
         </div>
       </div>
 
