@@ -23,7 +23,7 @@ function App() {
       {/* <Route path="/navbar" element={<Navbar/>}/> */}
       <Route path="/useraccount" element={<UserAccount/>}/>    
       <Route path="/contactus" element={<ContactUs/>}/>    
-      {/* <Route path="/cards" element={<ServicesCard/>}/>   */}
+      <Route path="/cards" element={<ServicesCard/>}/>  
       {/* <Route path="/members" element={<MemberCard/>}/>  */}
       <Route path="/review" element={<ReviewCard/>}/>
       <Route path="/doctor" element={<DoctorAccount/>}/>  
