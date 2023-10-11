@@ -20,31 +20,37 @@
   width: 30px;
   height: 30px;
   display: flex;
+  cursor: pointer;
 }
 .small-calendar {
   width: 30px;
   height: 30px;
   display: flex;
+  cursor: pointer;
 }
 .small-chat {
   width: 30px;
   height: 30px;
   display: flex;
+  cursor: pointer;
 }
 .small-time {
   width: 30px;
   height: 30px;
   display: flex;
+  cursor: pointer;
 }
 .small-settings {
   width: 30px;
   height: 30px;
   display: flex;
+  cursor: pointer;
 }
 .logout {
   width: 30px;
   height: 30px;
   display: flex;
+  cursor: pointer;
 }
 
 .sid-nav {
@@ -62,10 +68,9 @@
   border-bottom-left-radius: 70px;
   margin-left: 30px;
   margin-right: -15px;
-  margin-top: 3px;
 }
 .nav-user {
-  margin-top: 35px;
+  margin-top: 20px;
   justify-content: center;
   display: flex;
   gap: 10%;
@@ -174,12 +179,22 @@
   border-radius: 36px;
   cursor: pointer;
 }
-.subContainer {
-  gap: 5px;
+.text_user_appointment_calendar{
+  flex-direction: row;
+  justify-content:flex-start;
+  display: flex;
 }
+.text_user_appointment {
+  flex-direction: column;
+  width: 65%;
+  padding: 1rem;
+  display: flex;
+  gap: 10px;
+}
+
 .text_user {
-  margin-top: 2px;
-  margin-bottom: 4px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 .greeting-user {
   font-family: Arial, Helvetica, sans-serif;
@@ -197,9 +212,15 @@
   font-weight: 700;
   color: #007e85;
 }
+
+.face_user_calendar {
+display: flex;
+flex-direction: row;
+gap: 40px;
+}
 .container_face_user {
-  width: 815px;
-  height: 260px;
+  width: 85%;
+  height: 200px;
   padding: 1rem;
   border-radius: 16px;
   background: linear-gradient(
@@ -209,17 +230,12 @@
     #007e85 98.77%
   );
   margin-left: 2%;
-}
-.container_face_user {
-  
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .face_user_visit {
-  margin-top: 1%;
-  
   color: #000;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 24px;
@@ -230,7 +246,7 @@
 .face_user_number {
   color: #000;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 60px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -238,17 +254,17 @@
 .face_user_container_percent {
   justify-content:flex-start;
   display: flex;
-  gap: 10px;
+  gap: 5px;
 }
 .pointment-percent {
 padding: 1vh;
-width: 219px;
-height: 122px;
+width: 210px;
+height: 98px;
 border-radius: 18.019px;
 background: rgba(255, 255, 255, 0.55);
 flex-direction: column;
 display: flex;
- gap: 12px;
+ gap: 20px;
  cursor: pointer;
 }
 .pointment-percent:hover {
@@ -273,20 +289,58 @@ font-style: normal;
 font-weight: 500;
 line-height: normal;
 }
-/* .container_user_calendar {
-  width: 50vh;
-height: 60vh;
-border-radius: 16px;
-background: #FFF;
-background-color: #000;
-} */
+/* css pointment */
+.list_appointment_text {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+}
+.list_appointment {
+  width: 89%;
+  height: 275px;
+  border-radius: 16px;
+  margin-left: 2%;
+  display: flex;
+  flex-direction: column;
+background: #503131;
+}
+.appointment_text {
+  color: #000;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 24px;
+font-style: normal;
+font-weight: bold;
+line-height: normal;
+padding: 1rem;  
+}
+.appointment_date {
+display: flex;
+justify-content: center;
+flex-direction: row;
+}
+.appointment_date_user {
+  color: rgba(0, 0, 0, 0.60);
+font-family: Arial, Helvetica, sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.icon_appointment{
+ width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  stroke-width: 2.048px;
+  stroke: rgba(0, 0, 0, 0.60);
+}
 /* css calendar */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 
 	
 :root {
-	--c-theme-primary: #008FFD;
+	
 	--c-theme-primary-accent: #CBE8FF;
 	--c-bg-primary: #D6DAE0;
 	--c-bg-secondary: #EAEBEC;
@@ -300,23 +354,13 @@ background-color: #000;
 
 
 .datepicker {
-	width: 95%;
+	width: 90%;
+height: 35%;
 	max-width: 350px;
-	background-color: var(--c-bg-tertiary);
-	border-radius: 10px;
+	background: #FFF;
+	border-radius: 16px;
 	box-shadow: 0 0 2px 0 rgba(#000, .2), 0 5px 10px 0 rgba(#000, .1);
 	padding: 1rem;
-}
-
-.datepicker-top {
-	margin-bottom: 1rem;
-}
-
-.btn-group {
-	display: flex;
-	flex-wrap: wrap;
-	margin-bottom: 1rem;
-	margin-top: -.5rem;
 }
 
 .tag {
@@ -328,13 +372,55 @@ background-color: #000;
 	padding: .5em .75em;
 	font-weight: 600;
 }
-
-.month-selector {
-	display: flex;
+.datepicker-top {
+	margin-bottom: 1rem;
+  gap: 30px;
+}
+.name-calendar {
+  display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
+.text-calendar {
+  color: #000;
+text-align: center;
+font-family:  Arial, Helvetica, sans-serif;
+font-size: 20px;
+font-style: normal;
+font-weight: bold;
+line-height: normal;
+letter-spacing: 0.205px;
+text-transform: capitalize;
+}
+.icon-calendar {
+  width: 1rem;
+height: 1rem;
+transform: rotate(-90deg);
+}
+.month-selector {
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+}
+.month-name {
+	color: #000;
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 0.123px;
+text-transform: capitalize;
+}
 
+.left_right {
+  width: 1rem;
+  height: 1rem;
+}
+new4 {
+  border: 1px solid  #D2D2D2;
+}
 .arrow {
 	display: flex;
 	align-items: center;
@@ -345,10 +431,6 @@ background-color: #000;
 	width: 2.5rem;
 	height: 2.5rem;
 	box-shadow: 0 0 2px 0 rgba(#000,.25), 0 0 10px 0 rgba(#000, .15);
-}
-
-.month-name {
-	font-weight: 600;
 }
 
 .datepicker-calendar {
@@ -362,41 +444,126 @@ background-color: #000;
 }
 
 .day {
-	color: var(--c-text-secondary);
 	font-size: .875em;
 	font-weight: 500;
 	justify-self: center;
+  text-align: center;
+  font-family:Arial, Helvetica, sans-serif;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+  color: #2B2B36;
+  display: flex;
+width: 46px;
+height: 25px;
+padding: 4px;
+align-items: flex-start;
+gap: 10px;
+border: none;
 }
 
 .date {
-	border: 0;
-	padding: 0;
+  
 	width: 2.25rem;
 	height: 2.25rem;
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 6px;
-	font-weight: 600;
-	border: 2px solid transparent;
-	background-color: transparent;
-	cursor: pointer;
-	&:focus {
-		outline: 0;
-		color: var(--c-theme-primary);
-		border: 2px solid var(--c-theme-primary-accent);	
+flex-direction: column;
+justify-content: center;
+color: #0D0D0D;
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: uppercase;
+border: none;
 	}	
-}
-
-.faded {
-	color: var(--c-text-secondary);
-}
 
 .current-day {
-	color: #FFF;
-	border-color: var(--c-theme-primary);
-	background-color: var(--c-theme-primary);
-	&:focus {
-		background-color: var(--c-theme-primary-accent);
-	}
+	width: 2.25rem;
+	height: 2.25rem;
+	display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color: #0D0D0D;
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: uppercase;
+border: none;
+}
+.red_point {
+  justify-content: center;
+}
+
+.upcoming_user {
+  display: flex;
+  width: 20%px;
+  justify-content: space-between;
+  align-items: center;
+}
+.upcoming_user-all {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #007E85;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; 
+  text-decoration-line: underline;
+
+}
+.upcoming_user_test {
+color: var(--dmv-black, #23262F);
+font-family: Arial, Helvetica, sans-serif;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 40px; 
+}
+
+.user_meeting {
+  width: 98%;
+height: 20%;
+border-radius: 10px;
+background: #F0F9FD;
+padding: 2vh;
+justify-content:flex-start;
+flex-direction: row;
+display: flex;
+align-items: center;
+gap: 15px;
+}
+.type_meet {
+  width: 47px;
+height: 47px;
+fill: var(--med, linear-gradient(66deg, #57B4DE -5.25%, #58B6DD 35.43%, #3B29AB 98.77%));
+}
+.text_type {
+  flex-direction: column;
+  justify-content: flex-start;
+  display: flex;
+}
+
+.text_type_meet {
+  width: 5%;
+color: var(--dmv-black, #23262F);
+font-family: Arial, Helvetica, sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight:bold;
+line-height: normal;
+}
+.date_type_meet {
+  width:3%px;
+color: rgba(13, 13, 13, 0.60);
+font-family:Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }

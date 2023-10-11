@@ -180,16 +180,6 @@ const UserAccount = () => {
               </svg>
             </button>
           </div>
-          {/* <div className="search-user-input">
-    <input type="text" className="search__input" placeholder="Type your text"/>
-    <button className="search__button">
-        <svg className="search__icon" aria-hidden="true" viewBox="0 0 24 24">
-            <g>
-                <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
-            </g>
-        </svg>
-    </button>
-</div> */}
           <div className="chat_bell_user">
             <svg
               className="chat-user"
@@ -229,12 +219,17 @@ const UserAccount = () => {
             </div>
           </div>
         </div>
-
         <div className="subContainer">
-          <div className="text_user">
+<div className="text_user_appointment_calendar">
+<div className="text_user_appointment">
+        <div className="text_user">
             <span className="greeting-user">Good Morning</span>
             <span className="name-user">Mohamed!</span>
           </div>
+
+
+          
+          
           <div className="container_face_user">
             <span className="face_user_visit">Visits for Today</span>
             <span className="face_user_number">104</span>
@@ -249,41 +244,75 @@ const UserAccount = () => {
               </div>
             </div> 
           </div>
-          <div className="container_user_calendar">
+
+
+          <div className="list_appointment">
+            <div className="list_appointment_text">
+              <span className="appointment_text">Appointment List</span>
+              <div className="appointment_date">
+              <span className="appointment_date_user">Today</span>
+<svg  className="icon_appointment"xmlns="http://www.w3.org/2000/svg" width="17" height="10" viewBox="0 0 17 10" fill="none">
+<path d="M1.59802 0.876831L8.76696 8.04577L15.9359 0.876831" stroke="black" stroke-opacity="0.6" stroke-width="2.04827"/>
+</svg>
+              </div>
+            </div>
+          </div>
+</div>
+
+
+
+
           <div className="datepicker">
 	<div className="datepicker-top">
-		<div className="btn-group">
-			
+	<div className="name-calendar">
+			<span className="text-calendar">Calendar</span>
+      <svg  className="icon-calendar" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+<path d="M4.62862 7.80723C4.98442 7.44892 5.56363 7.4479 5.92068 7.80495L8.66853 10.5528C9.10418 10.9884 9.8105 10.9884 10.2461 10.5528L12.994 7.80495C13.351 7.4479 13.9303 7.44892 14.286 7.80723C14.6401 8.16376 14.6391 8.73946 14.2838 9.09474L10.2461 13.1324C9.8105 13.568 9.10418 13.568 8.66853 13.1324L4.6309 9.09474C4.27562 8.73946 4.27461 8.16376 4.62862 7.80723Z" fill="#5F647E"/>
+</svg>
 		</div>
 		<div className="month-selector">
-			<button className="arrow"><i className="material-icons">chevron_left</i></button>
 			<span className="month-name">December 2020</span>
-			<button className="arrow"><i className="material-icons">chevron_right</i></button>
+      <div className="left_right_calendar">
+      <svg className="left_right" xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+<path d="M11.2731 3.9172C11.6315 4.27299 11.6325 4.8522 11.2754 5.20926L8.52759 7.9571C8.09194 8.39275 8.09194 9.09907 8.52759 9.53472L11.2754 12.2826C11.6325 12.6396 11.6315 13.2188 11.2731 13.5746C10.9166 13.9286 10.3409 13.9276 9.98565 13.5723L5.94801 9.53472C5.51237 9.09907 5.51237 8.39275 5.94802 7.9571L9.98565 3.91947C10.3409 3.5642 10.9166 3.56318 11.2731 3.9172Z" fill="#D2D2D2"/>
+</svg>
+<svg className="left_right" xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+<path d="M7.71904 13.5746C7.36072 13.2188 7.3597 12.6396 7.71676 12.2826L10.4646 9.53472C10.9002 9.09907 10.9002 8.39275 10.4646 7.9571L7.71676 5.20926C7.3597 4.8522 7.36073 4.27299 7.71904 3.9172C8.07557 3.56318 8.65127 3.5642 9.00654 3.91947L13.0442 7.9571C13.4798 8.39275 13.4798 9.09907 13.0442 9.53472L9.00654 13.5723C8.65127 13.9276 8.07557 13.9286 7.71904 13.5746Z" fill="#D2D2D2"/>
+</svg>
+</div>
 		</div>
+    <hr className="new4"></hr>
 	</div>
 	<div className="datepicker-calendar">
-		<span className="day">Mo</span>
-		<span className="day">Tu</span>
-		<span className="day">We</span>
-		<span className="day">Th</span>
-		<span className="day">Fr</span>
-		<span className="day">Sa</span>
-		<span className="day">Su</span>
-		<button className="date faded">30</button>
-		<button className="date">1</button>
+  <span className="day">SUN</span>
+		<span className="day">MON</span>
+		<span className="day">TUE</span>
+		<span className="day">WED</span>
+		<span className="day">THU</span>
+		<span className="day">FRI</span>
+		<span className="day">SAT</span>
+<button className="date">1</button>
 		<button className="date">2</button>
 		<button className="date">3</button>
 		<button className="date">4</button>
 		<button className="date">5</button>
 		<button className="date">6</button>
 		<button className="date">7</button>
-		<button className="date">8</button>
-		<button className="date current-day">9</button>
+    <div className="current-day">
+		<button className="date current-day_red_point">8</button>
+    <svg className="red_point" xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+<circle cx="4.76756" cy="4.89445" r="4.09653" fill="#FF0000"/>
+</svg></div>
+		<button className="date">9</button>
 		<button className="date">10</button>
 		<button className="date">11</button>
 		<button className="date">12</button>
 		<button className="date">13</button>
-		<button className="date">14</button>
+    <div className="current-day">
+		<button className="date current-day_red_point">14</button>
+    <svg className="red_point" xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+<circle cx="4.76756" cy="4.89445" r="4.09653" fill="#FF0000"/>
+</svg></div>
 		<button className="date">15</button>
 		<button className="date">16</button>
 		<button className="date">17</button>
@@ -300,16 +329,35 @@ const UserAccount = () => {
 		<button className="date">28</button>
 		<button className="date">29</button>
 		<button className="date">30</button>
-		<button className="date">31</button>
-		<button className="date faded">1</button>
-		<button className="date faded">2</button>
-		<button className="date faded">3</button>
 	</div>
+  <div className="upcoming_user">
+    <span className="upcoming_user_test">Upcoming</span>
+    <a className="upcoming_user-all">View all</a>
+  </div>
+  <div className="user_meeting">
+    <svg   className="type_meet" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+<circle cx="24.075" cy="24.432" r="23.5551" fill="url(#paint0_linear_221_832)"/>
+<defs>
+<linearGradient id="paint0_linear_221_832" x1="-1.63727" y1="51.1695" x2="57.4776" y2="25.0403" gradientUnits="userSpaceOnUse">
+<stop stop-color="#57B4DE"/>
+<stop offset="0.390995" stop-color="#58B6DD"/>
+<stop offset="1" stop-color="#3B29AB"/>
+</linearGradient>
+</defs>
+</svg>
+<div className="text_type">
+<span className="text_type_meet">Montly patients meet</span>
+<span className="date_type_meet">8 April, 2023 | 09:00 AM</span>
+
+</div>
+  </div>
+</div>
+</div>
 </div>
           </div>
         </div>
-      </div>
-    </div>
+      
+    
   );
 };
 
