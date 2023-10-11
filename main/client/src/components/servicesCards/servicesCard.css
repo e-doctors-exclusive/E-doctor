@@ -1,0 +1,14 @@
+.box_servicesCard {
+    height: 506px;
+    width: 392px;
+  }
+  
+  .box_servicesCard .container_servicesCard {
+    background-color: #f9f9f9;
+    border-radius: 24px;
+    height: 506px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 392px;
+  }

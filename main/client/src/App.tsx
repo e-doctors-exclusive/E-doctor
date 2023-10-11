@@ -5,6 +5,7 @@ import UserAccount from './components/userAccount/UserAccount'
 import ContactUs from './components/contactUs/ContactUs';
 import DoctorAccount from './components/doctorAccount/DoctorAccount';
 import HomePage from './components/homePage/HomePage';
+import ServicesCard from './components/servicesCards/ServicesCard';
 
 import  {SignUp} from './components/doctorAuth/SignUp';
 
@@ -16,6 +17,7 @@ import UserSign from './components/userAuth/UserSign';
 function App() {
   return (
     <>
+
       {/* <Navbar/> */}
       <Routes>  
       {/* <Route path="/navbar" element={<Navbar/>}/> */}
