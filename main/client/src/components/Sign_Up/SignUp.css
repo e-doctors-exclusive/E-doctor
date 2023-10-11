@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
 
 .SignContainer {
-background-image: url("../../assets/misty-autumn-day-3840x2160_945794-mm-90.webp");
+background-image: url("../../assets/cool-background.png");
   /* background: #f6f5f7; */
   display: flex;
   justify-content: center;
@@ -13,11 +13,33 @@ background-image: url("../../assets/misty-autumn-day-3840x2160_945794-mm-90.webp
   height: 100vh;
   margin: -20px 0 50px;
 }
+.Sign_select{
+  width: 100%;
+}
+
+.Sign_select{
+  font-size: small;
+}
 .Sign_h1 {
   font-weight: bold;
   margin: 0;
 }
-
+.password_div{
+  position: relative;
+  width: 20px;
+  height: 20px;
+  top: -5%;
+  /* right: -2%; */
+  left: 50%;
+  /* display: flex; */
+}
+.password_input{
+  width: 10vh;
+}
+.password_svg{
+  cursor: pointer;
+  z-index: 1;
+}
 .Sign_h2 {
   text-align: center;
 }
