@@ -113,7 +113,62 @@ const DoctorAccount = () => {
           <h3 className='NumBer'>104</h3>
         </div>
 
-        <div className='calenDar'></div>
+        <div className='calenDar'>
+        <section className="card__header">
+      <h3>Thursday 7th</h3>
+      <h3>January 2020</h3>
+    </section>
+    <section className="card__body">
+      <ul className="card__body--days">
+        <li>mon</li>
+        <li>tue</li>
+        <li>wed</li>
+        <li>thu</li>
+        <li>fri</li>
+        <li>sat</li>
+        <li>sun</li>
+      </ul>
+      <ul className="card__body--dates">
+        <li className="prev">30</li>
+        <li className="prev">31</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li className="active">7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+        <li className="circle orange">16 <span>5</span></li>
+        <li>17</li>
+        <li>18</li>
+        <li className="circle purple">19 <span>6</span></li>
+        <li>20</li>
+        <li>21</li>
+        <li>22</li>
+        <li>23</li>
+        <li>24</li>
+        <li>25</li>
+        <li>26</li>
+        <li>27</li>
+        <li>28</li>
+        <li>29</li>
+        <li>30</li>
+        <li>31</li>
+        <li className="next">1</li>
+        <li className="next">2</li>
+      </ul>
+    </section>
+
+
+        </div>
       </div>
 
 
