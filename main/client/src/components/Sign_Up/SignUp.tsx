@@ -46,18 +46,10 @@ const options = [
   { value: 'Dentists', label: 'Dentists' }
 ];
 export const SignUp = () => {
-  const DoctorImages=[img02,img04]
-const PatientImages=[img01,img03]
-const [DoctorImagesCopy, setDoctorImagesCopy] = useState([...DoctorImages]);
-const [PatientImagesCopy, sePatientImagesCopy] = useState([...PatientImages]);
-const [DoctorImg, setDoctorImg] = useState("");
-const [PatientImg, setPatientImg] = useState("");
-const handleClick = (images:any, setImagesCopy:any, setImg:any) => {
-  if (images.length === 0) {
-    setImagesCopy(images === DoctorImagesCopy ? [...DoctorImages] : [...PatientImages]);
-  }
+  
   const [selectedOption, setSelectedOption] = React.useState(null);
   const [isSignUp, setIsSignUp] = useState(true);
+  const [img, setImg] = useState(true);
   const [eye, setEye] = useState(true);
   const [docEye, setDocEye] = useState(true)
   const [userValues, setUserValues] = useState(UserInitialValues);
@@ -70,7 +62,6 @@ const handleClick = (images:any, setImagesCopy:any, setImg:any) => {
       [name]: value
     });
   }
-  
   const handleDoctorInputChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) => {
     const { name, value } = e.target;
     setDoctorValues({
@@ -88,9 +79,9 @@ const handleClick = (images:any, setImagesCopy:any, setImg:any) => {
       });
     }
   };
-  
-  
-  
+
+
+
   const TogglePass = () => {
     const passwordInput = document.querySelector(".user_password_input") as HTMLInputElement;
     if (passwordInput) {
@@ -111,7 +102,7 @@ const handleClick = (images:any, setImagesCopy:any, setImg:any) => {
       }
     }
   };
-  
+
   const SubmitUser = async (e: React.MouseEvent<HTMLButtonElement>, input: object) => {
     e.preventDefault();
     var res = true
@@ -123,9 +114,9 @@ const handleClick = (images:any, setImagesCopy:any, setImg:any) => {
       });
       return res
     }
-    
+
     if (check01()) {
-      
+
       try {
         const task = await axios.post("http://localhost:3000/api/patient/addPatient", input);
         navigate("/Login")
@@ -155,11 +146,11 @@ const handleClick = (images:any, setImagesCopy:any, setImg:any) => {
       }
     }
   };
-  
+
   const toggleSignInUp = () => {
     setIsSignUp(!isSignUp);
   };
-  
+
   return (
     <div>
       <div className='SignContainer'>
@@ -207,7 +198,7 @@ const handleClick = (images:any, setImagesCopy:any, setImg:any) => {
               <input className='Sign_input password_input' onChange={handleDoctorInputChange} name='password' type="password" placeholder="Password" />
               <div className='password_div' onClick={() => (DoctorTogglePass(), setDocEye(!docEye))}>{
                 docEye ?
-                eyeOpen : eyeClosed
+                  eyeOpen : eyeClosed
               }
 
               </div>
@@ -227,25 +218,24 @@ const handleClick = (images:any, setImagesCopy:any, setImg:any) => {
               <div className={`overlay-panel overlay-left ${isSignUp ? '' : 'right-panel-active'}`}>
                 <h1 className='Sign_h1'>Your wellbeing our priority.</h1>
                 <p>Hello, let’s take the first step towards your wellbeing together!</p>
-                <button className="Sign_button ghost" onClick={() => { toggleSignInUp(); setEye(true); {() => handleClick(DoctorImagesCopy, setDoctorImagesCopy, setDoctorImg)} }}>Doctor Registration</button>
+                <button className="Sign_button ghost" onClick={() => { toggleSignInUp(); setEye(true); setImg(!img); }}>Doctor Registration</button>
               </div>
               <div className={`overlay-panel overlay-right ${isSignUp ? 'right-panel-active' : ''}`}>
                 <h1 className='Sign_h1'>Hello, Doctor!</h1>
                 <p>Enter your personal details and start the journey with us</p>
-                {/* <button className="Sign_button ghost" onClick={() => { toggleSignInUp(); setImg(!img); setDocEye(true) }}>Patient Registration</button> */}
+                <button className="Sign_button ghost" onClick={() => { toggleSignInUp(); setImg(!img); setDocEye(true) }}>Patient Registration</button>
 
               </div>
             </div>
           </div>
         </div>
-        {/* <div className='Sing_img_container'>
+        <div className='Sing_img_container'>
           {img ?
             <img className='Sign_img' src={img01}></img> : <img className='Sign_img' src={img02}></img>}
-        </div> */}
+        </div>
       </div>
       <Footer />
     </div>
 
-);
+  );
 };
-}
