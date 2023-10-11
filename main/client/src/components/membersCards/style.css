@@ -1,0 +1,52 @@
+.allCards_Member_Card{
+    display: flex;
+    gap:20px
+   }
+   .box_Member_Card {
+    height: 506px;
+    width: 392px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    border: solid 1px rgb(213, 213, 213);
+    background-color: #f9f9f9;
+    border-radius: 24px;
+    padding :20px;
+  }
+  .box_Member_Card:hover{
+    box-shadow: 2px 1px 1px rgb(185, 185, 185);
+    transition-duration:0.5s ;
+  }
+  .box_Member_Card .image_container_Member_Card{
+    width: 35%;
+  }
+  .image_container_Member_Card{
+    display: flex;
+    align-items: center;
+  }
+  .card-heading_Member_Card{
+    color: #007e85;
+    font-family: "DM Sans-Bold", Helvetica;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 34px;
+  }
+  .description_Member_Card{
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-darkslategray);
+    line-height: 20px;
+  }
+  .paragraph_Member_Card{
+    display: inline-block;
+    line-height: 30px;
+    color: var(--color-dimgray);
+    font-size: 20px;
+  }
+  .social-media-icons_Member_Cards{
+    display: flex;
+    gap: 20px;
+  }
