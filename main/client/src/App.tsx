@@ -11,6 +11,7 @@ import  {SignUp} from './components/doctorAuth/SignUp';
 import ReviewCard from './components/reviewCards/ReviewCard'
 import Service from './components/service/Service';
 import UserSign from './components/userAuth/UserSign';
+import DoctorChat from './components/doctorChat/DoctorChat';
 // import Navbar from './components/navBar/NavBar'
 // import Footer from './components/footer/Footer';
 
@@ -22,10 +23,12 @@ function App() {
       <Routes>  
       {/* <Route path="/navbar" element={<Navbar/>}/> */}
       <Route path="/useraccount" element={<UserAccount/>}/>    
-      <Route path="/contactus" element={<ContactUs/>}/>    
+      <Route path="/contactus" element={<ContactUs/>}/>
+      <Route path="/chat" element={<DoctorChat/>}/>
+          
       {/* <Route path="/cards" element={<ServicesCard/>}/>   */}
       {/* <Route path="/members" element={<MemberCard/>}/>  */}
-      <Route path="/review" element={<ReviewCard/>}/>
+      {/* <Route path="/review" element={<ReviewCard/>}/> */}
       <Route path="/doctor" element={<DoctorAccount/>}/>  
       <Route path="/docAuth" element={<SignUp/>}/>   
       <Route path="/UserSign" element={<UserSign/>} />

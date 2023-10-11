@@ -1,0 +1,58 @@
+.sidebar_doctor_chat{
+    display: flex;
+    gap : 15px;
+    align-items: center;
+}
+.side-bar_doctor_chat{
+ display: flex;
+ flex-direction: column;
+ flex-wrap: wrap;
+ 
+}
+.icons_doctor_chat{
+    height: 1.7em;
+}
+.logo_chat{
+    height: 2rem;
+}
+.logo_doct{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size:10px;
+}
+.sidebar_overview{
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+.biggest_div_ever{
+    display: flex;
+    gap: 70px;
+    max-height:fit-content;
+}
+.doctor_chat_title{
+    align-items: flex-start;
+    font-weight: 400;
+    font-size: 20px;
+}
+.doctor_chat_container{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap:35px;
+    align-items: flex-start;
+    padding: 20px;
+}
+.search_input_chat{
+    align-items: center;
+    display: flex;
+}
+.rooms_chat{
+    background-color: rgb(241, 241, 241);
+    border-color: aliceblue;
+}
+.doctor_chat_message{
+    font-size: 13px;
+    font-weight: 100;
+}
