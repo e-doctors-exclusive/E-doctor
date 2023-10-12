@@ -32,8 +32,13 @@ line-height: normal;
 .Navbar-Links a:hover {
   text-decoration: underline;
 }
+.Navbar-Links{
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
 .Navbar-Links a {
-  margin: 1.2rem;
+  /* margin: 1.2rem; */
   color: #000;
   text-align: center;
   font-family: Lexend Tera;
@@ -87,7 +92,4 @@ line-height: normal;
 }
 .Navbar-Links a:hover{
     color: #007e85;
-}
-.Navbar-Links a:active{
-    border-bottom: solid 2px #007e85;
 }
