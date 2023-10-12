@@ -11,6 +11,10 @@ import overview from '../../assets/forerkort-svgrepo-com.svg'
 import logo from '../../assets/pie-chart-svgrepo-com.svg'
 import scouter from '../../assets/basic-ui-computer-11-svgrepo-com.svg'
 import profilePic from '../../assets/Doctor_9.png'
+import heart from '../../assets/heart2-svgrepo-com.svg'
+import warning from '../../assets/warning-svgrepo-com.svg'
+import send from '../../assets/send-1-svgrepo-com.svg'
+import attach from '../../assets/attach-svgrepo-com.svg'
 
 const DoctorChat = () => {
   return (
@@ -29,7 +33,7 @@ const DoctorChat = () => {
         </div>
         <div className='sidebar_doctor_chat'>
         <img className='icons_doctor_chat' src={calendar} alt="" />
-            <p className='sidebar_paragraph'>Appointment</p>
+            <p className='sidebar_paragraph'>Appointments</p>
         </div>
         <div className='sidebar_doctor_chat'>
         <img className='icons_doctor_chat' src={person} alt="" />
@@ -45,11 +49,11 @@ const DoctorChat = () => {
         </div>
         <div className='sidebar_doctor_chat'>
         <img className='icons_doctor_chat' src={envelope} alt="" />
-            <p className='sidebar_paragraph'>Message</p>
+            <p className='sidebar_paragraph'>Messages</p>
         </div>
         <div className='sidebar_doctor_chat'>
         <img className='icons_doctor_chat' src={file} alt="" />
-            <p className='sidebar_paragraph'>Blog</p>
+            <p className='sidebar_paragraph'>Blogs</p>
         </div>
         <div className='sidebar_doctor_chat'>
         <img className='icons_doctor_chat' src={wheel} alt="" />
@@ -60,10 +64,10 @@ const DoctorChat = () => {
     </div>
     <div className='rooms_chat'>
         <div className='doctor_chat_container'>
-        <h1 className='doctor_chat_title'>Message</h1>
+        <h1 className='doctor_chat_title'>Messages</h1>
         <div className='search_input_chat'>
         <img className='icons_doctor_chat' src={scouter} alt="" />
-        <input className='chat_search_input' type="text" placeholder='Search for message' />
+        <input className='chat_search_input' type="text" placeholder='Search for a message' />
         </div>
         <div className='rooms_wrapper_chat'>
         <div className='chatroom_doctor'>
@@ -152,15 +156,55 @@ const DoctorChat = () => {
         </div>
         <div className='conversation_doctor'>
           <div className='conversation_title_status'>
+            <div className='left_top_bar_chat'>
             <img className='profile_picture_doctor_conversation' src={profilePic} alt="" />
             <div className='profile_details_conversation'>
             <p className='doctor_name_conversation'>Jone Martin</p>
-            <p className='doctor_status_conversation'>Onlines</p>
+            <p className='doctor_status_conversation'>Online</p>
             </div>
-            <img className='doctor_favorite_conversation' src="" alt="" />
-            <img className='doctor_report_conversation' src="" alt="" />
+            </div>
+
+
+            <div className='icons_top_convesation'>
+            <img className='doctor_icons_conversation' src={heart} alt="" />
+            <img className='doctor_icons_conversation' src={warning} alt="" />
+            </div>
+
           </div>
+
+
+          <div className='doctor_chat_history'>
+            <div className='messages_container_chat'>
+            <div className='left_message_doctor'>
+              <div className='little_message_container'>
+              <img className='doctor_picture_history_chat' src={profilePic} alt="" />
+              <div className='message_container_chat'>
+                <p className='first_left_Message'>Hi Doctor,</p>
+              </div>
+              <span className='date_message_chat'>10:12 AM, Today</span>
+              </div> 
+            </div>
+
+            <div className='right_message_doctor'>
+              <div className='little_message_container2'>
+              <img className='doctor_picture_history_chat2' src={profilePic} alt="" />
+              <div className='message_container_chat2'>
+                <p className='first_right_Message'>Hi Doctor,</p>
+              </div>
+              <span className='date_message_chat2'>10:12 AM, Today</span>
+              </div> 
+            </div>
+            </div>
+              
+          </div>
+          <div className='input_elements'>
+            <input className='message_input_chat' type="text" />
+            <img className='sending_icons' src={attach} alt="" />
+            <img className='sending_icons' src={send} alt="" />
+            </div>
+
         </div>
+        
     </div>
   )
 }
