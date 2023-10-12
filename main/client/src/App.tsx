@@ -10,10 +10,10 @@ import  {SignUp} from './components/Sign_Up/SignUp';
 import ReviewCard from './components/reviewCards/ReviewCard'
 import Service from './components/service/Service';
 import Login from "./components/Login/Login";
-import DoctorChat from './components/doctorChat/DoctorChat';
-// import Navbar from './components/navBar/NavBar'
-// import Footer from './components/footer/Footer';
 import DoctorProfile from './components/doctorprofile/DoctorProfile';
+import DoctorChat from './components/doctorChat/DoctorChat';
+
+
 
 function App() {
   return (
