@@ -8,7 +8,7 @@ doctorRouter.get("/doctor/getAllDoctor",getAllDoctor)
 doctorRouter.post("/doctor/addDoctor",addDoctor) 
 doctorRouter.post("/doctor/authenticate",authenticate) 
 doctorRouter.delete("/doctor/deleteDoctor/:id",deleleteDoctor)
-doctorRouter.put("/doctor/updateDoctor",updateDoctor)
+doctorRouter.put("/doctor/updateDoctor/:id",updateDoctor)
 
 
 module.exports = doctorRouter

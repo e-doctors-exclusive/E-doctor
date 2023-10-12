@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavBar from "../navBar/NavBar";
 import "./homePage.css";
 import imageMan from "../../assets/image 17.png";
@@ -8,9 +8,19 @@ import woman3 from "../../assets/woman3.svg";
 import ReviewCard from "../reviewCards/ReviewCard";
 import Footer from "../footer/Footer";
 import { useLocation } from "react-router-dom";
+import { RootState,AppDispatch } from '../../redux';
+import { addDoctor,fetchDoctors,UpdateDoctor,DeleteDocotr} from "../../redux/doctorSlice";
+import { useDispatch,useSelector } from 'react-redux';
+
 const HomePage = () => {
   const location = useLocation()
+  const dispatch:AppDispatch = useDispatch()
+  const DoctorData = useSelector((state:RootState)=>state.doctor)
+  console.log(DoctorData);
   
+  useEffect(()=>{
+dispatch(fetchDoctors())
+  },[dispatch])
   return (
     <div className="HomePage_container">
       <NavBar />
@@ -85,8 +95,8 @@ const HomePage = () => {
                   y2="548"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#007E85" />
-                  <stop offset="1" stop-color="#2B8500" stop-opacity="0.49" />
+                  <stop stopColor="#007E85" />
+                  <stop offset="1" stopColor="#2B8500" stopOpacity="0.49" />
                 </linearGradient>
               </defs>
             </svg>
@@ -431,7 +441,7 @@ const HomePage = () => {
               cy="7.92432"
               r="7"
               fill="#007E85"
-              fill-opacity="0.52"
+              fillOpacity="0.52"
             />
           </svg>
           <svg
@@ -446,7 +456,7 @@ const HomePage = () => {
               cy="7.92432"
               r="7"
               fill="#007E85"
-              fill-opacity="0.52"
+              fillOpacity="0.52"
             />
           </svg>
         </div>
