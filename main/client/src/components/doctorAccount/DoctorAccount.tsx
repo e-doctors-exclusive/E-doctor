@@ -116,6 +116,7 @@ const DoctorAccount = () => {
           <div className='rates'><p className='patioNess'> new patients</p> <p className="text-wrapper">40</p> <div className='insidePatients'>51%</div></div>
           <div className='ratesV2' ><p className='OldP'> Old patients</p> <p className='oldN'>64</p> <div className='secoNnd'>20%</div></div>
         </div>
+        
 
         <div className='calenDar'>
           
@@ -174,6 +175,7 @@ const DoctorAccount = () => {
        <section><p className='Upcoming'>Upcoming</p> <a href="" className='viewAll' >view all</a>  </section>
         </div>
         <div className='meetingD'>
+        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" className='harf'>M</text>
         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none" className='ecliPse'>
 <circle cx="24.075" cy="24.432" r="23.5551" fill="url(#paint0_linear_221_832)"/>
 <defs>
@@ -183,10 +185,22 @@ const DoctorAccount = () => {
 <stop offset="1" stop-color="#3B29AB"/>
 </linearGradient>
 </defs>
+
 </svg>
 <p className='heading-heading-left'>Monthly doctor’s meet</p>
 <p className="DateS">8 April, 2021&nbsp;&nbsp; |&nbsp;&nbsp; 04:00 PM</p>
         </div>
+        <div className='patientsList'>
+            <p className='lastDiv'>Patient List</p>
+            <p className='today'>Today</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none" className='ar2'>
+  <path d="M4.62862 7.80723C4.98442 7.44892 5.56363 7.4479 5.92068 7.80495L8.66853 10.5528C9.10418 10.9884 9.8105 10.9884 10.2461 10.5528L12.994 7.80495C13.351 7.4479 13.9303 7.44892 14.286 7.80723C14.6401 8.16376 14.6391 8.73946 14.2838 9.09474L10.2461 13.1324C9.8105 13.568 9.10418 13.568 8.66853 13.1324L4.6309 9.09474C4.27562 8.73946 4.27461 8.16376 4.62862 7.80723Z" fill="#5F647E"/>
+</svg>
+        <p className='consuLtation'>Consultation</p>
+        <div className='patient-conT'>
+
+        </div>
+            </div>
       </div>
 
 
