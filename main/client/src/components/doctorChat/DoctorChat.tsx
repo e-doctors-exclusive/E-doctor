@@ -155,7 +155,7 @@ const DoctorChat = () => {
             <img className='profile_picture_doctor_conversation' src={profilePic} alt="" />
             <div className='profile_details_conversation'>
             <p className='doctor_name_conversation'>Jone Martin</p>
-            <p className='doctor_status_conversation'>Online</p>
+            <p className='doctor_status_conversation'>Onlines</p>
             </div>
             <img className='doctor_favorite_conversation' src="" alt="" />
             <img className='doctor_report_conversation' src="" alt="" />
