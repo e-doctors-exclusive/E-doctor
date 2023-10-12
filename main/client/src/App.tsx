@@ -11,6 +11,7 @@ import  {SignUp} from './components/Sign_Up/SignUp';
 import ReviewCard from './components/reviewCards/ReviewCard'
 import Service from './components/service/Service';
 import Login from "./components/Login/Login";
+import DoctorProfile from './components/doctorProfile/DoctorProfile';
 // import Navbar from './components/navBar/NavBar'
 // import Footer from './components/footer/Footer';
 
@@ -30,7 +31,9 @@ function App() {
       <Route path="/signUp" element={<SignUp/>}/>   
       <Route path="/login" element={<Login/>}/>   
       <Route path="/homePage" element={<HomePage/>}/>   
-      <Route path="/service" element={<Service/>}/>   
+      <Route path="/service" element={<Service/>}/>
+      <Route path="/doctorprofil" element={<DoctorProfile/>}/>
+         
       {/* <Route path="/calander" element={<Calendar/>}/>    */}
       </Routes>
     </>
