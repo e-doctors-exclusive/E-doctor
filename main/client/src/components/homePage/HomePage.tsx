@@ -10,6 +10,8 @@ import Footer from "../footer/Footer";
 import { useLocation } from "react-router-dom";
 import { RootState,AppDispatch } from '../../redux';
 import { addDoctor,fetchDoctors,UpdateDoctor,DeleteDocotr} from "../../redux/doctorSlice";
+import { AddReview,fetchReview,UpdateReview,deleteReview} from "../../redux/reviewSlice";
+
 import { useDispatch,useSelector } from 'react-redux';
 
 const HomePage = () => {
@@ -17,8 +19,12 @@ const HomePage = () => {
   const dispatch:AppDispatch = useDispatch()
   const DoctorData = useSelector((state:RootState)=>state.doctor)
   console.log(DoctorData);
+  const Reviews = useSelector((state:RootState)=>state.review)
+  console.log(Reviews);
   
   useEffect(()=>{
+dispatch(fetchDoctors())
+dispatch(fetchReview())
 dispatch(fetchDoctors())
   },[dispatch])
   return (
