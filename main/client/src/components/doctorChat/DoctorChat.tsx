@@ -19,49 +19,6 @@ import attach from '../../assets/attach-svgrepo-com.svg'
 const DoctorChat = () => {
   return (
     <div className='biggest_div_ever'>
-    <div className='sidebar_overview'>
-
-        <div className='logo_doct'>
-            <img className='logo_chat' src={logo} alt="" />
-            <h1 className='logo_title'>Doct.</h1>
-        </div>
-        <div className='wrapper_chat'>
-        <div className='side-bar_doctor_chat'> 
-        <div className='sidebar_doctor_chat'>
-            <img className='icons_doctor_chat' src={overview} alt="" />
-            <p className='sidebar_paragraph'>Overview</p>
-        </div>
-        <div className='sidebar_doctor_chat'>
-        <img className='icons_doctor_chat' src={calendar} alt="" />
-            <p className='sidebar_paragraph'>Appointments</p>
-        </div>
-        <div className='sidebar_doctor_chat'>
-        <img className='icons_doctor_chat' src={person} alt="" />
-            <p className='sidebar_paragraph'>My Patients</p>
-        </div>
-        <div className='sidebar_doctor_chat'>
-        <img className='icons_doctor_chat' src={clock} alt="" />
-            <p className='sidebar_paragraph'>Schedule Timings</p>
-        </div>
-        <div className='sidebar_doctor_chat'>
-        <img className='icons_doctor_chat' src={money} alt="" />
-            <p className='sidebar_paragraph'>Payments</p>
-        </div>
-        <div className='sidebar_doctor_chat'>
-        <img className='icons_doctor_chat' src={envelope} alt="" />
-            <p className='sidebar_paragraph'>Messages</p>
-        </div>
-        <div className='sidebar_doctor_chat'>
-        <img className='icons_doctor_chat' src={file} alt="" />
-            <p className='sidebar_paragraph'>Blogs</p>
-        </div>
-        <div className='sidebar_doctor_chat'>
-        <img className='icons_doctor_chat' src={wheel} alt="" />
-            <p className='sidebar_paragraph'>Settings</p>
-        </div>
-        </div>
-        </div>
-    </div>
     <div className='rooms_chat'>
         <div className='doctor_chat_container'>
         <h1 className='doctor_chat_title'>Messages</h1>
