@@ -67,10 +67,10 @@ const ContactUs = () => {
         </div>
 
 
-        <div className="one-checkbox">
+        {/* <div className="one-checkbox">
           <input type="checkbox"  className="one-checkbox" />
           <label>I accept the terms</label>
-        </div>
+        </div> */}
         <div className="button-contact one-input">
           <button className="submit-button-contact">Submit</button>
         </div>
