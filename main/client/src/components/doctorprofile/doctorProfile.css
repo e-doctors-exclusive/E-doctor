@@ -1,0 +1,114 @@
+.allOfpage{
+    background-color: #e5e4e4;
+    height: 124vh;
+}
+
+
+.SideBar{
+    width: 18%;
+    height: 100vh;
+    background-color:#ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 4%;
+   
+}
+
+/* .sidebar_overview{
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    width: 350px;
+} */
+.logo_chat{
+    height: 2rem;
+}
+.sidebar_doctor_chat{
+    display: flex;
+    gap : 1px;
+    align-items: center;
+    margin-left: -60%;
+    position: relative;
+   margin-top: 20%;
+}
+/* .side-bar_doctor_chat{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+   } */
+   .icons_doctor_chat{
+    height: 1.7em;
+    margin-top: 4%;
+}
+.logo_title{
+    position: relative;
+    top: -9%;
+    left: 55%;
+    width: 5%;
+    height: 5%;
+}
+
+.sidebar_paragraph{
+    margin-top: 8%;
+    margin-left: 5%;
+}
+
+.box2 {
+    height: 57px;
+    width: 692px;
+  }
+  
+ .rectangles {
+    background-color: transparent;
+    border-radius: 16.39px;
+    height: 57px;
+    left: 30%;
+    position: relative;
+    top: -1255%;
+    width: 692px;
+    margin-left: 15%;
+    margin-top: 2%;
+  }
+
+  .searchInputs{
+    outline: none;
+    border: none;
+    background: transparent;
+    width: 90%;
+    height: 100%;
+    font-size: 24px;
+    padding-left: 27px;
+  }
+
+  .toP2{
+    /* margin-left: 10%; */
+   /* width:100%; */
+   /* margin-top: -37%; */
+   /* position: absolute;
+   right: 0; */
+   height: 14vh;
+  
+}
+.beEl{
+    margin-left: 190%;
+    position: relative;
+    top: -1320%;
+}
+
+.DoctorP{
+   background-color: #fff;
+    height: 60vh;
+    width: 390px;
+    margin-left: 20%;
+    position:relative;
+    top: -80%;
+    border-radius: 4%;
+}
+
+.Myprofile{
+    position: relative;
+    top: -85%;
+    left: 20.2%;
+    text-transform: bold;
+}
