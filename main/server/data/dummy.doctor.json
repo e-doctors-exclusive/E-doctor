@@ -1,0 +1,74 @@
+[
+  {
+    "id":1,
+    "name": "moahmed khalil",
+    "lastName": "kourooghli",
+    "Adress": "17 rue de carthage",
+    "email": "mohaamedkhalil.kouroghli@gmail.com",
+    "password": "123456789",
+    "MedicalInfo": "Neurosurgeons",
+    "rating": "6",
+    "avatar": "https://www.simpleimageresizer.com/_uploads/photos/0262d3d4/khalil_70.jpg",
+    "bio": "Dr. kouroghli khalil is a distinguished neurosurgeon celebrated for his exceptional skills and expertise in the realm of neurosurgery. Graduating with top honors from a renowned medical school, he embarked on a remarkable journey in the field of medicine."
+  },
+  {
+    "id":2,
+    "name": "Mohamed Jihed",
+    "lastName": "Garroum",
+    "Adress": "Boumhall",
+    "email": "jihedGarroum@gmail.com",
+    "password": "123456789",
+    "MedicalInfo": "Dentists",
+    "rating": "5",
+    "avatar": "https://www.simpleimageresizer.com/_uploads/photos/0262d3d4/jihed_1_70.jpg",
+    "bio": "Dr. Jihed Garroum is a distinguished neurosurgeon celebrated for his exceptional skills and expertise in the realm of neurosurgery. Graduating with top honors from a renowned medical school, he embarked on a remarkable journey in the field of medicine."
+  },
+  {
+    "id":3,
+    "name": "Syrine",
+    "lastName": "Rezgi",
+    "Adress": "hay tadhamen",
+    "email": "syrinerezgi@gmail.com",
+    "password": "123456789",
+    "MedicalInfo": "Psychiatrists",
+    "rating": "4",
+    "avatar": "",
+    "bio": "Dr. siryne rezgi is a distinguished neurosurgeon celebrated for his exceptional skills and expertise in the realm of neurosurgery. Graduating with top honors from a renowned medical school, he embarked on a remarkable journey in the field of medicine"
+  },
+  {
+    "id":4,
+    "name": "Abd elhakim",
+    "lastName": "Ksiksi ",
+    "Adress": "tataouin",
+    "email": "ksiksihakim@gmail.com",
+    "password": "123456789",
+    "MedicalInfo": "Oral and Maxillofacial Surgeons",
+    "rating": "3",
+    "avatar": "https://www.simpleimageresizer.com/_uploads/photos/0262d3d4/image_2023-10-12_181211340_70.png",
+    "bio": "Dr.Ksiksi Hakim is a distinguished neurosurgeon celebrated for his exceptional skills and expertise in the realm of neurosurgery. Graduating with top honors from a renowned medical school, he embarked on a remarkable journey in the field of medicine"
+  },
+  {
+    "id":5,
+    "name": "Dhia elhak",
+    "lastName": "Cherni",
+    "Adress": "ghazela",
+    "email": "dhiacherni@gmail.com",
+    "password": "123456789",
+    "MedicalInfo": "Family Physicians",
+    "rating": "2",
+    "avatar": "https://www.simpleimageresizer.com/_uploads/photos/0262d3d4/image_2023-10-12_181430826_70.png",
+    "bio": "Dr.Ksiksi Hakim is a distinguished neurosurgeon celebrated for his exceptional skills and expertise in the realm of neurosurgery. Graduating with top honors from a renowned medical school, he embarked on a remarkable journey in the field of medicine"
+  },
+  {
+    "id":6,
+    "name": "jesser",
+    "lastName": "Bango",
+    "Adress": "menzel temim",
+    "email": "jesser@gmail.com",
+    "password": "123456789",
+    "MedicalInfo": "scrum master",
+    "rating": "6",
+    "avatar": "https://www.simpleimageresizer.com/_uploads/photos/0262d3d4/image_2023-10-12_181647165_70.png",
+    "bio": "Dr.Ksiksi Hakim is a distinguished neurosurgeon celebrated for his exceptional skills and expertise in the realm of neurosurgery. Graduating with top honors from a renowned medical school, he embarked on a remarkable journey in the field of medicine"
+  }
+]
