@@ -1,4 +1,4 @@
-const { Review } = require("../database/model/review.js");
+const { Review } = require("../database/index");
 
 module.exports = {
   getAllReview: async (req, res) => {
