@@ -7,9 +7,12 @@ import MemberCard from "../membersCards/MemberCard";
 import woman3 from "../../assets/woman3.svg";
 import ReviewCard from "../reviewCards/ReviewCard";
 import Footer from "../footer/Footer";
+import { useLocation } from "react-router-dom";
 const HomePage = () => {
+  const location = useLocation()
+  
   return (
-    <>
+    <div className="HomePage_container">
       <NavBar />
       <div className="first-div-homePage">
         <div className="left-first-div-homePage">
@@ -54,7 +57,7 @@ const HomePage = () => {
               className="fa-solid fa-circle-play fa-lg"
               style={{ color: "#007E85", fontSize: "40px" }}
             ></i>
-            <p style={{ color: "black", fontWeight: "800", fontSize: "21px" }}>
+            <p className="setToCursor" style={{ width:"10rem", color: "black", fontWeight: "800", fontSize: "21px" }}>
               Watch Video
             </p>
           </div>
@@ -461,7 +464,7 @@ const HomePage = () => {
             <Footer/>
 
 
-    </>
+    </div>
   );
 };
 
