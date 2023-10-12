@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="logo-footer">
         <div className="logo-health-footer">
         <img src={logo} />
-        <p className="health-footer" >Healtcare</p>
+        <p className="health-footer footer_p" >Healtcare</p>
         </div>
         <p>Copyright © 2022 BRIX Templates </p>
         <p> | All Rights Reserved </p>
@@ -15,46 +15,46 @@ const Footer = () => {
 
       <div className="product">
         <div>
-        <span> Product </span>
+        <span className="footer_span"> Product </span>
         </div>
         <div>
-        <p className="text" > Features </p>
-        <p className="text"> Pricing </p>
-        <p className="text"> Case studies </p>
-        <p className="text"> Reviews </p>
-        <p className="text"> Updates </p>
+        <p className="text footer_p" > Features </p>
+        <p className="text footer_p"> Pricing </p>
+        <p className="text footer_p"> Case studies </p>
+        <p className="text footer_p"> Reviews </p>
+        <p className="text footer_p"> Updates </p>
         </div>
       </div>
 
       <div className="company">
         <div>
-        <span>Company</span>
+        <span className="footer_span">Company</span>
         </div>
         <div>
-        <p className="text"> About </p>
-        <p className="text"> Contact us </p>
-        <p className="text"> Careers </p>
-        <p className="text"> Culture </p>
-        <p className="text"> Blog </p>
+        <p className="text footer_p"> About </p>
+        <p className="text footer_p"> Contact us </p>
+        <p className="text footer_p"> Careers </p>
+        <p className="text footer_p"> Culture </p>
+        <p className="text footer_p"> Blog </p>
       </div>
       </div>
       <div className="support">
         <div>
-        <span>Support</span>
+        <span className="footer_span">Support</span>
         </div>
         <div>
-        <p className="text"> Getting started </p>
-        <p className="text"> Help center </p>
-        <p className="text"> Server status </p>
-        <p className="text"> Report a bug </p>
-        <p className="text"> Chat support </p>
+        <p className="text footer_p"> Getting started </p>
+        <p className="text footer_p"> Help center </p>
+        <p className="text footer_p"> Server status </p>
+        <p className="text footer_p"> Report a bug </p>
+        <p className="text footer_p"> Chat support </p>
       </div>
       </div>
 
       <div className="followus">
-        <span>Follow us </span>
+        <span className="footer_span">Follow us </span>
         <div className="icon-div">
-        <p>
+        <p className="footer_p">
           {" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +81,7 @@ const Footer = () => {
         </div>
         <div className="icon-div">
 
-        <p>
+        <p className="footer_p">
           {" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +108,7 @@ const Footer = () => {
         </div>
         <div className="icon-div">
 
-        <p>
+        <p className="footer_p">
           {" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -126,8 +126,8 @@ const Footer = () => {
               fill="#F2F1FA"
             />
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M6.58691 12.002C6.58691 9.60519 6.58691 8.40681 7.15804 7.54365C7.41308 7.15821 7.74317 6.82812 8.12862 6.57308C8.99177 6.00195 10.1902 6.00195 12.5869 6.00195C14.9837 6.00195 16.1821 6.00195 17.0452 6.57308C17.4307 6.82812 17.7607 7.15821 18.0158 7.54365C18.5869 8.40681 18.5869 9.60519 18.5869 12.002C18.5869 14.3987 18.5869 15.5971 18.0158 16.4603C17.7607 16.8457 17.4307 17.1758 17.0452 17.4308C16.1821 18.002 14.9837 18.002 12.5869 18.002C10.1902 18.002 8.99177 18.002 8.12862 17.4308C7.74317 17.1758 7.41308 16.8457 7.15804 16.4603C6.58691 15.5971 6.58691 14.3987 6.58691 12.002ZM15.6931 12.0021C15.6931 13.7177 14.3024 15.1084 12.5868 15.1084C10.8713 15.1084 9.48053 13.7177 9.48053 12.0021C9.48053 10.2866 10.8713 8.89583 12.5868 8.89583C14.3024 8.89583 15.6931 10.2866 15.6931 12.0021ZM12.5868 14.0574C13.7219 14.0574 14.6421 13.1372 14.6421 12.0021C14.6421 10.867 13.7219 9.94677 12.5868 9.94677C11.4517 9.94677 10.5315 10.867 10.5315 12.0021C10.5315 13.1372 11.4517 14.0574 12.5868 14.0574ZM15.8158 9.46965C16.2189 9.46965 16.5456 9.14287 16.5456 8.73977C16.5456 8.33667 16.2189 8.00989 15.8158 8.00989C15.4127 8.00989 15.0859 8.33667 15.0859 8.73977C15.0859 9.14287 15.4127 9.46965 15.8158 9.46965Z"
               fill="#555555"
             />
@@ -136,7 +136,7 @@ const Footer = () => {
         </p>
         </div>
         <div className="icon-div">
-        <p>
+        <p className="footer_p">
           {" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -163,7 +163,7 @@ const Footer = () => {
         </p>
         </div>
         <div className="icon-div">
-        <p>
+        <p className="footer_p">
           {" "}
       
           <svg
