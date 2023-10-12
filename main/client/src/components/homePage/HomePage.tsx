@@ -11,7 +11,7 @@ import { useLocation } from "react-router-dom";
 import { RootState,AppDispatch } from '../../redux';
 import { addDoctor,fetchDoctors,UpdateDoctor,DeleteDocotr} from "../../redux/doctorSlice";
 import { AddReview,fetchReview,UpdateReview,deleteReview} from "../../redux/reviewSlice";
-import { addPatient,fetchPatients} from "../../redux/patientSlice";
+
 import { useDispatch,useSelector } from 'react-redux';
 
 const HomePage = () => {
