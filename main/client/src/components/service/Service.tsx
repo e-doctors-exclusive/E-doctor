@@ -7,7 +7,9 @@ import "../membersCards/style.css";
 import userIcon from "../../assets/userIcon.png";
 import Footer from "../footer/Footer"
 import ServicesCard from "../servicesCards/ServicesCard";
+import { useLocation } from "react-router-dom";
 const Service = () => {
+  const location = useLocation()
   const fullstar = (
     <i className="fa-solid fa-star fa-sm" style={{ color: "#F3CD03" }}></i>
   );

@@ -37,7 +37,7 @@ module.exports = {
       });
       res.json(response);
     } catch (error) {
-      throw error;
+      next(error)
     }
   }, authenticate: async (req, res, next) => {
     try {

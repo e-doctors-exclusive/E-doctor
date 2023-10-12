@@ -1,0 +1,445 @@
+.contaiNerrr{
+    background-color:#007E85;
+    width: 100%;
+    height: 152vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    
+}
+
+
+.alls{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 45px;
+    padding: 20px;
+    margin-left: 2%;
+    margin-bottom: 15%;
+}
+
+
+.topBars{
+    /* margin-left: 10%; */
+   /* width:100%; */
+   /* margin-top: -37%; */
+   /* position: absolute;
+   right: 0; */
+   height: 14vh;
+  
+}
+.boxxx {
+    height: 57px;
+    width: 692px;
+  }
+  
+  .boxxx .rectanglees {
+    background-color: #E5E5E5;
+    border-radius: 16.39px;
+    height: 57px;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 692px;
+    margin-left: 15%;
+    margin-top: 2%;
+  }
+
+  .searchInputts{
+    outline: none;
+    border: none;
+    background: transparent;
+    width: 90%;
+    height: 100%;
+    font-size: 24px;
+    padding-left: 20px;
+  }
+
+  .chatRoomsss{
+        margin-bottom: 92%;
+        margin-left: 135%;
+        margin-top: -6%;
+        
+  }
+  .pageContenttt{
+   background-color: #F8F8F8; 
+   height: 1052px;
+  width: 1388px;
+  border-top-left-radius: 70px;
+  border-bottom-left-radius: 70px;
+  margin-top: 0.8rem;
+  }
+
+  .beEEl{
+    position: relative;
+  margin-left: 159%;
+  margin-top: -11%;
+  bottom: 50%;
+  }
+
+  .proFFile {
+    height: 57px;
+    width: 144px;
+  }
+  
+  .proFFile .rectangles {
+    border: 1.02px solid;
+    border-color: #d9d9d9;
+    border-radius: 16.39px;
+    height: 57px;
+    position: relative;
+    width: 144px;
+    margin-left: 820%;
+    margin-top: -50%;
+  }
+
+  .greetingfr{
+    color: #0D0D0D;
+font-family: Poppins;
+font-size: 26.331px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-left: 3.5%;
+margin-top: 1%;
+  }
+
+  .miniCard{
+    margin-left: 2.5%;
+  width: 815.152px;
+  height: 312.676px;
+  flex-shrink: 0;
+  border-radius: 16.386px;
+  background: linear-gradient(66deg, rgba(0, 126, 133, 0.33) -5.25%, rgba(0, 126, 133, 0.34) 35.43%, #007E85 98.77%);
+  }
+
+  .viSits{
+    color: #000;
+font-family: Poppins;
+font-size: 24.579px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin-left: 3.5%;
+  }
+
+  .NumBer{
+    color: #000;
+font-family: Poppins;
+font-size: 61.438px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin-top: 2%;
+margin-left: 2.5%;
+  }
+
+  .calenDar{
+    height: 518px;
+  width: 414px;
+  background-color: #ffffff;
+  border-radius: 16.39px;
+  height: 518px;
+  left: 0;
+  /* position: fixed; */
+  top: 0;
+  width: 414px;
+  margin-left: 66%;
+  margin-top: -30%;
+  }
+
+  .card__header{
+    padding: 0 1.25rem;
+    color: gray;
+    display: flex;;
+    flex-direction: column;
+    /* align-items: center; */
+    
+}
+
+.card__body{
+  padding: 1.5rem 2rem;
+        border-top: 1px solid #ccc;
+        /* border-bottom: 1px solid #ccc; */
+}
+
+.card__body--days{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1rem;
+  margin-bottom: -5px;
+}
+
+
+li {
+  margin-bottom: 10%;
+  flex: 1;
+  font-weight: bold;
+  text-transform: uppercase;
+  /* text-align: center; */
+  color: gray;
+  /* margin: 0 1px; */
+  
+
+}
+
+.card__body--dates{
+  display: grid;
+  gap: 3px;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  text-align: center;
+  margin-left: -18%;
+}
+
+li {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+  position: relative;
+}
+
+li.active {
+  background: rgb(255, 85, 0);
+  color: white;
+  border-radius: 70%;
+
+  width: 40px;
+  height: 40px;
+}
+
+.arCc{
+  position: relative;
+top: -533px;
+right: -93%;
+}
+.unSplShh{
+  height: 386px;
+  left: 0;
+  /* position: fi; */
+  top: 0;
+  width: 437px;
+  margin-left: 45.5%;
+  margin-top: -31.6%;
+}
+.rates{
+  background-color: #ffffff8c;
+  border-radius: 16.39px;
+  height: 112px;
+  left: 0;
+  /* position: fixed; */
+  top: 0;
+  width: 200px;
+  margin-top: -17%;
+  margin-left: 1.5%;
+}
+
+.ratesV2{
+  background-color: #ffffff8c;
+  border-radius: 16.39px;
+  height: 112px;
+  left: 0;
+  /* position: fixed; */
+  top: 0;
+  width: 200px;
+  margin-left: 32%;
+  margin-top: -13.5%;
+}
+.patioNess{
+  color: #000000;
+   font-family: "Poppins-Medium", Helvetica;
+  font-size: 18px;
+  font-weight: 500;
+  height: 27px;
+  /* left: 0; */
+  /* letter-spacing: 0.18px; */
+  /* line-height: normal; */
+  /* position: fixed;  */
+  text-align: center;
+  margin-right: 45%;
+  margin-top: -18.5%;
+}
+
+.text-wrapper {
+  color: #000000;
+  font-family: "Poppins-Medium", Helvetica;
+  font-size: 36px;
+  font-weight: 500;
+  height: 54px;
+  /* left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: fixed; */
+  margin-left: 10%;
+  
+ 
+}
+
+.OldP{
+  color: #000000;
+  font-family: "Poppins" !important;
+ font-size: 18px;
+ font-weight: 500;
+ height: 27px;
+ /* left: 0; */
+ /* letter-spacing: 0.18px; */
+ /* line-height: normal; */
+ /* position: fixed;  */
+ text-align: center;
+ margin-right: 45%;
+ margin-top: -18.5%;
+}
+
+.oldN{
+  color: #000000;
+  font-family: "Poppins-Medium", Helvetica;
+  font-size: 36px;
+  font-weight: 500;
+  height: 54px;
+  /* left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: fixed; */
+  margin-left: 10%;
+  
+}
+.Upcoming{
+  color: #000000;
+  font-family: "Poppins";
+ font-size: 18px;
+ font-weight: 500;
+ height: 27px;
+ /* left: 0; */
+ /* letter-spacing: 0.18px; */
+ /* line-height: normal; */
+ /* position: fixed;  */
+ text-align: center;
+ margin-right: 75%;
+ margin-top: -12.5%;
+}
+
+.viewAll{
+  margin-left: 85%;
+  position:relative ;
+  top: -43.5px;
+}
+.meetingD{
+  width: 32%;
+  height: 8%;
+  background-color: #ffffff;
+ margin-left: 66%;
+ margin-top: 3%;
+ border-radius: 6%;
+}
+
+.ecliPse{
+  margin-top: 2.9%;
+}
+.heading-heading-left{
+  color: #000000;
+  font-family: "Poppins-Medium", Helvetica;
+ font-size: 18px;
+ font-weight: 500;
+ height: 27px;
+ margin-left: 16%;
+ margin-top: -12%;
+}
+.DateS{
+  margin-left: 16%;
+  margin-top: -3%;
+}
+.insidePatients{
+  background-color: #defcdd;
+  border-radius: 12.65px;
+  height: 35px;
+  /* left: 0; */
+  /* position: fixed; */
+  /* top: 0; */
+  width: 92px;
+  margin-left: 62%;
+  margin-top: -52%;
+}
+
+.secoNnd{
+  background-color: #fac3c3;
+  border-radius: 8.19px;
+  height: 23px;
+  /* left: 0; */
+  /* position: fixed; */
+  /* top: 0; */
+  width: 59px;
+  margin-left: 55%;
+  margin-top: -50%;
+}
+
+.patientsList{
+  background-color: #ffffff;
+  border-radius: 16.39px;
+  height: 48%;
+  width: 60%;
+  margin-left: 2.8%;
+  margin-top: -16.5%;
+}
+
+.lastDiv{
+  color: #000000;
+  font-family: "Poppins-Medium", Helvetica;
+  font-size: 24.6px;
+  height: 37px;
+  margin-left: 4%;
+  position: relative;
+  bottom: -5%;
+}
+.today{
+  color: #00000099;
+  font-family: "Poppins-Regular", Helvetica;
+  font-size: 16.4px;
+  font-weight: 400;
+  height: 25px;
+  position: relative;
+  margin-left: 39%;
+ top: -5.5%;
+}
+.ar2{
+  margin-left: 46%;
+  position: relative;
+  top: -13.5%;
+}
+
+.consuLtation{
+  color: #000000;
+  font-family: "Poppins-Medium", Helvetica;
+  font-size: 24.6px;
+  height: 37px;
+  margin-left: 65%;
+  position: relative;
+  bottom: 23%;
+}
+.patient-conT{
+  border: 1.02px solid;
+  border-color: #58b6de80;
+  border-radius: 16.39px;
+  height: 405px;
+  /* left: 0;
+  position: fixed;
+  top: 0; */
+  width: 390px;
+  margin-left: 50%;
+  position: relative;
+  top: -25%;
+}
+.harf{
+  color: #ffffff;
+  font-family: "Poppins-Bold", Helvetica;
+  font-size: 16.4px;
+  font-weight: 700;
+  height: 25px;
+  position: relative;
+  top: -20%;
+  left: 6.8%;
+}
