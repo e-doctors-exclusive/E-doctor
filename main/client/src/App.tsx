@@ -13,6 +13,7 @@ import Login from "./components/Login/Login";
 import DoctorChat from './components/doctorChat/DoctorChat';
 // import Navbar from './components/navBar/NavBar'
 // import Footer from './components/footer/Footer';
+import DoctorProfile from './components/doctorprofile/DoctorProfile';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
       <Route path="/login" element={<Login/>}/>   
       <Route path="/" element={<HomePage/>}/>   
       <Route path="/service" element={<Service/>}/>   
+      <Route path="/Profile" element={<DoctorProfile/>}/>   
       </Routes>
     </>
 
