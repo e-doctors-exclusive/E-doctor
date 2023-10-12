@@ -31,7 +31,9 @@ const Login = () => {
 
             try {
                 const task = await axios.post("http://localhost:3000/api/patient/authenticate", input)
-                navigate("/homePage")
+                localStorage.setItem("user",task.data.patient)
+                localStorage.setItem("token",task.data.token)
+                navigate("/")
             } catch (error) {
                 console.error(error);
 
