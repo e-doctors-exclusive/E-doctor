@@ -10,6 +10,7 @@ import person from '../../assets/bouncer-svgrepo-com.svg'
 import overview from '../../assets/forerkort-svgrepo-com.svg'
 import logo from '../../assets/pie-chart-svgrepo-com.svg'
 import scouter from '../../assets/basic-ui-computer-11-svgrepo-com.svg'
+import profilePic from '../../assets/Doctor_9.png'
 
 const DoctorChat = () => {
   return (
@@ -66,73 +67,100 @@ const DoctorChat = () => {
         </div>
         <div className='rooms_wrapper_chat'>
         <div className='chatroom_doctor'>
-          <img className='doctor_profile_icon' src='' alt="" />
+          <img className='doctor_profile_icon' src={profilePic} alt="" />
+          <div className='text_container_chat'>
           <p className='doctor_chat_name'>Jone Martin</p>  
           <p className='doctor_chat_message'>
             I hope you get well soon
             </p> 
+            </div>
         </div>
         <div className='chatroom_doctor'>
-          <img className='doctor_profile_icon' src='' alt="" />
-          <p className='doctor_chat_name'>John Smith</p>
+          <img className='doctor_profile_icon' src={profilePic} alt="" />
+          <div className='text_container_chat'>
+          <p className='doctor_chat_name'>Jone Martin</p>  
           <p className='doctor_chat_message'>
             I hope you get well soon
-            </p>  
+            </p> 
+            </div>  
         </div>
         <div className='chatroom_doctor'>
-          <img className='doctor_profile_icon' src='' alt="" />
-          <p className='doctor_chat_name'>Johnathon Smith</p>
+          <img className='doctor_profile_icon' src={profilePic} alt="" />
+          <div className='text_container_chat'>
+          <p className='doctor_chat_name'>Jone Martin</p>  
           <p className='doctor_chat_message'>
             I hope you get well soon
-            </p>   
+            </p> 
+            </div>  
         </div>
         <div className='chatroom_doctor'>
-          <img className='doctor_profile_icon' src='' alt="" />
-          <p className='doctor_chat_name'>Celicilia R. Jones</p> 
+          <img className='doctor_profile_icon' src={profilePic} alt="" />
+          <div className='text_container_chat'>
+          <p className='doctor_chat_name'>Jone Martin</p>  
           <p className='doctor_chat_message'>
             I hope you get well soon
-            </p>  
+            </p> 
+            </div>
+            </div> 
           <div className='chatroom_doctor'>
-          <img className='doctor_profile_icon' src='' alt="" />
-          <p className='doctor_chat_name'>Mr. John Doe</p> 
+          <img className='doctor_profile_icon' src={profilePic} alt="" />
+          <div className='text_container_chat'>
+          <p className='doctor_chat_name'>Jone Martin</p>  
           <p className='doctor_chat_message'>
             I hope you get well soon
-            </p>  
+            </p> 
+            </div> 
         </div>
         <div className='chatroom_doctor'>
-          <img className='doctor_profile_icon' src='' alt="" />
-          <p className='doctor_chat_name'>Linda G. Guthrie</p>
+          <img className='doctor_profile_icon' src={profilePic} alt="" />
+          <div className='text_container_chat'>
+          <p className='doctor_chat_name'>Jone Martin</p>  
           <p className='doctor_chat_message'>
             I hope you get well soon
-            </p>   
+            </p> 
+            </div>   
         </div>
         <div className='chatroom_doctor'>
-          <img className='doctor_profile_icon' src='' alt="" />
-          <p className='doctor_chat_name'>Mr. Jhon Doe</p>
+          <img className='doctor_profile_icon' src={profilePic} alt="" />
+          <div className='text_container_chat'>
+          <p className='doctor_chat_name'>Jone Martin</p>  
           <p className='doctor_chat_message'>
             I hope you get well soon
-            </p>   
+            </p> 
+            </div> 
         </div>
         <div className='chatroom_doctor'>
-          <img className='doctor_profile_icon' src='' alt="" />
-          <p className='doctor_chat_name'>Jhonathon Smith</p> 
+          <img className='doctor_profile_icon' src={profilePic} alt="" />
+          <div className='text_container_chat'>
+          <p className='doctor_chat_name'>Jone Martin</p>  
           <p className='doctor_chat_message'>
             I hope you get well soon
-            </p>  
+            </p> 
+            </div>  
         </div>
         <div className='chatroom_doctor'>
-          <img className='doctor_profile_icon' src='' alt="" />
-          <p className='doctor_chat_name'>Celicilia R. Jones</p> 
+          <img className='doctor_profile_icon' src={profilePic} alt="" />
+          <div className='text_container_chat'>
+          <p className='doctor_chat_name'>Jone Martin</p>  
           <p className='doctor_chat_message'>
             I hope you get well soon
-            </p>  
+            </p> 
+            </div>  
         </div>
         </div>
         </div>
         </div>
-    </div>
-
-
+        <div className='conversation_doctor'>
+          <div className='conversation_title_status'>
+            <img className='profile_picture_doctor_conversation' src={profilePic} alt="" />
+            <div className='profile_details_conversation'>
+            <p className='doctor_name_conversation'>Jone Martin</p>
+            <p className='doctor_status_conversation'>Online</p>
+            </div>
+            <img className='doctor_favorite_conversation' src="" alt="" />
+            <img className='doctor_report_conversation' src="" alt="" />
+          </div>
+        </div>
     </div>
   )
 }
