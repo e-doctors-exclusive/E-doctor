@@ -14,9 +14,10 @@
     width: 55px;
 }
 .logo {
-  display: flex;
-  justify-content: center;
+   display: flex;
+  /* justify-content: center; */
   align-items: center;
+
 }
 .logo p {
 text-align: center;
@@ -26,11 +27,18 @@ font-style: normal;
 font-weight: 600;
 line-height: normal;
 /* letter-spacing: -2.34px; */
-text-transform: capitalize;
+/* text-transform: capitalize; */
 }
-
+.Navbar-Links a:hover {
+  text-decoration: underline;
+}
+.Navbar-Links{
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
 .Navbar-Links a {
-  margin: 1.2rem;
+  /* margin: 1.2rem; */
   color: #000;
   text-align: center;
   font-family: Lexend Tera;
@@ -84,7 +92,4 @@ text-transform: capitalize;
 }
 .Navbar-Links a:hover{
     color: #007e85;
-}
-.Navbar-Links a:active{
-    border-bottom: solid 2px #007e85;
 }
