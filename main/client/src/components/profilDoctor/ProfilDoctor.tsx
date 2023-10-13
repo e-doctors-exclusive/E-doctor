@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./profildoctor.css";
-import DoctorProfile from "../doctorProfile/DoctorProfile";
+import DoctorProfile from "../doctorprofile/DoctorProfile";
 import avatar from "../../assets/profildoctor/avatar.png";
 const ProfilDoctor = () => {
   const [clicked1, setClicked1] = useState(false);

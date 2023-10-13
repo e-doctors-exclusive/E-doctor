@@ -13,13 +13,37 @@ import { addDoctor,fetchDoctors,UpdateDoctor,DeleteDocotr} from "../../redux/doc
 import { AddReview,fetchReview,UpdateReview,deleteReview} from "../../redux/reviewSlice";
 
 import { useDispatch,useSelector } from 'react-redux';
-type props ={
+enum MedicalInfotype{
+  "Neurosurgeons",
+  "Thoracic Surgeons",
+  "Orthopedic Surgeons",
+  "Plastic Surgeons,",
+  "Oral and Maxillofacial Surgeons",
+  "Family Physicians",
+  "Internists",
+  "Emergency Physicians",
+  "Psychiatrists",
+  "Obstetricians",
+  "Dentists",
+}
+interface objtype{
+  name:string
+  lastName:string
+  Address:string
+  email:string
+  password:string
+  MedicalInfo:MedicalInfotype
+  rating:string
+  avatar:string
+  bio:string
+
+}type props ={
   setIsLoggedIn:(value: boolean) => void;
 };
 const HomePage:React.FC<props> = ({setIsLoggedIn}) => {
   const location = useLocation()
   const dispatch:AppDispatch = useDispatch()
-  const DoctorData = useSelector((state:RootState)=>state.doctor)
+  const DoctorData = useSelector((state:RootState)=>state.doctor.data)
   console.log(DoctorData);
   const Reviews = useSelector((state:RootState)=>state.review)
   console.log(Reviews);
@@ -272,12 +296,14 @@ dispatch(fetchDoctors())
         </div>
 
         <div className="doctor-card-container-service">
+        {DoctorData.map((obj:objtype)=>{
+        return   <MemberCard data={obj} />
+        })}
+          {/* <MemberCard />
           <MemberCard />
           <MemberCard />
           <MemberCard />
-          <MemberCard />
-          <MemberCard />
-          <MemberCard />
+          <MemberCard /> */}
 
           {/* <MemberCard /> */}
         </div>
@@ -486,4 +512,4 @@ dispatch(fetchDoctors())
   );
 };
 
-export default HomePage;
+export default HomePage
