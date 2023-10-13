@@ -12,6 +12,7 @@ import ReviewCard from './components/reviewCards/ReviewCard'
 import Service from './components/service/Service';
 import Login from "./components/Login/Login";
 import DoctorChat from './components/doctorChat/DoctorChat';
+import Overview from './components/overviews/Overview';
 import { Navigate } from 'react-router-dom';
 
 

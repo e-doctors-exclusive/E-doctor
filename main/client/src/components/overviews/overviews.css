@@ -1,0 +1,94 @@
+.big_wrapper_overview{
+    background-color: rgb(249,249,249);
+}
+.hello_doctor_phrase{
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+}
+.wishing_phrase_overview{
+    font-weight: 300;
+    font-size: 14px;
+    color: black;
+}
+.hello_greeting_overview{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    padding-left: 1%;
+    padding-top: 2%;
+}
+.statistics_cards_overview{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.first_statistics{
+    background-color: #7A6EFE;
+    border-radius: 20px;
+    width: 250px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.statistics_numbers{
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+.statistics_details{
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+}
+.statistics_information{
+    display: flex;
+    flex-direction: column;
+}
+.second_statistics{
+    background-color: #FF5363;
+    border-radius: 20px;
+    width: 250px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.third_statistics{
+    background-color: #FFA901;
+    border-radius: 20px;
+    width: 250px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+}
+.fourth_statistics{
+    background-color: #4BB8F9;
+    border-radius: 20px;
+    width: 250px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.statistics_icons{
+    height: 2.5rem;
+    border: 1px solid #ffffffcf;
+    border-radius:50% ;
+    padding: 2px;
+}
