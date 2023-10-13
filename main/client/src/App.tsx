@@ -12,6 +12,7 @@ import Service from './components/service/Service';
 import Login from "./components/Login/Login";
 import DoctorProfile from './components/doctorprofile/DoctorProfile';
 import DoctorChat from './components/doctorChat/DoctorChat';
+import Overview from './components/overviews/Overview';
 
 
 
@@ -25,7 +26,7 @@ function App() {
       <Route path="/cards" element={<ServicesCard/>}/>  
       <Route path="/review" element={<ReviewCard/>}/>
       <Route path="/chat" element={<DoctorChat/>}/>
-
+      <Route path="/hello" element={<Overview/>}/>
       <Route path="/doctor" element={<DoctorAccount/>}/>
       <Route path="/signUp" element={<SignUp/>}/>   
       <Route path="/login" element={<Login/>}/>   
