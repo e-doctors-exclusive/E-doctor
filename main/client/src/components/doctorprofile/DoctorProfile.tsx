@@ -4,10 +4,40 @@ import iconbell from '../../assets/profildoctor/iconbell.png'
 import help from '../../assets/profildoctor/help.png'
 import logo from '../../assets/profildoctor/logo.png'
 const DoctorProfile = () => {
-  const [clicked,setClicked] = useState(false)
-  const handleListClick = () => {
-    setClicked(true);
-  };
+  const [selected1,setSelected1]=useState(false)
+  const [selected2,setSelected2]=useState(false)
+  const [selected3,setSelected3]=useState(false)
+  const [selected4,setSelected4]=useState(false)
+  const [selected5,setSelected5]=useState(false)
+  const [selected6,setSelected6]=useState(false)
+  const [selected7,setSelected7]=useState(false)
+  const [selected8,setSelected8]=useState(false)
+  
+  const handleSelecte1 =() => {
+    setSelected1(!selected1)
+  }
+
+  const handleSelecte2 =() => {
+    setSelected2(!selected2)
+  }
+  const handleSelecte3 =() => {
+    setSelected3(!selected3)
+  }
+  const handleSelecte4 =() => {
+    setSelected4(!selected4)
+  }
+  const handleSelecte5 =() => {
+    setSelected5(!selected5)
+  }
+  const handleSelecte6 =() => {
+    setSelected6(!selected6)
+  }
+  const handleSelecte7 =() => {
+    setSelected7(!selected7)
+  }
+  const handleSelecte8 =() => {
+    setSelected8(!selected8)
+  }
   return (
     
         <div className='container_doctor_profil'>
@@ -64,47 +94,54 @@ const DoctorProfile = () => {
                     <div className='unicode_icon'>
                      
                   <span className="name-user-icon_doctor">Mohamed </span>
-                   <h6>&#9660;</h6>
+                   <h6 className='unicode'>&#9660;</h6>
                   </div>
                   <span className=' MedicalInfo_doctor'>Cardiologist</span>
                   </div>
                 </div>
                 </div>
      </div>
+     {/* menu bar */}
           <div className='content_doctor_profil'>
             <div className='menu_left_doctor'>
           <ul className='list_profil_doctor'>
-            <div className='icon_list' onClick={handleListClick} style={{ backgroundColor: clicked ? 'black' : 'white' }}>
-            
-            <i className="fa-solid fa-grid-2"></i><li>Overview</li>
+            <div className='icon_list' onClick={handleSelecte1}>
+            {/* {selected1  ? style={{ backgroundColor: 'black'}}: style={{ backgroundColor: 'white' }}} */}
+            <i className="fa-brands fa-microsoft" />
+            <span className='text_sid'>Overview</span>
             </div>
-            <div className='icon_list'>
+            <div className='icon_list'  onClick={handleSelecte2}>
             <i className="fa-regular fa-calendar"></i>
-            <li>Appointment</li>
+         
+            <span className='text_sid'>Appointment</span>
             </div>
-            <div className='icon_list'>
+            <div className='icon_list'  onClick={handleSelecte3}>
             <i className="fa-solid fa-user-plus"></i>
-            <li>My Patients</li>
+            <span className='text_sid'>My Patients</span>
             </div>
-            <div className='icon_list'>
+            <div className='icon_list'  onClick={handleSelecte4}>
             <i className="fa-sharp fa-solid fa-clock"></i>
-            <li>Schedule Timings</li>
+            <span className='text_sid'>Schedule Timings</span>
+
             </div>
-            <div className='icon_list'>
+            <div className='icon_list'  onClick={handleSelecte5}>
             <i className="far fa-credit-card"></i>
-            <li>Payments</li>
+            <span className='text_sid'>Payments</span>
             </div>
-            <div className='icon_list'>
+            <div className='icon_list'  onClick={handleSelecte6}>
             <i className="fa-regular fa-envelope"></i>
-            <li>Messages</li>
+            <span className='text_sid'>Messages</span>
+
             </div>
-            <div className='icon_list'>
-            <i className="fa-sharp fa-light fa-file-spreadsheet"></i>
-            <li>Blog</li>
+            <div className='icon_list'  onClick={handleSelecte7}>
+            <i className="fa-solid fa-sheet-plastic"></i>
+            <span className='text_sid'>Blog</span>
+
             </div>
-            <div className='icon_list'>
+            <div className='icon_list'  onClick={handleSelecte8}>
             <i className="fa-solid fa-gear"></i>
-            <li>Settings</li>
+            <span className='text_sid'>Settings</span>
+
             </div>
           </ul>
             </div>
