@@ -3,10 +3,13 @@ import NavBar from "../navBar/NavBar";
 import pictureContactUs from "../../assets/Rectangle 1548.png";
 import "./contact.css";
 import Footer from "../footer/Footer";
-const ContactUs = () => {
+type props ={
+  setIsLoggedIn:(value: boolean) => void;
+};
+const ContactUs:React.FC<props> = ({setIsLoggedIn}) => {
   return (
     <>
-      <NavBar />
+      <NavBar setIsLoggedIn={setIsLoggedIn} />
       <div className="picture-container-contactus">
         <img src={pictureContactUs} />
       </div>
