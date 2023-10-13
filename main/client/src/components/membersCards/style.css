@@ -21,6 +21,7 @@
   }
   .box_Member_Card .image_container_Member_Card{
     width: 35%;
+    border-radius: 50%;
   }
   .image_container_Member_Card{
     display: flex;

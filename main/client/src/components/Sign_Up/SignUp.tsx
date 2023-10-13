@@ -165,7 +165,7 @@ useEffect(()=>{
     <div>
       <div className='SignContainer'>
         {/* <h2 className='Sign_h2'>Sign in/up !</h2> */}
-        <div className={`container ${isSignUp ? 'right-panel-active' : ''}`} id="container">
+        <div className={`container_Sign_up_switch  ${isSignUp ? 'right-panel-active' : ''}`} id="container">
           <div className="form-container sign-up-container">
             <form className='Sign_Form' >
               <h1 className='Sign_h1'>Sign Up</h1>

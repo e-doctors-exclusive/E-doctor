@@ -2,10 +2,17 @@ import React from 'react'
 import "./navBar.css"
 import logo from "../../assets/image 16.png"
 import { Link, useLocation } from "react-router-dom";
-
-const NavBar = () => {
+type props ={
+  setIsLoggedIn:(value: boolean) => void;
+};
+const NavBar:React.FC<props> = ({setIsLoggedIn}) => {
   const logged = localStorage.getItem("token")
   const location = useLocation()
+  const logout =()=>{
+    localStorage.removeItem("token")
+    localStorage.removeItem("user")
+    setIsLoggedIn(false)
+  }
   return (
 
     <div className='Top-Navbar'>
@@ -32,7 +39,7 @@ const NavBar = () => {
           </Link>
         </div> : <div className='Navbar-Button'>
           <Link style={{ textDecoration: "none" }} to="/login">
-            <button className='login'>Log out</button>
+            <button className='login' onClick={()=>logout()}>Log out</button>
           </Link>
         </div>}
     </div>
