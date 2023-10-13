@@ -3,14 +3,14 @@ import './App.css';
 import { Routes, Route } from "react-router-dom";
 import UserAccount from './components/userAccount/UserAccount'
 import ContactUs from './components/contactUs/ContactUs';
-import DoctorAccount from './components/doctorAccount/DoctorAccount';
+import DoctorAccount from './components/doctorAccount/doctorAccount';
 import HomePage from './components/homePage/HomePage';
+import DoctorProfile from './components/doctorProfile/DoctorProfile';
 import ServicesCard from './components/servicesCards/ServicesCard';
 import { SignUp } from './components/Sign_Up/SignUp';
 import ReviewCard from './components/reviewCards/ReviewCard'
 import Service from './components/service/Service';
 import Login from "./components/Login/Login";
-import DoctorProfile from './components/doctorprofile/DoctorProfile';
 import DoctorChat from './components/doctorChat/DoctorChat';
 import { Navigate } from 'react-router-dom';
 
