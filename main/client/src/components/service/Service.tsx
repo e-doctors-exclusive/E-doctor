@@ -8,13 +8,20 @@ import userIcon from "../../assets/userIcon.png";
 import Footer from "../footer/Footer";
 import ServicesCard from "../servicesCards/ServicesCard";
 import { useLocation } from "react-router-dom";
-import { RootState,AppDispatch } from '../../redux';
-import { useDispatch,useSelector } from 'react-redux';
-import { addDoctor,fetchDoctors,UpdateDoctor,DeleteDocotr} from "../../redux/doctorSlice";
+import { RootState, AppDispatch } from "../../redux";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  addDoctor,
+  fetchDoctors,
+  UpdateDoctor,
+  DeleteDocotr,
+} from "../../redux/doctorSlice";
+import { fetchAppointments } from ".././../redux/appointment";
+
 type props = {
   setIsLoggedIn: (value: boolean) => void;
 };
-enum MedicalInfotype{
+enum MedicalInfotype {
   "Neurosurgeons",
   "Thoracic Surgeons",
   "Orthopedic Surgeons",
@@ -27,17 +34,16 @@ enum MedicalInfotype{
   "Obstetricians",
   "Dentists",
 }
-interface objtype{
-  name:string
-  lastName:string
-  Address:string
-  email:string
-  password:string
-  MedicalInfo:MedicalInfotype
-  rating:string
-  avatar:string
-  bio:string
-
+interface objtype {
+  name: string;
+  lastName: string;
+  Address: string;
+  email: string;
+  password: string;
+  MedicalInfo: MedicalInfotype;
+  rating: string;
+  avatar: string;
+  bio: string;
 }
 interface UserData {
   id: number;
@@ -67,34 +73,129 @@ const Service: React.FC<props> = ({ setIsLoggedIn }) => {
       style={{ color: "#F3CD03" }}
     ></i>
   );
-
-  const dispatch:AppDispatch = useDispatch()
-  const DoctorData = useSelector((state:RootState)=>state.doctor.data)
-  useEffect(()=>{
-    dispatch(fetchDoctors())
-  },[dispatch])
-// console.log("jijji",DoctorData);
-
-  const handleScrollDown = () => {
-    window.scrollTo({
-      top: window.innerHeight, // Scroll to the height of the viewport
-      behavior: 'smooth', // Add smooth scrolling behavior
-    });
-  }
-
-  const [showDoc,setShowDoc] = useState(false)
-  const [department,setDepartment]=useState<any> ("")
-  const [userData, setUserData] = useState<UserData | null>(null);
+  // const [docId, setDocId] = useState<string>("jj");
+  const dispatch: AppDispatch = useDispatch();
+  const appointmentData = useSelector(
+    (state: RootState) => state.appointment.data
+  );
+  const DoctorData = useSelector((state: RootState) => state.doctor.data);
+  console.log("appointment Data here", appointmentData);
 
   useEffect(() => {
+    dispatch(fetchDoctors());
+    dispatch(fetchAppointments());
     const myObjectString = getLocalStorage("user");
     if (myObjectString) {
       const myObject = JSON.parse(myObjectString);
       setUserData(myObject);
-      // console.log(myObject)
     }
-  }, []);
-  // console.log("khalil is good ",userData);
+  }, [dispatch]);
+
+  const handleScrollDown = () => {
+    window.scrollTo({
+      top: window.innerHeight, // Scroll to the height of the viewport
+      behavior: "smooth", // Add smooth scrolling behavior
+    });
+  };
+  const [showDoc, setShowDoc] = useState(false);
+  const [department, setDepartment] = useState<any>("");
+  const [userData, setUserData] = useState<UserData | null>(null);
+  const [appointmentTime, setAppointmentTime] = useState("");
+  interface Appointment {
+    AppointmentTime: string;
+    AppointmentDuration: number;
+    DoctorId: string;
+  }
+
+  interface TimeSlot {
+    start: string;
+    end: string;
+  }
+
+  function findAvailableSlots(
+    appointments: Appointment[],
+    appointmentDuration: number,
+    workingHoursStart: number,
+    workingHoursEnd: number
+  ): TimeSlot[] {
+    const bookedSlots: { startMinutes: number; endMinutes: number }[] =
+      appointments.map((appointment) => {
+        const [hours, minutes] =
+          appointment.AppointmentTime.split(":").map(Number);
+        const startMinutes = hours * 60 + minutes;
+        const endMinutes = startMinutes + appointment.AppointmentDuration;
+        return { startMinutes, endMinutes };
+      });
+
+    const availableSlots: TimeSlot[] = [];
+
+    for (
+      let currentMinutes = workingHoursStart * 60;
+      currentMinutes < workingHoursEnd * 60;
+      currentMinutes += appointmentDuration
+    ) {
+      const slotEnd = currentMinutes + appointmentDuration;
+      const isSlotAvailable = !bookedSlots.some(
+        ({ startMinutes, endMinutes }) => {
+          return (
+            (currentMinutes >= startMinutes && currentMinutes < endMinutes) ||
+            (slotEnd > startMinutes && slotEnd <= endMinutes)
+          );
+        }
+      );
+
+      if (isSlotAvailable) {
+        const startHour = Math.floor(currentMinutes / 60);
+        const startMinute = currentMinutes % 60;
+        const endHour = Math.floor(slotEnd / 60);
+        const endMinute = slotEnd % 60;
+
+        const slot: TimeSlot = {
+          start: `${startHour.toString().padStart(2, "0")}:${startMinute
+            .toString()
+            .padStart(2, "0")}`,
+          end: `${endHour.toString().padStart(2, "0")}:${endMinute
+            .toString()
+            .padStart(2, "0")}`,
+        };
+
+        availableSlots.push(slot);
+      }
+    }
+
+    return availableSlots;
+  }
+
+  const appointmentDuration: number = 30;
+  const workingHoursStart: number = 0;
+  const workingHoursEnd: number = 23;
+
+  const availableSlots: TimeSlot[] = findAvailableSlots(
+    appointmentData,
+    appointmentDuration,
+    workingHoursStart,
+    workingHoursEnd
+  );
+  console.log("Available Slots:", availableSlots);
+
+  function isTimeInRange(time: string, start: string, end: string) {
+    return time >= start && time <= end;
+  }
+
+  let isAppointmentTimeAvailable = false;
+
+  for (let i = 0; i < availableSlots.length; i++) {
+    const start = availableSlots[i].start;
+    const end = availableSlots[i].end;
+
+    if (isTimeInRange(appointmentTime, start, end)) {
+      isAppointmentTimeAvailable = true;
+      break;
+    }
+  }
+
+  console.log("Is appointment time available:", isAppointmentTimeAvailable);
+
   return (
     <>
       <NavBar setIsLoggedIn={setIsLoggedIn} />
@@ -133,25 +234,41 @@ const Service: React.FC<props> = ({ setIsLoggedIn }) => {
                 value={userData?.email ?? ""}
               />
               <label>Departement </label>
-              <select name="department" id="" onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>setDepartment(e.target.value)}>
+              <select
+                name="department"
+                id=""
+                onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
+                  setDepartment(e.target.value)
+                }
+              >
                 <option selected>Department</option>
-                <option value='Neurosurgeons' >Neurosurgeons</option>
-                <option  value='Thoracic Surgeons'>Thoracic Surgeons</option>
-                <option  value='Orthopedic Surgeons'>Orthopedic Surgeons</option>
-                <option  value='Plastic Surgeons,'>Plastic Surgeons,</option>
-                <option  value='Oral and Maxillofacial Surgeons'>Oral and Maxillofacial Surgeons</option>
-                <option  value='Family Physicians'>Family Physicians</option>
-                <option  value='Internists'>Internists</option>
-                <option  value='Emergency Physicians'>Emergency Physicians</option>
-                <option  value='Psychiatrists'>Psychiatrists</option>
-                <option  value='Obstetricians'>Obstetricians</option>
-                <option  value='Dentists'>Dentists</option>
+                <option value="Neurosurgeons">Neurosurgeons</option>
+                <option value="Thoracic Surgeons">Thoracic Surgeons</option>
+                <option value="Orthopedic Surgeons">Orthopedic Surgeons</option>
+                <option value="Plastic Surgeons,">Plastic Surgeons,</option>
+                <option value="Oral and Maxillofacial Surgeons">
+                  Oral and Maxillofacial Surgeons
+                </option>
+                <option value="Family Physicians">Family Physicians</option>
+                <option value="Internists">Internists</option>
+                <option value="Emergency Physicians">
+                  Emergency Physicians
+                </option>
+                <option value="Psychiatrists">Psychiatrists</option>
+                <option value="Obstetricians">Obstetricians</option>
+                <option value="Dentists">Dentists</option>
               </select>
               <label>Time</label>
-              <input type="time"/>
+              <input
+                type="time"
+                onChange={(e) => setAppointmentTime(e.target.value)}
+              />
             </div>
             <div className="button-right-first-div">
-              <button onClick={()=>(handleScrollDown(),setShowDoc(true))} className="book-appointment-button">
+              <button
+                onClick={() => (handleScrollDown(), setShowDoc(true))}
+                className="book-appointment-button"
+              >
                 Select Doctor{" "}
               </button>
             </div>
@@ -187,14 +304,25 @@ const Service: React.FC<props> = ({ setIsLoggedIn }) => {
           </div>
         </div>
 
-       { showDoc ?  <div  className="doctor-afet-book"  >
-            {DoctorData.map((obj:objtype,i:number)=>{
-              if((obj.MedicalInfo as MedicalInfotype) === (department as MedicalInfotype ))
-              return( 
-           <MemberCard data={obj} />
-            )
+        {showDoc ? (
+          <div className="doctor-afet-book">
+            {DoctorData.map((obj: objtype, i: number) => {
+              if (
+                (obj.MedicalInfo as MedicalInfotype) ===
+                (department as MedicalInfotype)
+              ) {
+                return (
+                  <MemberCard
+                    // setDocId={setDocId}
+                    key={i}
+                    data={obj}
+                    appointmentTime={appointmentTime}
+                  />
+                );
+              }
             })}
-        </div>:null}
+          </div>
+        ) : null}
 
         {/* services we provide  */}
 
