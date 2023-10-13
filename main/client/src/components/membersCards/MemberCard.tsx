@@ -36,6 +36,7 @@ interface props{
   data:objtype
 }
 const MemberCard = (props:props) => {
+
   console.log("taswirti",props.data.avatar);
   
   return (
@@ -46,6 +47,7 @@ const MemberCard = (props:props) => {
       <p className="paragraph_Member_Card">
        {props.data.bio}
       </p>
+      
       <div className='social-media-icons_Member_Cards'>
         <img className ='facebook_Member_Card' src={facebook} alt="" />
         <img className ='twitter_Member_Card' src={twitter} alt="" />
