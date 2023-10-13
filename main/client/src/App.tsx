@@ -12,7 +12,7 @@ import ReviewCard from './components/reviewCards/ReviewCard'
 import Service from './components/service/Service';
 import Login from "./components/Login/Login";
 import DoctorChat from './components/doctorChat/DoctorChat';
-import { Navigate } from 'react-router-dom'
+import { Navigate } from 'react-router-dom';
 
 
 
