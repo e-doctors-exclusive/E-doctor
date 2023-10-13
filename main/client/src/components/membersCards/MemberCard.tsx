@@ -7,16 +7,43 @@ import facebook from '../../assets/Facebook.svg'
 import instagram from '../../assets/Instagram.svg'
 import twitter from '../../assets/Twitter.svg'
 import linkedin from '../../assets/LinkedIn.svg'
+enum MedicalInfotype{
+  "Neurosurgeons",
+  "Thoracic Surgeons",
+  "Orthopedic Surgeons",
+  "Plastic Surgeons,",
+  "Oral and Maxillofacial Surgeons",
+  "Family Physicians",
+  "Internists",
+  "Emergency Physicians",
+  "Psychiatrists",
+  "Obstetricians",
+  "Dentists",
+}
+interface objtype{
+  name:string
+  lastName:string
+  Address:string
+  email:string
+  password:string
+  MedicalInfo:MedicalInfotype
+  rating:string
+  avatar:string
+  bio:string
 
-const MemberCard = () => {
+}
+interface props{
+  data:objtype
+}
+const MemberCard = (props:props) => {
+  
   return (
     <div className="box_Member_Card">
-    <img className="image_container_Member_Card" alt="" src={AndySmith} />
-      <h1 className="card-heading_Member_Card">Andy Smith</h1>
-      <h2 className="description_Member_Card">Brain SURGEON</h2>
+    <img className="image_container_Member_Card" alt="" src={props.data.avatar} />
+      <h1 className="card-heading_Member_Card">{props.data.name}</h1>
+      <h2 className="description_Member_Card">{props.data.MedicalInfo}</h2>
       <p className="paragraph_Member_Card">
-        Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalaracc lacus vel facilisis volutpat est
-        velitolm.
+       {props.data.bio}
       </p>
       <div className='social-media-icons_Member_Cards'>
         <img className ='facebook_Member_Card' src={facebook} alt="" />

@@ -10,16 +10,16 @@ module.exports = {
       throw error;
     }
   },
-  addDoctor: async (req, res,next) => {
+  addDoctor: async (req, res) => {
     try {
-      const doctorInfo = await Doctor.create(req.body);
+      const doctorInfo = await Doctor.bulkCreate(req.body);
       res.status(201).send({
         status: "success",
         message: "doctor added successfully!!!",
         data: doctorInfo,
       });
     } catch (err) {
-      next(err);
+    throw err
     }
   },
   deleleteDoctor: async (req, res, next) => {
