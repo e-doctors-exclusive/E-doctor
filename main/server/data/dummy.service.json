@@ -1,0 +1,44 @@
+[
+  {
+    "picture": "https://www.verywellhealth.com/thmb/11gOxIbeLXBMKIrnZim7vPbqVc0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/neurosurgeon-performing-surgery-589412366-5bff16c74cedfd00264577b4.jpg",
+    "ServiceName": "Neurosurgeons",
+    "Cost": 30,
+    "ServiceDescription": "Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalaracc lacus vel facilisis volutpat est velitolm.",
+    "DoctorId": "1"
+  },
+  {
+    "picture": "https://www.yourdentistryguide.com/wp-content/uploads/2017/11/tooth-cleaning.jpg",
+    "ServiceName": "Dentists",
+    "Cost": 40,
+    "ServiceDescription": "Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalaracc lacus vel facilisis volutpat est velitolm.",
+    "DoctorId": "2"
+  },
+  {
+    "picture": "https://www.health.com/thmb/rjDY1h4Wntb9kVQr0l8Ljv-LqwI=/8660x0/filters:no_upscale():max_bytes(150000):strip_icc()/psychiatrist-GettyImages-1433472018-d9221f4efcd34a07bf5e42945696cea6.jpg",
+    "ServiceName": "Psychiatrists",
+    "Cost": 100,
+    "ServiceDescription": "Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalaracc lacus vel facilisis volutpat est velitolm.",
+    "DoctorId": "3"
+  },
+  {
+    "picture": "https://pcoms.ca/wp-content/uploads/2020/05/Image-of-Oral-Maxillofacial-Surgery.jpg",
+    "ServiceName": "Oral and Maxillofacial Surgeons",
+    "Cost": 60,
+    "ServiceDescription": "Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalaracc lacus vel facilisis volutpat est velitolm.",
+    "DoctorId": "4"
+  },
+  {
+    "picture": "https://mypvhc.com/wp-content/uploads/2018/10/shutterstock_284499818.jpg",
+    "ServiceName": "Family Physicians",
+    "Cost":120,
+    "ServiceDescription": "Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalaracc lacus vel facilisis volutpat est velitolm.",
+    "DoctorId": "5"
+  },
+  {
+    "picture": "https://resize.prod.docfr.doc-media.fr/s/1200/ext/eac4ff34/content/2022/7/3/neurologue-272f57f285ab3207.jpeg",
+    "ServiceName": "scrum master",
+    "Cost": 200,
+    "ServiceDescription": "Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalaracc lacus vel facilisis volutpat est velitolm.",
+    "DoctorId": "6"
+  }
+]
