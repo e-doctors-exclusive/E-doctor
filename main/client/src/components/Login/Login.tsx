@@ -64,11 +64,13 @@ const Login: React.FC<props> = ({ setIsLoggedIn }) => {
                 console.log(input);
                 const task = await axios.post("http://localhost:3000/api/doctor/authenticate", input)
                 console.log(task.data.data.token);
-                task.data.status==="success"?
-                (localStorage.setItem("token", task.data.data.token),
-                localStorage.setItem("user", task.data.data.doctor),
-                setIsLoggedIn(true),
-                navigate("/")):null
+                if (task.data.status === "success") {
+                    localStorage.setItem("token", task.data.data.token);
+                    localStorage.setItem("user", task.data.data.doctor);
+                    setIsLoggedIn(true);
+                    navigate("/");
+                  }
+                  
 
             } catch (error) {
                 console.error(error);

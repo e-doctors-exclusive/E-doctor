@@ -47,8 +47,7 @@ module.exports = {
         where: {
           email: req.body.email,
         },
-      });
-     
+      })
       if (bcrypt.compareSync(req.body.password, patientInfo.password)) {
         const token = jwt.sign(
           { id: patientInfo.id },
