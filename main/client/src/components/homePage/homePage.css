@@ -43,6 +43,25 @@
 .setToCursor{
   cursor: pointer;
 }
+.home_input-find-doctor:focus{
+background-color:#333333 ;
+color: white;
+border-color: white;
+border: 1px solid #dfdfdf; 
+outline-color: rgb(172, 172, 172);
+transition-duration: .7s;
+}
+.home_input-find-doctor:focus::placeholder {
+  color: rgb(209, 209, 209);
+}
+.home_input-find-doctor{
+  width: 17rem;
+  border: 1px solid #007e85;
+  border-style: ridge;
+  padding: 1.2rem;
+  border-radius: 7px;
+  font-size: 17px;
+}
 .appointment-homepage {
   border: none;
   outline: none;
