@@ -3,9 +3,9 @@ import './App.css';
 import { Routes, Route } from "react-router-dom";
 import UserAccount from './components/userAccount/UserAccount'
 import ContactUs from './components/contactUs/ContactUs';
-import DoctorAccount from './components/doctorAccount/doctorAccount';
+import DoctorAccount from './components/doctorAccount/DoctorAccount';
 import HomePage from './components/homePage/HomePage';
-import DoctorProfile from './components/doctorProfile/DoctorProfile';
+import DoctorProfile from './components/doctorprofile/DoctorProfile';
 import ServicesCard from './components/servicesCards/ServicesCard';
 import { SignUp } from './components/Sign_Up/SignUp';
 import ReviewCard from './components/reviewCards/ReviewCard'
