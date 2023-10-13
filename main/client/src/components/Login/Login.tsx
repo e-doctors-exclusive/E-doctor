@@ -70,7 +70,7 @@ const Login: React.FC<props> = ({ setIsLoggedIn }) => {
                     setIsLoggedIn(true);
                     navigate("/");
                   }
-
+                  
             } catch (error) {
                 console.error(error);
 
