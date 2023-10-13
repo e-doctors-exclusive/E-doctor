@@ -23,22 +23,22 @@ const Overview = () => {
         <div className='second_statistics'>
         <img className='statistics_icons' src={person} alt="" />
           <div className='statistics_information'>
-            <p className='statistics_numbers'>24.4k</p>
-            <span className='statistics_details'>Appointments</span>
+            <p className='statistics_numbers'>166.6k</p>
+            <span className='statistics_details'>Total Patient</span>
           </div>
         </div>
         <div className='third_statistics'>
         <img className='statistics_icons' src={building} alt="" />
           <div className='statistics_information'>
-            <p className='statistics_numbers'>24.4k</p>
-            <span className='statistics_details'>Appointments</span>
+            <p className='statistics_numbers'>53.5k</p>
+            <span className='statistics_details'>Clinic Consulting</span>
           </div>
         </div>
         <div className='fourth_statistics'>
         <img className='statistics_icons' src={camera} alt="" />
           <div className='statistics_information'>
-            <p className='statistics_numbers'>24.4k</p>
-            <span className='statistics_details'>Appointments</span>
+            <p className='statistics_numbers'>28.0k</p>
+            <span className='statistics_details'>Video Consulting</span>
           </div>
         </div>
         </div>

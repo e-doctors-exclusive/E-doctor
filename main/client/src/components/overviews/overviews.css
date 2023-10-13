@@ -29,7 +29,11 @@
     width: 250px;
     height: 100px;
     text-align: center;
-    justify-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 .statistics_numbers{
     font-size: 20px;
@@ -63,7 +67,12 @@
     width: 250px;
     height: 100px;
     text-align: center;
-    justify-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
 }
 .fourth_statistics{
     background-color: #4BB8F9;
@@ -71,8 +80,15 @@
     width: 250px;
     height: 100px;
     text-align: center;
-    justify-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 .statistics_icons{
-    height: 1.3rem;
+    height: 2.5rem;
+    border: 1px solid #ffffffcf;
+    border-radius:50% ;
+    padding: 2px;
 }

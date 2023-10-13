@@ -1,22 +1,52 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import './style.css'
-import calendar from '../../assets/calendar-samsung-16-svgrepo-com.svg'
-import money from '../../assets/money-check-edit.svg'
-import envelope from '../../assets/envelope-open-text.svg'
-import clock from '../../assets/clock-nine.svg'
-import file from '../../assets/file-invoice.svg'
-import wheel from '../../assets/adiutor-svgrepo-com.svg'
-import person from '../../assets/bouncer-svgrepo-com.svg'
-import overview from '../../assets/forerkort-svgrepo-com.svg'
-import logo from '../../assets/pie-chart-svgrepo-com.svg'
+// import calendar from '../../assets/calendar-samsung-16-svgrepo-com.svg'
+// import money from '../../assets/money-check-edit.svg'
+// import envelope from '../../assets/envelope-open-text.svg'
+// import clock from '../../assets/clock-nine.svg'
+// import file from '../../assets/file-invoice.svg'
+// import wheel from '../../assets/adiutor-svgrepo-com.svg'
+// import person from '../../assets/bouncer-svgrepo-com.svg'
+// import overview from '../../assets/forerkort-svgrepo-com.svg'
+// import logo from '../../assets/pie-chart-svgrepo-com.svg'
 import scouter from '../../assets/basic-ui-computer-11-svgrepo-com.svg'
 import profilePic from '../../assets/Doctor_9.png'
 import heart from '../../assets/heart2-svgrepo-com.svg'
 import warning from '../../assets/warning-svgrepo-com.svg'
 import send from '../../assets/send-1-svgrepo-com.svg'
 import attach from '../../assets/attach-svgrepo-com.svg'
+import io from 'socket.io-client'
+import axios from 'axios'
+const socket = io('http://localhost:3000')
 
 const DoctorChat = () => {
+  const [rooms, setRooms] = useState([]);
+  const [users, setUsers] = useState([]);
+  const [messages, setMessages] = useState<string[]>([]);
+  const [newMessage, setNewMessage] = useState<string>('');
+
+  useEffect(() => {
+    fetch('http://localhost:3000/api/message/getAllMessages')
+      .then((response) => response.json())
+      .then((data) => setMessages(data));
+  }, []);
+
+  useEffect(()=>{
+    socket.on('messageResponse',(data)=>{
+      console.log('this is data',data);
+      setMessages((prev)=>[...prev,data])
+    })
+  },[])
+
+  const sendMessage = () => {
+
+        socket.emit('message',{
+          MessageContent:newMessage
+        })
+        setNewMessage('');
+  };
+
+
   return (
     <div className='biggest_div_ever'>
     <div className='rooms_chat'>
@@ -129,8 +159,11 @@ const DoctorChat = () => {
 
           </div>
 
-
-          <div className='doctor_chat_history'>
+           {messages.map((message:any,i)=>(
+            <div>{message.MessageContent}</div>
+           )
+           )}
+          {/* <div className='doctor_chat_history'>
             <div className='messages_container_chat'>
             <div className='left_message_doctor'>
               <div className='little_message_container'>
@@ -153,11 +186,11 @@ const DoctorChat = () => {
             </div>
             </div>
               
-          </div>
+          </div> */}
           <div className='input_elements'>
-            <input className='message_input_chat' type="text" />
+            <input className='message_input_chat' value={newMessage} type="text" onChange={(e)=>setNewMessage(e.target.value)}/>
             <img className='sending_icons' src={attach} alt="" />
-            <img className='sending_icons' src={send} alt="" />
+            <img className='sending_icons' src={send} alt="" onClick={sendMessage}/>
             </div>
 
         </div>
