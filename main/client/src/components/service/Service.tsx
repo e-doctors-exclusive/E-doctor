@@ -8,7 +8,10 @@ import userIcon from "../../assets/userIcon.png";
 import Footer from "../footer/Footer"
 import ServicesCard from "../servicesCards/ServicesCard";
 import { useLocation } from "react-router-dom";
-const Service = () => {
+type props ={
+  setIsLoggedIn:(value: boolean) => void;
+};
+const Service:React.FC<props> = ({setIsLoggedIn}) => {
   const location = useLocation()
   const fullstar = (
     <i className="fa-solid fa-star fa-sm" style={{ color: "#F3CD03" }}></i>
@@ -24,7 +27,7 @@ const Service = () => {
   );
   return (
     <>
-      <NavBar />
+      <NavBar setIsLoggedIn={setIsLoggedIn} />
       <div className="fisrt-div">
         <img src={image} />
         <div className="container-first-div">

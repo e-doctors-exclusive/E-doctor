@@ -8,14 +8,18 @@ const eyeOpen = <svg xmlns="http://www.w3.org/2000/svg" className='login_icon_sv
 const bridge = <svg xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 576 512"><path d="M32 32C14.3 32 0 46.3 0 64S14.3 96 32 96H72v64H0V288c53 0 96 43 96 96v64c0 17.7 14.3 32 32 32h32c17.7 0 32-14.3 32-32V384c0-53 43-96 96-96s96 43 96 96v64c0 17.7 14.3 32 32 32h32c17.7 0 32-14.3 32-32V384c0-53 43-96 96-96V160H504V96h40c17.7 0 32-14.3 32-32s-14.3-32-32-32H32zM456 96v64H376V96h80zM328 96v64H248V96h80zM200 96v64H120V96h80z" /></svg>
 const patient = <svg xmlns="http://www.w3.org/2000/svg" className='login_icon_svg' height="4em" viewBox="0 0 576 512"><path d="M48 0C21.5 0 0 21.5 0 48V256H144c8.8 0 16 7.2 16 16s-7.2 16-16 16H0v64H144c8.8 0 16 7.2 16 16s-7.2 16-16 16H0v80c0 26.5 21.5 48 48 48H265.9c-6.3-10.2-9.9-22.2-9.9-35.1c0-46.9 25.8-87.8 64-109.2V271.8 48c0-26.5-21.5-48-48-48H48zM152 64h16c8.8 0 16 7.2 16 16v24h24c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16H184v24c0 8.8-7.2 16-16 16H152c-8.8 0-16-7.2-16-16V152H112c-8.8 0-16-7.2-16-16V120c0-8.8 7.2-16 16-16h24V80c0-8.8 7.2-16 16-16zM512 272a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM288 477.1c0 19.3 15.6 34.9 34.9 34.9H541.1c19.3 0 34.9-15.6 34.9-34.9c0-51.4-41.7-93.1-93.1-93.1H381.1c-51.4 0-93.1 41.7-93.1 93.1z" /></svg>
 const doctor = <svg xmlns="http://www.w3.org/2000/svg" className='login_icon_svg' id='doctor_svg' height="4em" viewBox="0 0 576 512"><path d="M142.4 21.9c5.6 16.8-3.5 34.9-20.2 40.5L96 71.1V192c0 53 43 96 96 96s96-43 96-96V71.1l-26.1-8.7c-16.8-5.6-25.8-23.7-20.2-40.5s23.7-25.8 40.5-20.2l26.1 8.7C334.4 19.1 352 43.5 352 71.1V192c0 77.2-54.6 141.6-127.3 156.7C231 404.6 278.4 448 336 448c61.9 0 112-50.1 112-112V265.3c-28.3-12.3-48-40.5-48-73.3c0-44.2 35.8-80 80-80s80 35.8 80 80c0 32.8-19.7 61-48 73.3V336c0 97.2-78.8 176-176 176c-92.9 0-168.9-71.9-175.5-163.1C87.2 334.2 32 269.6 32 192V71.1c0-27.5 17.6-52 43.8-60.7l26.1-8.7c16.8-5.6 34.9 3.5 40.5 20.2zM480 224a32 32 0 1 0 0-64 32 32 0 1 0 0 64z" /></svg>
-const Login = () => {
+type props = {
+    setIsLoggedIn: (value: boolean) => void;
+};
+const Login: React.FC<props> = ({ setIsLoggedIn }) => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [docEmail, setDocEmail] = useState("")
     const [DocPassword, setDocPassword] = useState("")
     const [eye, setEye] = useState(true);
     const [view, setView] = useState(true)
-    const navigate= useNavigate()
+    const [alert, setAlert] = ("")
+    const navigate = useNavigate()
     const UserAuth = async (input: object) => {
         var res = true
         const check01 = () => {
@@ -31,10 +35,13 @@ const Login = () => {
 
             try {
                 const task = await axios.post("http://localhost:3000/api/patient/authenticate", input)
-                localStorage.setItem("user",task.data.patient)
-                localStorage.setItem("token",task.data.token)
+                console.log(task.data.data.token);
+                localStorage.setItem("token", task.data.data.token)
+                localStorage.setItem("user", task.data.data.patient)
+                setIsLoggedIn(true)
                 navigate("/")
             } catch (error) {
+                // setAlert("incorrect password/email")
                 console.error(error);
 
             }
@@ -52,10 +59,16 @@ const Login = () => {
         }
 
         if (check01()) {
-
+            
             try {
+                console.log(input);
                 const task = await axios.post("http://localhost:3000/api/doctor/authenticate", input)
-                navigate("/homePage")
+                console.log(task.data.data.token);
+                task.data.status==="success"?
+                (localStorage.setItem("token", task.data.data.token),
+                localStorage.setItem("user", task.data.data.doctor),
+                setIsLoggedIn(true),
+                navigate("/")):null
 
             } catch (error) {
                 console.error(error);
@@ -76,37 +89,44 @@ const Login = () => {
     };
     return (
         <div className='Login_Body'>
-            <div className="container"
+            <div className="container_login_page"
             >
                 <div className="top"></div>
                 <div className="bottom"></div>
-                {view ? <div className="center">
+                {view ? <div className="center_sign_up">
 
-                    <div onClick={() => (setView(!view))}>{patient}</div>
-                    <h1>Patient Login</h1>
-                    <input className='login_input' style={{ borderColor: "#979FDA", borderWidth: "2px" }} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Type Your Email" />
-                    <input style={{ borderColor: "#979FDA", borderWidth: "2px" }} className='login_input login_password_input' onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Type Your Password " />
-                    <div className='login_password_div' onClick={() => (TogglePass(), setEye(!eye))}>{
+                    <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }} onClick={() => (setView(!view))}>{patient}
+                        <h1>Patient Login</h1>
+                    </div>
+                    <div className='login_input_container_box'>
+                        <input className='login_input' style={{ borderColor: "#979FDA", borderWidth: "2px" }} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Type Your Email" />
+                        <input style={{ borderColor: "#979FDA", borderWidth: "2px" }} className='login_input login_password_input' onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Type Your Password " />
+                    </div>
+                    <div className='login_password_div_eye' onClick={() => (TogglePass(), setEye(!eye))}>{
                         eye ?
                             eyeOpen : eyeClosed
                     }
 
                     </div>
-                    <div className='Submit' onClick={() => UserAuth({ email, password })}>Submit</div>
-                    <Link to="/SignUp"><p id='log' style={{color:'black'}}>..forgot Password?</p></Link>
-                </div> : <div className="center">
+                    <div className='Submit' onClick={() => UserAuth({ email: email, password: password })}>Submit</div>
+                    <Link to="/SignUp"><p id='log' style={{ color: 'black' }}>..forgot Password?</p></Link>
+                </div> : <div className="center_sign_up">
                     <div onClick={() => (setView(!view))}>{doctor}</div>
                     <h1>Doctor Login</h1>
-                    <input style={{ borderColor: "#979FDA", borderWidth: "2px" }} className='login_input' onChange={(e) => setDocEmail(e.target.value)} type="email" placeholder="Type Your Email" />
-                    <input style={{ borderColor: "#979FDA", borderWidth: "2px" }} className='login_input login_password_input' onChange={(e) => setDocPassword(e.target.value)} type="password" placeholder="Type Your Password " />
-                    <div className='login_password_div' onClick={() => (TogglePass(), setEye(!eye))}>{
+                    <div className='login_input_container_box'>
+
+                        <input style={{ borderColor: "#979FDA", borderWidth: "2px" }} className='login_input' onChange={(e) => setDocEmail(e.target.value)} type="email" placeholder="Type Your Email" />
+                        <input style={{ borderColor: "#979FDA", borderWidth: "2px" }} className='login_input login_password_input' onChange={(e) => setDocPassword(e.target.value)} type="password" placeholder="Type Your Password " />
+                    </div>
+
+                    <div className='login_password_div_eye' onClick={() => (TogglePass(), setEye(!eye))}>{
                         eye ?
-                        eyeOpen : eyeClosed
+                            eyeOpen : eyeClosed
                     }
                     </div>
 
-                    <div className='Submit' onClick={() => DoctorAuth({ email:docEmail, password:DocPassword })}>Submit</div>
-                        <Link to="/SignUp"><p id='log' style={{color:'black'}}>..forgot Password?</p></Link>
+                    <div className='Submit' onClick={() => DoctorAuth({ email: docEmail, password: DocPassword })}>Submit</div>
+                    <Link to="/SignUp"><p id='log' style={{ color: 'black' }}>..forgot Password?</p></Link>
                 </div>}
             </div>
         </div>
