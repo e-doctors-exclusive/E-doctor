@@ -20,7 +20,8 @@
     transition-duration:0.5s ;
   }
   .box_Member_Card .image_container_Member_Card{
-    width: 35%;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
   }
   .image_container_Member_Card{
@@ -43,11 +44,14 @@
   }
   .paragraph_Member_Card{
     display: inline-block;
-    line-height: 30px;
+    line-height: 20px;
+    text-align: start;
     color: var(--color-dimgray);
-    font-size: 20px;
+    font-weight: 700;
+    font-size: 15px;
   }
   .social-media-icons_Member_Cards{
+    margin-top: 1.7rem;
     display: flex;
     gap: 20px;
   }

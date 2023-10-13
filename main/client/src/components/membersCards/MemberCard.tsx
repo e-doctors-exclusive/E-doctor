@@ -7,6 +7,8 @@ import facebook from '../../assets/Facebook.svg'
 import instagram from '../../assets/Instagram.svg'
 import twitter from '../../assets/Twitter.svg'
 import linkedin from '../../assets/LinkedIn.svg'
+import { fetchAppointments } from ".././../redux/appointment" 
+import { useLocation } from 'react-router'
 enum MedicalInfotype{
   "Neurosurgeons",
   "Thoracic Surgeons",
@@ -36,9 +38,13 @@ interface props{
   data:objtype
 }
 const MemberCard = (props:props) => {
-
-  console.log("taswirti",props.data.avatar);
+    const location = useLocation()
+  // console.log("taswirti",props.data.avatar);
   
+const availablelity = ()=>{
+
+}
+
   return (
     <div className="box_Member_Card">
     <img className="image_container_Member_Card" alt="" src={props.data.avatar} />
@@ -46,15 +52,18 @@ const MemberCard = (props:props) => {
       <h2 className="description_Member_Card">{props.data.MedicalInfo}</h2>
       <p className="paragraph_Member_Card">
        {props.data.bio}
+       <div>
+       </div>
       </p>
-      
       <div className='social-media-icons_Member_Cards'>
         <img className ='facebook_Member_Card' src={facebook} alt="" />
         <img className ='twitter_Member_Card' src={twitter} alt="" />
         <img className ='instagram_Member_Card' src={instagram} alt="" />
         <img className ='linkedIn_Member_Card' src={linkedin} alt="" />
       </div>
-
+{   location.pathname==="/service" ?   <div className='make-appoitment-div-memberCard' >
+      <button className='make-appoitment-button-memberCard'>Make an appoitment </button>
+      </div>:null}
   </div>
   )
 }
