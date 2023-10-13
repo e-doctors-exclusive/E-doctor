@@ -7,6 +7,7 @@ import facebook from '../../assets/Facebook.svg'
 import instagram from '../../assets/Instagram.svg'
 import twitter from '../../assets/Twitter.svg'
 import linkedin from '../../assets/LinkedIn.svg'
+import { fetchAppointments } from ".././../redux/appointment" 
 import { useLocation } from 'react-router'
 enum MedicalInfotype{
   "Neurosurgeons",
@@ -41,7 +42,7 @@ const MemberCard = (props:props) => {
   // console.log("taswirti",props.data.avatar);
   
 const availablelity = ()=>{
-    
+
 }
 
   return (
