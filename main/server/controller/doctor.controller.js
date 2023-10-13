@@ -46,18 +46,19 @@ module.exports = {
           email: req.body.email,
         },
       });
-
-      if (bcrypt.compareSync(req.body.password, doctorInfo.password)) {
-        const token = jwt.sign(
+if (doctorInfo) {
+  
+  if (bcrypt.compareSync(req.body.password, doctorInfo.password)) {
+    const token = jwt.sign(
           { id: doctorInfo.id },
           req.app.get("TOKEN_SECRET"),
           {
             expiresIn: "24h",
           }
-        );
-        res.json({
-          status: "success",
-          message: "doctor found!!!",
+          );
+          res.json({
+            status: "success",
+            message: "doctor found!!!",
           data: { doctor: doctorInfo, token },
         });
       } else {
@@ -66,6 +67,7 @@ module.exports = {
           message: "Invalid email/password!!!",
           data: "error",
         });
+      }
       }
     } catch (err) {
       next(err);
