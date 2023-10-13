@@ -36,6 +36,7 @@ interface props{
   data:objtype
 }
 const MemberCard = (props:props) => {
+  console.log("taswirti",props.data.avatar);
   
   return (
     <div className="box_Member_Card">
