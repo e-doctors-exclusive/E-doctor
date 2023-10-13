@@ -1,0 +1,73 @@
+ [
+    {
+      "AppointmentTime": "10:00 ",
+      "AppointmentStatus": "Scheduled",
+      "AppointmentDuration": 30,
+      "Notes": "Please arrive 10 minutes early.",
+      "ReasonForVisit": "Regular checkup"
+    },
+    {
+      "AppointmentTime": "11:30 ",
+      "AppointmentStatus": "Completed",
+      "AppointmentDuration": 45,
+      "Notes": "Patient arrived late but was seen.",
+      "ReasonForVisit": "Follow-up appointment"
+    },
+    {
+      "AppointmentTime": "2:15 ",
+      "AppointmentStatus": "Scheduled",
+      "AppointmentDuration": 60,
+      "Notes": "New patient, handle with care.",
+      "ReasonForVisit": "Initial consultation"
+    },
+    {
+      "AppointmentTime": "3:45 ",
+      "AppointmentStatus": "Cancelled",
+      "AppointmentDuration": 30,
+      "Notes": "Patient called to cancel due to emergency.",
+      "ReasonForVisit": "Urgent issue"
+    },
+    {
+      "AppointmentTime": "9:30 ",
+      "AppointmentStatus": "Scheduled",
+      "AppointmentDuration": 45,
+      "Notes": "Patient needs blood pressure check.",
+      "ReasonForVisit": "Health monitoring"
+    },
+    {
+      "AppointmentTime": "1:00 ",
+      "AppointmentStatus": "Scheduled",
+      "AppointmentDuration": 30,
+      "Notes": "Routine checkup.",
+      "ReasonForVisit": "General health"
+    },
+    {
+      "AppointmentTime": "4:30 ",
+      "AppointmentStatus": "Scheduled",
+      "AppointmentDuration": 60,
+      "Notes": "Follow-up appointment after surgery.",
+      "ReasonForVisit": "Post-surgery check"
+    },
+    {
+      "AppointmentTime": "2:45 ",
+      "AppointmentStatus": "Completed",
+      "AppointmentDuration": 40,
+      "Notes": "Patient feeling much better.",
+      "ReasonForVisit": "Recovery check"
+    },
+    {
+      "AppointmentTime": "11:00 ",
+      "AppointmentStatus": "Cancelled",
+      "AppointmentDuration": 45,
+      "Notes": "Patient called to cancel due to work commitment.",
+      "ReasonForVisit": "Routine checkup"
+    },
+    {
+      "AppointmentTime": "3:00 ",
+      "AppointmentStatus": "Scheduled",
+      "AppointmentDuration": 30,
+      "Notes": "Regular checkup.",
+      "ReasonForVisit": "General health"
+    }
+  ]
+  
