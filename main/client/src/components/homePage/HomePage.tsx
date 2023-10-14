@@ -45,7 +45,7 @@ const HomePage:React.FC<props> = ({setIsLoggedIn}) => {
   const dispatch:AppDispatch = useDispatch()
   const DoctorData = useSelector((state:RootState)=>state.doctor.data)
   console.log(DoctorData);
-  const Reviews = useSelector((state:RootState)=>state.review)
+  const Reviews = useSelector((state:RootState)=>state.review.data)
   console.log(Reviews);
   
   useEffect(()=>{

@@ -424,3 +424,11 @@ width: 90%;
   background-color: #007E85;
   cursor: pointer;
 }
+
+.doctor-afet-book{
+  display: grid;
+  /* flex-direction: row; */
+  grid-template-columns: repeat(3,1fr);
+  gap :  1rem ;
+  padding-top: 2rem;
+}

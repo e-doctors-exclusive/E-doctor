@@ -3,8 +3,13 @@ import "./doctorProfile.css";
 import iconbell from "../../assets/profildoctor/iconbell.png";
 import help from "../../assets/profildoctor/help.png";
 import logo from "../../assets/profildoctor/logo.png";
+import ProfilDoctor from "../profilDoctor/ProfilDoctor";
+import { useNavigate } from "react-router-dom";
 const DoctorProfile = () => {
+  console.log("khalilfzfz");
+  
   const [activdiv, setActivediv] = useState("");
+  const navigate = useNavigate();
 
   return (
     <div className="container_doctor_profil">
@@ -79,7 +84,7 @@ const DoctorProfile = () => {
               }}
             >
               <i className="fa-brands fa-microsoft" />
-              <span className="text_sid">Overview</span>
+              <span className="text_sid" onClick={()=>navigate("overview")}>Overview</span>
             </div>
             <div
               className={`icon_list ${
@@ -154,6 +159,8 @@ const DoctorProfile = () => {
           </ul>
         </div>
       </div>
+    
+      <ProfilDoctor/>
     </div>
   );
 };
