@@ -13,7 +13,7 @@
   flex-direction: row;
   align-items: center;
   display: flex;
-  background: #f0f9fd;
+  background: white;
   width: 50rem;
   height: 4rem;
   gap: 8rem;
@@ -59,7 +59,7 @@
 }
 .search__button_doctor_Profil {
   border: none;
-  background-color: #f4f2f2;
+  background-color: white;
   margin-top: 0.1em;
 }
 
@@ -76,7 +76,7 @@
 .search__input_doctor_Profil {
   font-family: inherit;
   font-size: inherit;
-  background: #f0f9fd;
+  background: white;
   border: none;
   color: #646464;
   padding: 0.7rem 1rem;
@@ -152,10 +152,9 @@
   gap: 1px;
 }
 .unicode_icon {
- 
   display: flex;
   justify-content: center;
-  gap: 3px ;
+  gap: 3px;
 }
 .name-user-icon_doctor {
   font-family: Arial, Helvetica, sans-serif;
@@ -184,14 +183,14 @@
 .content_doctor_profil {
   width: 22%;
   height: 100%;
-  background-color:  white;
+  background-color: white;
   padding: 1px;
 }
 .list_profil_doctor {
   list-style-type: none;
 }
 .icon_list {
-  width: 200px;
+  width: 170px;
   height: 45px;
   border-radius: 10%;
   display: flex;
@@ -203,4 +202,15 @@
   background-color: white;
 
   cursor: pointer;
+}
+
+.active {
+  background: black;
+  color: white;
+  border-radius: 10px;
+  box-shadow: #0d0d0d;
+}
+
+.icon_list {
+  padding-left: 20px;
 }
