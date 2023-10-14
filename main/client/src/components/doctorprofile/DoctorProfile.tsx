@@ -4,6 +4,8 @@ import iconbell from "../../assets/profildoctor/iconbell.png";
 import help from "../../assets/profildoctor/help.png";
 import logo from "../../assets/profildoctor/logo.png";
 const DoctorProfile = () => {
+  console.log("khalilfzfz");
+  
   const [activdiv, setActivediv] = useState("");
 
   return (
