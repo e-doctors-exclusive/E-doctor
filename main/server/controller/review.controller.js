@@ -3,8 +3,10 @@ const { Review } = require("../database/index");
 module.exports = {
   getAllReview: async (req, res) => {
     try {
-      const response = await Review.findAll();
-      res.status(200).send(response);
+      const response = await Review.findAll({
+        includes:["patient"]
+      });
+      res.json(response);
     } catch (error) {
       throw error;
     }
@@ -35,4 +37,5 @@ module.exports = {
       throw error;
     }
   },
+ 
 };
