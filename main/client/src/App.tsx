@@ -21,14 +21,12 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   return (
     <>
-
       <Routes>
         <Route path="/useraccount" element={<UserAccount />} />
         <Route path="/contactus" element={<ContactUs setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/cards" element={<ServicesCard />} />
         <Route path="/review" element={<ReviewCard />} />
         <Route path="/chat" element={<DoctorChat />} />
-
         <Route path="/doctor" element={<DoctorAccount />} />
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/Login" element={isLoggedIn ? <Navigate to="/" /> : <Login setIsLoggedIn={setIsLoggedIn} />} />
@@ -37,7 +35,6 @@ function App() {
         <Route path="/Profile" element={<DoctorProfile />} />
       </Routes>
     </>
-
   );
 }
 
