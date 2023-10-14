@@ -14,7 +14,7 @@ import Login from "./components/Login/Login";
 import DoctorChat from './components/doctorChat/DoctorChat';
 import { Navigate } from 'react-router-dom';
 import Overview from './components/overviews/Overview';
-import Review from './components/myreviews/Review';
+import Review from './components/reviews/Review'
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)

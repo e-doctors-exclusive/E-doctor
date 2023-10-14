@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import avatar from "../../assets/profildoctor/avatar.png";
-import AllReview from "../allReview/Review";
+import AllReview from "../allreview/AllReview";
 import './review.css'
 const Review = () => {
     
