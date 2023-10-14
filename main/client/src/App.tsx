@@ -13,8 +13,8 @@ import Service from './components/service/Service';
 import Login from "./components/Login/Login";
 import DoctorChat from './components/doctorChat/DoctorChat';
 import { Navigate } from 'react-router-dom';
-import Overview from './components/overviews/Overview';
 import Review from './components/reviews/Review'
+import Overview from './components/overviews/Overview';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
