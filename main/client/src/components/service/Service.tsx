@@ -305,8 +305,11 @@ const Service: React.FC<props> = ({ setIsLoggedIn }) => {
         </div>
 
         {showDoc ? (
-          <div className="doctor-afet-book">
+          isAppointmentTimeAvailable ?(
+
+            <div className="doctor-afet-book">
             {DoctorData.map((obj: objtype, i: number) => {
+              
               if (
                 (obj.MedicalInfo as MedicalInfotype) ===
                 (department as MedicalInfotype)
@@ -322,6 +325,7 @@ const Service: React.FC<props> = ({ setIsLoggedIn }) => {
               }
             })}
           </div>
+          ):null
         ) : null}
 
         {/* services we provide  */}
