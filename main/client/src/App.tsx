@@ -28,7 +28,6 @@ function App() {
         <Route path="/cards" element={<ServicesCard />} />
         <Route path="/review" element={<ReviewCard />} />
         <Route path="/chat" element={<DoctorChat />} />
-
         <Route path="/doctor" element={<DoctorAccount />} />
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/Login" element={isLoggedIn ? <Navigate to="/" /> : <Login setIsLoggedIn={setIsLoggedIn} />} />

@@ -8,17 +8,17 @@ const initialState = {
 }
 
 export const fetchMessages = createAsyncThunk(
-    "/api/patient/getAllMessages",
+    "/api/message/getAllMessages",
     async()=>{
         const message = await axios.get(
-            "http://localhost:3000/api/message/getAllMessages"
+            'http://localhost:3000/api/message/getAllMessages'
             )
             return message.data
     }
 )
 
 export const addMessage = createAsyncThunk("/api/message/addMessage",
-async(input,dispatch:any)=>{
+async(input:object,{dispatch})=>{
     const addMessage = await axios.post("http://localhost:3000/api/message/addMessage",
     input
     )
