@@ -37,7 +37,7 @@ app.use("/api/", serviceRouter)
 app.use("/api/", appointmentRouter)
 app.use("/api/", chatRoomRouter)
 
-http.listen(3000, () => {
+server.listen(port, () => {
   console.log(`server running at ${port}`)
 });
 app.use(function (err, req, res, next) {

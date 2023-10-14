@@ -1,9 +1,11 @@
 import axios from "axios";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { AppDispatch } from "./index";
+// import { AppDispatch } from "./index";
 interface Args {
   id: number;
   input: object;
+  loading: boolean;
+  error: string;
 }
 const initialState = {
   data: [],
