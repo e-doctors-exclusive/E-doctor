@@ -1,0 +1,51 @@
+
+.blog_review {
+    gap: 30px;
+    padding: 20px;
+}
+
+.name_prof {
+flex-direction: column;
+display: flex;
+justify-content:flex-start;
+align-items:flex-start;
+gap: 3px;
+}
+.image_name_profession {
+    flex-direction:row;
+    display: flex;
+    justify-content:flex-start;
+    align-items:flex-start;
+   gap: 10px;
+}
+.image_review {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 1px;
+
+}
+.name_review {
+line-height: bold;
+font-size: 20px;
+}
+.profession_review {
+font-size: 15px;
+
+}
+.image_name_profession_rate {
+    flex-direction: row;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap: 20px;
+}
+.rate_datev {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.content_review_text {
+    display: flex;
+    justify-content: flex-start;
+}
