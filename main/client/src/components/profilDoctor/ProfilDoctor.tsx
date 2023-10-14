@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import "./profildoctor.css";
 import DoctorProfile from "../doctorprofile/DoctorProfile";
 import avatar from "../../assets/profildoctor/avatar.png";
+import Review from "../reviewProfileDoctor/Review";
+import { MDBBtn } from "mdbreact";
 const ProfilDoctor = () => {
+
   const [clicked1, setClicked1] = useState(false);
   const [clicked2, setClicked2] = useState(false);
   const [clicked3, setClicked3] = useState(false);
@@ -73,13 +76,16 @@ const ProfilDoctor = () => {
         </div>
         <div className="comments_container">
           <div className="topnav_profil_doctor">
-            <span className="nav_profil_doctor">My Profile</span>
-            <span className="nav_profil_doctor">Change Password</span>
-            <span className="nav_profil_doctor">Notification</span>
-            <span className="nav_profil_doctor">Reviews</span>
+            <span className="navprofil_doctor">My Profile</span>
+            <span className="navprofil_doctor">Change Password</span>
+            <span className="navprofil_doctor">Notification</span>
+            <span className="navprofil_doctor">Reviews</span>
+          </div>
+          <div className="onereview_content">
+            <span className="review_profil">Reviews</span>
           </div>
 
-        
+          <Review />
         </div>
       </div>
     </div>
