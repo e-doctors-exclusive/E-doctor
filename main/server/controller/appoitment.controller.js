@@ -14,7 +14,7 @@ module.exports = {
 
   addAppoitment: async (req, res) => {
     try {
-      const response = await Appointment.create(req.body);
+      const response = await Appointment.bulkCreate(req.body);
       res.status(201).json(response);
     } catch (error) {
       throw error;
