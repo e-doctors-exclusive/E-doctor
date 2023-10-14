@@ -3,7 +3,7 @@ import './App.css';
 import { Routes, Route } from "react-router-dom";
 import UserAccount from './components/userAccount/UserAccount'
 import ContactUs from './components/contactUs/ContactUs';
-import DoctorAccount from './components/doctorAccount/doctorAccount';
+import DoctorAccount from './components/doctorAccount/DoctorAccount';
 import HomePage from './components/homePage/HomePage';
 import ProfilDoctor from './components/profilDoctor/ProfilDoctor';
 import ServicesCard from './components/servicesCards/ServicesCard';
