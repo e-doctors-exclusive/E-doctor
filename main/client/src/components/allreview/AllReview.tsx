@@ -3,7 +3,7 @@ import OneReview from "../OneReview/OneReview";
 import { AppDispatch, RootState } from "../../redux/index";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchReview } from "../../redux/reviewSlice";
-
+import './allreviews.css'
 
 
 interface objtype{
@@ -22,9 +22,12 @@ const AllReview = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className="allreview_content">
+      <div className="onereview_content">
+            <span className="review_profil">Reviews</span>
+          </div>
       {reviews.map((review: objtype) => {
-        return <OneReview review={review} />;
+        return <OneReview  review={review} />;
       })}
     </div>
   );

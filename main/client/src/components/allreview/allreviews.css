@@ -1,0 +1,4 @@
+.allreview_content {
+    max-height: 550px; 
+    overflow-y: scroll;
+}

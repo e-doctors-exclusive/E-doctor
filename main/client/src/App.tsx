@@ -3,9 +3,9 @@ import './App.css';
 import { Routes, Route } from "react-router-dom";
 import UserAccount from './components/userAccount/UserAccount'
 import ContactUs from './components/contactUs/ContactUs';
-import DoctorAccount from './components/doctorAccount/doctorAccount';
+import DoctorAccount from './components/doctorAccount/DoctorAccount';
 import HomePage from './components/homePage/HomePage';
-import DoctorProfile from './components/doctorProfile/DoctorProfile';
+import MenuDocotor from './components/menudocotor/MenuDoctor'
 import ServicesCard from './components/servicesCards/ServicesCard';
 import { SignUp } from './components/Sign_Up/SignUp';
 import ReviewCard from './components/reviewCards/ReviewCard'
@@ -15,7 +15,7 @@ import DoctorChat from './components/doctorChat/DoctorChat';
 import { Navigate } from 'react-router-dom';
 import Review from './components/reviews/Review'
 import Overview from './components/overviews/Overview';
-
+import MyProfil from './components/myProfil/MyProfil';
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   return (
@@ -33,9 +33,12 @@ function App() {
         <Route path="/Login" element={isLoggedIn ? <Navigate to="/" /> : <Login setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/" element={<HomePage setIsLoggedIn={setIsLoggedIn}/>} />
         <Route path="/service" element={<Service setIsLoggedIn={setIsLoggedIn} />} />
-        <Route path="/DoctorProfile" element={<DoctorProfile />} >
+        <Route path="/menuDoctor" element={<MenuDocotor />} >
           <Route path='overview' element={<Overview />} />
-          <Route path='Review' element={<Review />} />
+          <Route path='Review' element={<Review />} >
+            <Route path='Myprofile' element={<MyProfil/>}/>
+          
+          </Route>
         </Route>
       </Routes>
     </>

@@ -1,9 +1,30 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import avatar from "../../assets/profildoctor/avatar.png";
 import AllReview from "../allreview/AllReview";
+import { useNavigate } from 'react-router-dom';
 import './review.css'
+import { AppDispatch, RootState } from '../../redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchDoctors } from '../../redux/doctorSlice';
+interface Doctor {
+  name: string;
+  lastName: string;
+  Address: string;
+  email: string;
+  password: string;
+  MedicalInfo: "Neurosurgeons" | "Thoracic Surgeons" | "Orthopedic Surgeons" | "Plastic Surgeons" | "Oral and Maxillofacial Surgeons" | "Family Physicians" | "Internists" | "Emergency Physicians" | "Psychiatrists" | "Obstetricians" | "Dentists";
+  rating: number | null;
+  avatar: string;
+  bio: string;
+}
 const Review = () => {
-    
+  const dispatch: AppDispatch = useDispatch();
+  const doctors = useSelector((state: RootState) => state.doctor.data);
+  useEffect(() => {
+    dispatch(fetchDoctors());
+  }, [dispatch]);
+  
+  const navigate = useNavigate();
   const [clicked1, setClicked1] = useState(false)
   const [clicked2, setClicked2] = useState(false);
   const [clicked3, setClicked3] = useState(false);
@@ -36,14 +57,17 @@ const Review = () => {
     setClicked5(!clicked5);
   };
   return (
-    <div>
-        <div className="card_container">
+    <div className='reviews_container'>
+         <div className="card_container">
           <p className="myProfile">My Profile</p>
-          <div className="details_card">
-            <img src={avatar} alt="Image" />
+         
+         
+          {doctors.map((doctor: Doctor)=>{return (
 
-            <span className="name_doctor_info">Dr. Stephen Contey</span>
-            <span className="medical_info_name">Cardiologist</span>
+<div className="details_card"><img src={avatar} alt="Image" />
+
+            <span className="name_doctor_info">{doctor.name}</span>
+            <span className="medical_info_name">{doctor.MedicalInfo}</span>
             <button className="button-profile">
               <span className="edit_p">
                 <svg
@@ -58,7 +82,8 @@ const Review = () => {
               </span>
             </button>
 
-            <span className="rate_profile_info">146 Rates</span>
+            <span className="rate_profile_info">{doctor.rating}</span>
+            <span className="rate_profile_info">Rates</span>
             <div
               style={{ display: "flex", justifyContent: "center", gap: "5px" }}
             >
@@ -67,21 +92,22 @@ const Review = () => {
               <div onClick={changeState3}>{clicked3 ? fullstar : nostar}</div>
               <div onClick={changeState4}>{clicked4 ? fullstar : nostar}</div>
               <div onClick={changeState5}>{clicked5 ? fullstar : nostar}</div>
-            </div>
-          </div>
+            </div></div>
+
+)})}
+          
+          
+       
         </div>
         <div className="comments_container">
           <div className="topnav_profil_doctor">
-            <span className="navprofil_doctor">My Profile</span>
+            <span className="navprofil_doctor" onClick={()=>navigate('Myprofile')}>My Profile</span>
             <span className="navprofil_doctor">Change Password</span>
             <span className="navprofil_doctor">Notification</span>
-            <span className="navprofil_doctor">Reviews</span>
-          </div>
-          <div className="onereview_content">
-            <span className="review_profil">Reviews</span>
+            <span className="navprofil_doctor" onClick={()=>navigate('OneReview')}>Reviews</span>
           </div>
           <AllReview />
-        </div>
+        </div> 
     </div>
   )
 }

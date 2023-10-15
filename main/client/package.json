@@ -14,11 +14,9 @@
     "@types/react-dom": "^18.2.12",
     "@videosdk.live/react-sdk": "^0.1.77",
     "axios": "^1.5.1",
+    "hls.js": "^1.4.12",
     "mdbreact": "^5.2.0",
     "moment": "^2.29.4",
-
-    "hls.js": "^1.4.12",
-
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
