@@ -14,7 +14,7 @@ import Login from "./components/Login/Login";
 import DoctorChat from './components/doctorChat/DoctorChat';
 import Overview from './components/overviews/Overview';
 import { Navigate } from 'react-router-dom';
-
+import UserAppointments from './components/apointements/getAppointements';
 
 
 function App() {
@@ -22,7 +22,10 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/useraccount" element={<UserAccount />} />
+        
+        <Route path="/useraccount" element={<UserAccount />}/>
+        <Route path='/appointments' element={<UserAppointments />}/>
+       
         <Route path="/contactus" element={<ContactUs setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/cards" element={<ServicesCard />} />
         <Route path="/review" element={<ReviewCard />} />

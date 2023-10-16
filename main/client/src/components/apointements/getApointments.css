@@ -1,0 +1,45 @@
+.user-details {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .user-info {
+    border: 1px solid #176419;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fff;
+  }
+  
+  .appointment {
+    border: 1px solid#176419;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fff;
+  }
+  
+  .appointments {
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  .user-info p {
+    margin: 5px 0;
+  }
+  
+
+  .appointment p {
+    margin: 5px 0;
+  }
+  
+
+  

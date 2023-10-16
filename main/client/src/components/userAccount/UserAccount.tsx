@@ -101,6 +101,9 @@ const UserAccount = () => {
           height="32"
           viewBox="0 0 31 32"
           fill="none"
+          onClick={()=>{
+            navigate("/appointments");
+          }}
         >
           <g clipPath="url(#clip0_221_631)">
             <path
