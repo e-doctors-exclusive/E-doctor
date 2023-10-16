@@ -76,7 +76,7 @@ const MenuDoctor = () => {
               }}
             >
               <i className="fa-regular fa-envelope"></i>
-              <span className="text_sid">Messages</span>
+              <span className="text_sid" onClick={()=>navigate('chat')}>Messages</span>
             </div>
             <div
               className={`icon_list ${activdiv === "Blog" ? "active" : ""}`}
@@ -94,7 +94,7 @@ const MenuDoctor = () => {
               }}
             >
               <i className="fa-solid fa-gear"></i>
-              <span className="text_sid"onClick={()=>navigate("Review")}>Settings</span>
+              <span className="text_sid"onClick={()=>navigate('NavMenuDoctor')}>Settings</span>
             </div>
           </ul>
         </div>

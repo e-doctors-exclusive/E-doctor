@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./userAccount.css";
 import doctor from "../../assets/unsplash_7bMdiIqz_J4.png";
 import { useNavigate } from "react-router-dom";
-
+import { AppDispatch, RootState } from "../../redux";
+import { useDispatch, useSelector } from "react-redux";
+import {fetchAppointments} from "../../redux/appointment"
+interface appointmentType {
+  AppointmentTime:Date,
+  AppointmentStatus: "Scheduled"|"Completed"| "Cancelled",
+  AppointmentDuration: number,
+  Notes: string,
+  ReasonForVisit: string,
+  createdAt:Date
+}
 
 const UserAccount = () => {
-
+  const dispatch: AppDispatch = useDispatch();
+  const appointments = useSelector((state: RootState) => state.appointment.data);
+  useEffect(() => {
+    dispatch(fetchAppointments());
+  }, [dispatch]);
   const navigate = useNavigate();
   return (
     <div className="container-user">
@@ -275,35 +289,23 @@ const UserAccount = () => {
                     </svg>
                   </div>
                 </div>
+<div className="poitment_scroll">{appointments.map((appointment: appointmentType)=>{return (
+                <div className="container_pointment">
+                  <div className="left_pointment_start">
+                    <span className="first_letter_piontment">SP</span>
+                    <div className="status">
+                      <span className="list_name_pointment">
+                        Stacy Mitchell
+                      </span>
+                      <span className="list_pointment_status">{appointment.AppointmentStatus}</span>
+                    </div>
+                  </div>
+                  <div className="left_pointment_end">
+                    <span className="list_pointment_time">{new Date(appointment.createdAt).toDateString()}</span>
+                  </div>
+                </div>)})}
+                </div>
 
-                <div className="container_pointment">
-                  <div className="left_pointment_start">
-                    <span className="first_letter_piontment">SP</span>
-                    <div className="status">
-                      <span className="list_name_pointment">
-                        Stacy Mitchell
-                      </span>
-                      <span className="list_pointment_status">Schedule</span>
-                    </div>
-                  </div>
-                  <div className="left_pointment_end">
-                    <span className="list_pointment_time">9:15AM</span>
-                  </div>
-                </div>
-                <div className="container_pointment">
-                  <div className="left_pointment_start">
-                    <span className="first_letter_piontment">SP</span>
-                    <div className="status">
-                      <span className="list_name_pointment">
-                        Stacy Mitchell
-                      </span>
-                      <span className="list_pointment_status">Schedule</span>
-                    </div>
-                  </div>
-                  <div className="left_pointment_end">
-                    <span className="list_pointment_time">9:15AM</span>
-                  </div>
-                </div>
               </div>
             </div>
 

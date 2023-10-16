@@ -13,9 +13,10 @@ import Service from './components/service/Service';
 import Login from "./components/Login/Login";
 import DoctorChat from './components/doctorChat/DoctorChat';
 import { Navigate } from 'react-router-dom';
-import Review from './components/reviews/Review'
+import NavMenuDoctor from './components/navMenuDoctor/NavMenuDoctor';
 import Overview from './components/overviews/Overview';
-import MyProfil from './components/myProfil/MyProfil';
+import Review from './components/reviews/Review';
+import EditeProfil from './components/editeProfil/EditeProfil';
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   return (
@@ -26,7 +27,7 @@ function App() {
         <Route path="/contactus" element={<ContactUs setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/cards" element={<ServicesCard />} />
         <Route path="/review" element={<ReviewCard />} />
-        <Route path="/chat" element={<DoctorChat />} />
+        
 
         <Route path="/doctor" element={<DoctorAccount />} />
         <Route path="/signUp" element={<SignUp />} />
@@ -35,8 +36,10 @@ function App() {
         <Route path="/service" element={<Service setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/menuDoctor" element={<MenuDocotor />} >
           <Route path='overview' element={<Overview />} />
-          <Route path='Review' element={<Review />} >
-            <Route path='Myprofile' element={<MyProfil/>}/>
+          <Route path="chat" element={<DoctorChat />} />
+          <Route path='EditeProfil' element={<EditeProfil/>} />
+          <Route path='NavMenuDoctor' element={<NavMenuDoctor/>} >
+            <Route path='Review' element={<Review/>}/>
           
           </Route>
         </Route>
