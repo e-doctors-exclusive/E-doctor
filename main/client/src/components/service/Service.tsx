@@ -300,13 +300,21 @@ const Service: React.FC<props> = ({ setIsLoggedIn }) => {
                 <span className="slider round"></span>
               </label>
             </div>
-            <button className="Search-button-find">Search</button>
+            <button className="Search-button-find" onClick={()=>{
+                // setShowDoc(true);
+                // setAppointmentTime("1:00")
+            }}>Search</button>
           </div>
         </div>
 
         {showDoc ? (
-          <div className="doctor-afet-book">
-            {DoctorData.map((obj: objtype, i: number) => {
+          isAppointmentTimeAvailable ?(
+
+            <div className="doctor-afet-book">
+            
+              {Array.isArray(DoctorData) && DoctorData.map((obj: objtype, i: number) => {
+                // Your map function here
+              
               if (
                 (obj.MedicalInfo as MedicalInfotype) ===
                 (department as MedicalInfotype)
@@ -322,6 +330,7 @@ const Service: React.FC<props> = ({ setIsLoggedIn }) => {
               }
             })}
           </div>
+          ):null
         ) : null}
 
         {/* services we provide  */}

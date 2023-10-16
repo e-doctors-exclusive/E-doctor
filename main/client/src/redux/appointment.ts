@@ -13,7 +13,14 @@ export const fetchAppointments = createAsyncThunk(
     return task.data
     }
 ) 
-
+export const addAppointments = createAsyncThunk(
+    "AddDoctor",
+    async (input:any, { dispatch }) => {
+     const task = await axios.post("http://localhost:3000/api/appointment/addAppointment", input);
+      dispatch(fetchAppointments());
+  return task.data
+    }
+  );
 const appointmentSlice = createSlice({
 name:"appointment" , 
 initialState,

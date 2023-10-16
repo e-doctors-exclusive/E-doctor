@@ -8,9 +8,9 @@ module.exports = (connection) => {
             }),
             defaultValue:"Scheduled"
         },
-        AppointmentDuration: { type: DataTypes.INTEGER, allowNull: false, trim: true, defaultValue: 0 },
-        Notes: { type: DataTypes.TEXT, allowNull: true, trim: true},
-        ReasonForVisit: { type: DataTypes.TEXT, allowNull: false, trim: true }
+        AppointmentDuration: { type: DataTypes.INTEGER, allowNull: false, trim: true, defaultValue: 30 },
+        Notes: { type: DataTypes.TEXT, allowNull: true, trim: true,defaultValue: "" },
+        ReasonForVisit: { type: DataTypes.TEXT, allowNull: false, trim: true, defaultValue:""}
     })
     return Appointment
 }
