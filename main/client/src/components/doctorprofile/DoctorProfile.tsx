@@ -4,9 +4,13 @@ import iconbell from "../../assets/profildoctor/iconbell.png";
 import help from "../../assets/profildoctor/help.png";
 import logo from "../../assets/profildoctor/logo.png";
 const DoctorProfile = () => {
+<<<<<<< HEAD
+  const [activdiv, setActivediv] = useState('');
+=======
   console.log("khalilfzfz");
   
   const [activdiv, setActivediv] = useState("");
+>>>>>>> aaac2fb7b608dc331bbf96e38665216861cd8d54
 
   return (
     <div className="container_doctor_profil">
