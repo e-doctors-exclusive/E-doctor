@@ -1,3 +1,4 @@
+/* css navBar */
 .navBar_doctor_profil {
   margin-top: 2px;
   justify-content: space-between;
@@ -7,13 +8,12 @@
   flex-direction: row;
   padding: 10px;
   margin-left: 10px;
-  position: relative;
 }
 .left_doctor_profil {
   flex-direction: row;
   align-items: center;
   display: flex;
-  background: white;
+  background: #f0f9fd;
   width: 50rem;
   height: 4rem;
   gap: 8rem;
@@ -59,7 +59,7 @@
 }
 .search__button_doctor_Profil {
   border: none;
-  background-color: white;
+  background-color: #f4f2f2;
   margin-top: 0.1em;
 }
 
@@ -76,7 +76,7 @@
 .search__input_doctor_Profil {
   font-family: inherit;
   font-size: inherit;
-  background: white;
+  background: #f0f9fd;
   border: none;
   color: #646464;
   padding: 0.7rem 1rem;
@@ -137,21 +137,23 @@
 .icon-user_doctor {
   width: 170px;
   height: 55px;
-  background: white;
+  background: #f0f9fd;
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1px;
+  gap: 10px;
 }
 .name_doctor {
   flex-direction: column;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 1px;
+  gap: 5px;
+  padding: 1rem;
 }
 .unicode_icon {
+  flex-direction: row;
   display: flex;
   justify-content: center;
   gap: 3px;
@@ -183,14 +185,14 @@
 .content_doctor_profil {
   width: 22%;
   height: 100%;
-  background-color: white;
+  background-color:  white;
   padding: 1px;
 }
 .list_profil_doctor {
   list-style-type: none;
 }
 .icon_list {
-  width: 170px;
+  width: 200px;
   height: 45px;
   border-radius: 10%;
   display: flex;
@@ -202,15 +204,4 @@
   background-color: white;
 
   cursor: pointer;
-}
-
-.active {
-  background: black;
-  color: white;
-  border-radius: 10px;
-  box-shadow: #0d0d0d;
-}
-
-.icon_list {
-  padding-left: 20px;
 }
