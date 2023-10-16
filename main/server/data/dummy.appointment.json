@@ -1,73 +1,115 @@
- [
-    {
-      "AppointmentTime": "10:00 ",
-      "AppointmentStatus": "Scheduled",
-      "AppointmentDuration": 30,
-      "Notes": "Please arrive 10 minutes early.",
-      "ReasonForVisit": "Regular checkup"
-    },
-    {
-      "AppointmentTime": "11:30 ",
-      "AppointmentStatus": "Completed",
-      "AppointmentDuration": 45,
-      "Notes": "Patient arrived late but was seen.",
-      "ReasonForVisit": "Follow-up appointment"
-    },
-    {
-      "AppointmentTime": "2:15 ",
-      "AppointmentStatus": "Scheduled",
-      "AppointmentDuration": 60,
-      "Notes": "New patient, handle with care.",
-      "ReasonForVisit": "Initial consultation"
-    },
-    {
-      "AppointmentTime": "3:45 ",
-      "AppointmentStatus": "Cancelled",
-      "AppointmentDuration": 30,
-      "Notes": "Patient called to cancel due to emergency.",
-      "ReasonForVisit": "Urgent issue"
-    },
-    {
-      "AppointmentTime": "9:30 ",
-      "AppointmentStatus": "Scheduled",
-      "AppointmentDuration": 45,
-      "Notes": "Patient needs blood pressure check.",
-      "ReasonForVisit": "Health monitoring"
-    },
-    {
-      "AppointmentTime": "1:00 ",
-      "AppointmentStatus": "Scheduled",
-      "AppointmentDuration": 30,
-      "Notes": "Routine checkup.",
-      "ReasonForVisit": "General health"
-    },
-    {
-      "AppointmentTime": "4:30 ",
-      "AppointmentStatus": "Scheduled",
-      "AppointmentDuration": 60,
-      "Notes": "Follow-up appointment after surgery.",
-      "ReasonForVisit": "Post-surgery check"
-    },
-    {
-      "AppointmentTime": "2:45 ",
-      "AppointmentStatus": "Completed",
-      "AppointmentDuration": 40,
-      "Notes": "Patient feeling much better.",
-      "ReasonForVisit": "Recovery check"
-    },
-    {
-      "AppointmentTime": "11:00 ",
-      "AppointmentStatus": "Cancelled",
-      "AppointmentDuration": 45,
-      "Notes": "Patient called to cancel due to work commitment.",
-      "ReasonForVisit": "Routine checkup"
-    },
-    {
-      "AppointmentTime": "3:00 ",
-      "AppointmentStatus": "Scheduled",
-      "AppointmentDuration": 30,
-      "Notes": "Regular checkup.",
-      "ReasonForVisit": "General health"
-    }
-  ]
-  
+[
+  {
+    "AppointmentTime": "10:00",
+    "AppointmentStatus": "Scheduled",
+    "AppointmentDuration": 60,
+    "Notes": "First appointment",
+    "ReasonForVisit": "Routine check-up",
+    "UserId": 1,
+    "DoctorId": 1
+  },
+  {
+    "AppointmentTime": "11:00",
+    "AppointmentStatus": "Scheduled",
+    "AppointmentDuration": 60,
+    "Notes": "Second appointment",
+    "ReasonForVisit": "Follow-up visit",
+    "UserId": 2,
+    "DoctorId": 1
+  },
+
+  {
+    "AppointmentTime": "10:00",
+    "AppointmentStatus": "Scheduled",
+    "AppointmentDuration": 60,
+    "Notes": "First appointment",
+    "ReasonForVisit": "Routine check-up",
+    "UserId": 3,
+    "DoctorId": 2
+  },
+  {
+    "AppointmentTime": "11:00",
+    "AppointmentStatus": "Scheduled",
+    "AppointmentDuration": 60,
+    "Notes": "Second appointment",
+    "ReasonForVisit": "Follow-up visit",
+    "UserId": 4,
+    "DoctorId": 2
+  },
+
+  {
+    "AppointmentTime": "10:00",
+    "AppointmentStatus": "Scheduled",
+    "AppointmentDuration": 60,
+    "Notes": "First appointment",
+    "ReasonForVisit": "Routine check-up",
+    "UserId": 5,
+    "DoctorId": 3
+  },
+  {
+    "AppointmentTime": "11:00",
+    "AppointmentStatus": "Scheduled",
+    "AppointmentDuration": 60,
+    "Notes": "Second appointment",
+    "ReasonForVisit": "Follow-up visit",
+    "UserId": 6,
+    "DoctorId": 3
+  },
+
+  {
+    "AppointmentTime": "10:00",
+    "AppointmentStatus": "Scheduled",
+    "AppointmentDuration": 60,
+    "Notes": "First appointment",
+    "ReasonForVisit": "Routine check-up",
+    "UserId": 7,
+    "DoctorId": 4
+  },
+  {
+    "AppointmentTime": "11 :00 ",
+    "AppointmentStatus": "Scheduled ",
+    "AppointmentDuration": 60,
+    "Notes": "Second appointment ",
+    "ReasonForVisit": "Follow-up visit ",
+    "UserId": 8,
+    "DoctorId": 4
+  },
+
+  {
+    "AppointmentTime": "10 :00 ",
+    "AppointmentStatus": "Scheduled ",
+    "AppointmentDuration": 60,
+    "Notes": "First appointment ",
+    "ReasonForVisit": "Routine check-up ",
+    "UserId": 9,
+    "DoctorId": 5
+  },
+  {
+    "AppointmentTime": "11 :00 ",
+    "AppointmentStatus": "Scheduled ",
+    "AppointmentDuration": 60,
+    "Notes": "Second appointment ",
+    "ReasonForVisit": "Follow-up visit ",
+    "UserId": 10,
+    "DoctorId": 5
+  },
+
+  {
+    "AppointmentTime": "10 :00 ",
+    "AppointmentStatus": "Scheduled ",
+    "AppointmentDuration": 60,
+    "Notes": "First appointment ",
+    "ReasonForVisit": "Routine check-up ",
+    "UserId": 1,
+    "DoctorId": 6
+  },
+  {
+    "AppointmentTime": "11 :00 ",
+    "AppointmentStatus": "Scheduled ",
+    "AppointmentDuration": 60,
+    "Notes": "Second appointment ",
+    "ReasonForVisit": "Follow-up visit ",
+    "UserId": 2,
+    "DoctorId": 6
+  }
+]

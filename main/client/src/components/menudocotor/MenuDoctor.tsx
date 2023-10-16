@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+<<<<<<< HEAD:main/client/src/components/menudocotor/MenuDoctor.tsx
 import "./menuDoctor.css";
 
 import ProfilDoctor from "../profilDoctor/ProfilDoctor";
@@ -6,6 +7,14 @@ import { useNavigate } from "react-router-dom";
 import TopMenu from "../topmenu/TopMenu";
 const MenuDoctor = () => {
  
+=======
+import "./doctorProfile.css";
+import iconbell from "../../assets/profildoctor/iconbell.png";
+import help from "../../assets/profildoctor/help.png";
+import logo from "../../assets/profildoctor/logo.png";
+const DoctorProfile = () => {
+  console.log("khalilfzfz");
+>>>>>>> aaac2fb7b608dc331bbf96e38665216861cd8d54:main/client/src/components/doctorprofile/DoctorProfile.tsx
   
   const [activdiv, setActivediv] = useState("");
   const navigate = useNavigate();

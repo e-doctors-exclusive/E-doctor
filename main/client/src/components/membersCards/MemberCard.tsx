@@ -7,7 +7,7 @@ import facebook from "../../assets/Facebook.svg";
 import instagram from "../../assets/Instagram.svg";
 import twitter from "../../assets/Twitter.svg";
 import linkedin from "../../assets/LinkedIn.svg";
-import { fetchAppointments } from ".././../redux/appointment";
+import { fetchAppointments,addAppointments } from ".././../redux/appointment";
 import { useLocation } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState, AppDispatch } from "../../redux";
@@ -43,8 +43,17 @@ interface props {
 }
 
 const MemberCard = (props: any) => {
+  const user = localStorage.getItem("user")
+  let patientId = 0;
+  if(user) {
+    patientId = JSON.parse(user).id;
+  }
+  const DoctorId = props.data.id
   console.log("appointment time",props.appointmentTime);  
-  // const dispatch: AppDispatch = useDispatch();
+  const dispatch: AppDispatch = useDispatch();
+  useEffect(()=>{
+
+  },[dispatch ])
   // const appointmentData = useSelector(
   //   (state: RootState) => state.appointment.data
   // );
@@ -76,7 +85,13 @@ const MemberCard = (props: any) => {
       </div>
       {location.pathname === "/service" ? (
         <div className="make-appoitment-div-memberCard">
-          <button className="make-appoitment-button-memberCard">
+          <button onClick={()=>{
+            dispatch(addAppointments({
+              AppointmentTime:props.appointmentTime
+              ,patientId,
+              DoctorId
+            }))
+          }} className="make-appoitment-button-memberCard">
             Make an appoitment{" "}
           </button>
         </div>

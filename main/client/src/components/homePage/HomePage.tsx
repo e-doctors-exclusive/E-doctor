@@ -7,7 +7,7 @@ import MemberCard from "../membersCards/MemberCard";
 import woman3 from "../../assets/woman3.svg";
 import ReviewCard from "../reviewCards/ReviewCard";
 import Footer from "../footer/Footer";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { RootState,AppDispatch } from '../../redux';
 import { addDoctor,fetchDoctors,UpdateDoctor,DeleteDocotr} from "../../redux/doctorSlice";
 import { AddReview,fetchReview,UpdateReview,deleteReview} from "../../redux/reviewSlice";
@@ -47,7 +47,7 @@ const HomePage:React.FC<props> = ({setIsLoggedIn}) => {
   console.log(DoctorData);
   const Reviews = useSelector((state:RootState)=>state.review.data)
   console.log(Reviews);
-  
+  const navigate = useNavigate()
   useEffect(()=>{
 dispatch(fetchDoctors())
 dispatch(fetchReview())
@@ -94,7 +94,9 @@ dispatch(fetchDoctors())
             </p>
           </div>
           <div className="button-video-homePage">
-            <button className="appointment-homepage"> Appointment</button>
+            <button className="appointment-homepage" onClick={()=>{
+              navigate("/service")
+            }}> Appointment</button>
             <i
               className="fa-solid fa-circle-play fa-lg"
               style={{ color: "#007E85", fontSize: "40px" }}
@@ -461,7 +463,11 @@ dispatch(fetchDoctors())
             viewBox="0 0 14 15"
             fill="none"
           >
-            <circle cx="7" cy="7.92432" r="7" fill="#007E85" />
+            <circle cx="7" cy="7.92432" r="7" fill="#007E85" onClick={()=>(navigate("/"),  window.scrollTo({
+                top: window.outerHeight, // Scroll to the height of the viewport
+                behavior: "smooth", // Add smooth scrolling behavior
+              }))
+              } />
           </svg>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -469,6 +475,12 @@ dispatch(fetchDoctors())
             height="15"
             viewBox="0 0 14 15"
             fill="none"
+            onClick={()=>(navigate("/service"),
+              window.scrollTo({
+                top: window.outerHeight, // Scroll to the height of the viewport
+                behavior: "smooth", // Add smooth scrolling behavior
+              }))
+          }
           >
             <circle
               cx="7"
@@ -476,6 +488,7 @@ dispatch(fetchDoctors())
               r="7"
               fill="#007E85"
               fillOpacity="0.52"
+              
             />
           </svg>
           <svg
@@ -484,6 +497,11 @@ dispatch(fetchDoctors())
             height="15"
             viewBox="0 0 14 15"
             fill="none"
+            onClick={()=>(navigate("/contactus"),  window.scrollTo({
+              top: window.outerHeight, // Scroll to the height of the viewport
+              behavior: "smooth", // Add smooth scrolling behavior
+            }))
+          }
           >
             <circle
               cx="7"
@@ -491,6 +509,7 @@ dispatch(fetchDoctors())
               r="7"
               fill="#007E85"
               fillOpacity="0.52"
+              
             />
           </svg>
         </div>
