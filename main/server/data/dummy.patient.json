@@ -1,0 +1,73 @@
+[
+  {
+    "name": "John",
+    "lastName": "Doe",
+    "Address": "123 Main St",
+    "email": "john.doe@example.com",
+    "password": "password1"
+  },
+  {
+    "name": "Jane",
+    "lastName": "Doe",
+    "Address": "456 Maple Ave",
+    "email": "jane.doe@example.com",
+    "password": "password2"
+  },
+  {
+    "name": "Bob",
+    "lastName": "Smith",
+    "Address": "789 Oak Dr",
+    "email": "bob.smith@example.com",
+    "password": "password3"
+  },
+  {
+    "name": "Alice",
+    "lastName": "Johnson",
+    "Address": "321 Pine Rd",
+    "email": "alice.johnson@example.com",
+    "password": "password4"
+  },
+  {
+    "name": "Charlie",
+    "lastName": "Brown",
+    "Address": "654 Elm St",
+    "email": "charlie.brown@example.com",
+    "password": "password5"
+  },
+
+  {
+    "name": "Sally",
+    "lastName": "Davis",
+    "Address": "987 Cedar Ave",
+    "email": "sally.davis@example.com",
+    "password": "password6"
+  },
+  {
+    "name": "Lucy",
+    "lastName": "Miller",
+    "Address": "234 Birch Dr",
+    "email": "lucy.miller@example.com",
+    "password": "password7"
+  },
+  {
+    "name": "Linus",
+    "lastName": "Wilson",
+    "Address": "567 Spruce Rd",
+    "email": "linus.wilson@example.com",
+    "password": "password8"
+  },
+  {
+    "name": "Peppermint Patty",
+    "lastName": "Reed",
+    "Address": "890 Willow St",
+    "email": "peppermint.patty@example.com",
+    "password": "password9"
+  },
+  {
+    "name": "Marcie",
+    "lastName": "Clark",
+    "Address": "123 Cherry Ave",
+    "email": "marcie.clark@example.com",
+    "password": "password10"
+  }
+]
