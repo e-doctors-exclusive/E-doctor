@@ -3,11 +3,10 @@ import "./doctorProfile.css";
 import iconbell from "../../assets/profildoctor/iconbell.png";
 import help from "../../assets/profildoctor/help.png";
 import logo from "../../assets/profildoctor/logo.png";
+import { useNavigate } from "react-router";
 const DoctorProfile = () => {
-  console.log("khalilfzfz");
-  
+  const navigate = useNavigate();
   const [activdiv, setActivediv] = useState("");
-
   return (
     <div className="container_doctor_profil">
       <div className="navBar_doctor_profil">
@@ -19,7 +18,6 @@ const DoctorProfile = () => {
               <span className="car_doctor_profil">care</span>
             </div>
           </div>
-
           <div className="search_doctor_Profil">
             <button className="search__button_doctor_Profil">
               <svg
@@ -81,7 +79,7 @@ const DoctorProfile = () => {
               }}
             >
               <i className="fa-brands fa-microsoft" />
-              <span className="text_sid">Overview</span>
+              <span className="text_sid" onClick={()=>{navigate("/overview")}}>Overview</span>
             </div>
             <div
               className={`icon_list ${

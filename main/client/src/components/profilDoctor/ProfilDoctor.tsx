@@ -3,15 +3,13 @@ import "./profildoctor.css";
 import DoctorProfile from "../doctorprofile/DoctorProfile";
 import avatar from "../../assets/profildoctor/avatar.png";
 import Review from "../reviewProfileDoctor/Review";
-import { MDBBtn } from "mdbreact";
+// import { MDBBtn } from "mdbreact";
 const ProfilDoctor = () => {
-
   const [clicked1, setClicked1] = useState(false);
   const [clicked2, setClicked2] = useState(false);
   const [clicked3, setClicked3] = useState(false);
   const [clicked4, setClicked4] = useState(false);
   const [clicked5, setClicked5] = useState(false);
-
   const fullstar = (
     <i className="fa-solid fa-star fa-sm" style={{ color: "#F3CD03" }}></i>
   );

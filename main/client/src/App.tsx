@@ -15,8 +15,6 @@ import DoctorChat from './components/doctorChat/DoctorChat';
 import Overview from './components/overviews/Overview';
 import { Navigate } from 'react-router-dom';
 
-
-
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   return (
@@ -33,6 +31,7 @@ function App() {
         <Route path="/" element={<HomePage setIsLoggedIn={setIsLoggedIn}/>} />
         <Route path="/service" element={<Service setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/ProfilDoctor" element={<ProfilDoctor />} />
+        <Route path="/overview" element={<Overview />} />
       </Routes>
     </>
   );
