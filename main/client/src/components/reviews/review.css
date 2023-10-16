@@ -1,0 +1,7 @@
+.reviews_container {
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+
+}

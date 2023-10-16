@@ -1,6 +1,8 @@
-import React, { useState } from "react";
-import avatar from "../../assets/profildoctor/avatar.png";
+import React, { useEffect, useState } from "react";
 import "./oneReview.css";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "../../redux";
+import { fetchDoctors } from "../../redux/doctorSlice";
 interface objtype{
   content:string,
   rating:string,
@@ -8,14 +10,32 @@ interface objtype{
   DocReply:string,
   createdAt:Date
 }
+interface Doctor {
+  name: string;
+  lastName: string;
+  Address: string;
+  email: string;
+  password: string;
+  MedicalInfo: "Neurosurgeons" | "Thoracic Surgeons" | "Orthopedic Surgeons" | "Plastic Surgeons" | "Oral and Maxillofacial Surgeons" | "Family Physicians" | "Internists" | "Emergency Physicians" | "Psychiatrists" | "Obstetricians" | "Dentists";
+  rating: number | null;
+  avatar: string;
+  bio: string;
+}
 
 const OneReview = (props:{review:objtype}) => {
+  const dispatch: AppDispatch = useDispatch();
+const doctors = useSelector((state: RootState) => state.doctor.data);
+useEffect(() => {
+  dispatch(fetchDoctors());
+}, [dispatch]);
+
 
   const [clicked1, setClicked1] = useState(false);
   const [clicked2, setClicked2] = useState(false);
   const [clicked3, setClicked3] = useState(false);
   const [clicked4, setClicked4] = useState(false);
   const [clicked5, setClicked5] = useState(false);
+ 
   const fullstar = (
     <i className="fa-solid fa-star fa-sm" style={{ color: "#F3CD03" }}></i>
   );
@@ -41,25 +61,27 @@ const OneReview = (props:{review:objtype}) => {
   const changeState5 = () => {
     setClicked5(!clicked5);
   };
-const update =() => {
-  try {
-    
-  } catch (error) {
-    console.log(error);
-    
-  }
-}
+
+// const update =() => {
+//   dispatch(UpdateDoctor(doctors.rating))
+// }
+  
+  
+  
+  
+  
+  
 
   return (
     <div className="all_review_content">
       <div className="blog_review">
         <div className="image_name_profession_rate">
-          <div className="image_name_profession">
-            <img className="image_review" src={avatar} />
-            <div className="name_prof">
-              <span className="name_review">Ronald Richards</span>
-              <span className="profession_review">Engineer</span>
-            </div>
+          <div className="image_name_profession">{doctors.map((doctor: Doctor)=>{return (<div>
+            <img className="image_review" src={doctor.avatar} />
+            <div className="name_prof ">
+              <span className="name_review">{doctor.name}</span>
+              <span className="profession_review">{doctor.MedicalInfo}</span></div>
+              </div>)})}
           </div>
           <div className="rate_date">
             <div

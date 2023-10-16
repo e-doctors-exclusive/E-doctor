@@ -32,7 +32,7 @@ module.exports = (connection) => {
       allowNull: false,
       trim: true,
     },
-    rating: { type: DataTypes.STRING, allowNull: true, trim: true },
+    rating: { type: DataTypes.INTEGER, allowNull: true, trim: true,dafaultValue:0 },
     avatar: {
       type: DataTypes.STRING,
       defaultValue:

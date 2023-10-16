@@ -1,6 +1,5 @@
 import axios from "axios";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { AppDispatch } from "./index";
 interface Args {
   id: number;
   input: object;

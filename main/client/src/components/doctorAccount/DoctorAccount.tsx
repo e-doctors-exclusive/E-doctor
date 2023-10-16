@@ -3,7 +3,7 @@ import "./doctorAccount.css"
 import doctor from "../../assets/unsplash_7bMdiIqz_J4.png"
 
 
-const DoctorAccount = () => {
+const doctorAccount = () => {
   return (
     
     <div className='contaiNerrr'>
@@ -208,4 +208,4 @@ const DoctorAccount = () => {
   )
 }
 
-export default DoctorAccount
+export default doctorAccount
