@@ -4,7 +4,7 @@ import iconbell from "../../assets/profildoctor/iconbell.png";
 import help from "../../assets/profildoctor/help.png";
 import logo from "../../assets/profildoctor/logo.png";
 const DoctorProfile = () => {
-  const [activdiv, setActivediv] = useState("");
+  const [activdiv, setActivediv] = useState('');
 
   return (
     <div className="container_doctor_profil">

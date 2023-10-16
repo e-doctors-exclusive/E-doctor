@@ -18,7 +18,7 @@ export const fetchMessages = createAsyncThunk(
 )
 
 export const addMessage = createAsyncThunk("/api/message/addMessage",
-async(input:object,{dispatch})=>{
+async(input:any,{dispatch})=>{
     const addMessage = await axios.post("http://localhost:3000/api/message/addMessage",
     input
     )
