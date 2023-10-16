@@ -12,13 +12,13 @@ module.exports = {
   },
   addPatient: async (req, res,next) => {
     try {
-      const patientInfo = await Patient.bulkCreate(req.body);
+      const patientInfo = await Patient.create(req.body);
       res.json({
         status: "success",
         message: "patient added successfully!!!",
         data: patientInfo,
       });
-      res.status(201).json(patientInfo);
+      // res.status(201).json(patientInfo);
     } catch (err) {
       next(err);
     }

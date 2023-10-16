@@ -17,9 +17,10 @@ import {
   DeleteDocotr,
 } from "../../redux/doctorSlice";
 import { fetchAppointments } from ".././../redux/appointment";
-
+import { findDoctors } from "../../redux/doctorSlice";
 type props = {
   setIsLoggedIn: (value: boolean) => void;
+  isLoggedIn: boolean
 };
 enum MedicalInfotype {
   "Neurosurgeons",
@@ -59,7 +60,17 @@ interface UserData {
 const getLocalStorage = (key: string): string | null => {
   return localStorage.getItem(key);
 };
-const Service: React.FC<props> = ({ setIsLoggedIn }) => {
+const Service: React.FC<props> = ({ setIsLoggedIn, isLoggedIn }) => {
+  const [docName, setDocName] = useState<string>("")
+  const [docSpec, setDocSpec] = useState<string>("")
+  const [showsearchDoc, setSearchShowDoc] = useState<boolean>(false)
+  let buttons: any = document.getElementsByClassName("book-appointment-button");
+  for (let i = 0; i < buttons.length; i++) {
+    let button = buttons[i] as HTMLButtonElement;
+    if (!isLoggedIn) {
+      button.disabled = true;
+    }
+  }
   const location = useLocation();
   const fullstar = (
     <i className="fa-solid fa-star fa-sm" style={{ color: "#F3CD03" }}></i>
@@ -79,6 +90,7 @@ const Service: React.FC<props> = ({ setIsLoggedIn }) => {
     (state: RootState) => state.appointment.data
   );
   const DoctorData = useSelector((state: RootState) => state.doctor.data);
+  const DocotrSearch = useSelector((state: RootState) => state.doctor.search);
   console.log("appointment Data here", appointmentData);
 
   useEffect(() => {
@@ -183,18 +195,23 @@ const Service: React.FC<props> = ({ setIsLoggedIn }) => {
   }
 
   let isAppointmentTimeAvailable = false;
+  const appointment = () => {
+    for (let i = 0; i < availableSlots.length; i++) {
+      const start = availableSlots[i].start;
+      const end = availableSlots[i].end;
 
-  for (let i = 0; i < availableSlots.length; i++) {
-    const start = availableSlots[i].start;
-    const end = availableSlots[i].end;
+      if (isTimeInRange(appointmentTime, start, end)) {
+        isAppointmentTimeAvailable = true;
+        console.log("this is appointment ready");
 
-    if (isTimeInRange(appointmentTime, start, end)) {
-      isAppointmentTimeAvailable = true;
-      break;
+        break;
+      }
     }
   }
 
-  console.log("Is appointment time available:", isAppointmentTimeAvailable);
+
+
+  console.log("Is appointment time available:", isAppointmentTimeAvailable, "available slots", availableSlots);
 
   return (
     <>
@@ -261,15 +278,20 @@ const Service: React.FC<props> = ({ setIsLoggedIn }) => {
               <label>Time</label>
               <input
                 type="time"
-                onChange={(e) => setAppointmentTime(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => (setAppointmentTime(e.target.value), appointment())}
               />
             </div>
             <div className="button-right-first-div">
               <button
-                onClick={() => (handleScrollDown(), setShowDoc(true))}
+                onClick={() => {
+                  handleScrollDown();
+                  setShowDoc(true);
+                  // setSearchShowDoc(false)
+                }
+                }
                 className="book-appointment-button"
               >
-                Select Doctor{" "}
+                Select Doctor
               </button>
             </div>
           </div>
@@ -287,11 +309,18 @@ const Service: React.FC<props> = ({ setIsLoggedIn }) => {
               className="input-find-doctor"
               type="text"
               placeholder="Name"
+              onChange={(e) => {
+                setDocName(e.target.value)
+              }}
             />
             <input
               className="input-find-doctor"
               type="text"
               placeholder="Speciality"
+              onChange={(e) => {
+
+                setDocSpec(e.target.value)
+              }}
             />
             <div className="available-switch">
               <label className="available-find">Available</label>
@@ -300,21 +329,23 @@ const Service: React.FC<props> = ({ setIsLoggedIn }) => {
                 <span className="slider round"></span>
               </label>
             </div>
-            <button className="Search-button-find" onClick={()=>{
-                // setShowDoc(true);
-                // setAppointmentTime("1:00")
+            <button className="Search-button-find" onClick={() => {
+              dispatch(findDoctors({ name: docName, MedicalInfo: docSpec })),
+                setSearchShowDoc(true)
+              console.log("jbnujb j", DocotrSearch);
+
             }}>Search</button>
           </div>
         </div>
 
         {showDoc ? (
-          isAppointmentTimeAvailable ?(
 
-            <div className="doctor-afet-book">
-            
-              {Array.isArray(DoctorData) && DoctorData.map((obj: objtype, i: number) => {
-                // Your map function here
-              
+
+          <div className="doctor-afet-book">
+
+            {Array.isArray(DoctorData) && DoctorData.map((obj: objtype, i: number) => {
+              // Your map function here
+
               if (
                 (obj.MedicalInfo as MedicalInfotype) ===
                 (department as MedicalInfotype)
@@ -330,9 +361,23 @@ const Service: React.FC<props> = ({ setIsLoggedIn }) => {
               }
             })}
           </div>
-          ):null
-        ) : null}
 
+        ) : null}
+        {showsearchDoc ?
+          (<div className="doctor-afet-book">
+
+            {Array.isArray(DocotrSearch) && DocotrSearch.map((obj: objtype, i: number) => {
+              return (
+                <MemberCard
+                  search={true}
+                  key={i}
+                  data={obj}
+                  appointmentTime={appointmentTime}
+                />
+              );
+
+            })}
+          </div>) : null}
         {/* services we provide  */}
 
         <div className="services-we-provide-container">

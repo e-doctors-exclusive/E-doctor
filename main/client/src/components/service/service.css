@@ -259,6 +259,7 @@ input:checked + .slider:before {
 }
 
 .Search-button-find {
+  cursor: pointer;
   width: 13rem;
   height: 3rem;
   border: none;

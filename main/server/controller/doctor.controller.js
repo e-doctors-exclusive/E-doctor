@@ -10,6 +10,30 @@ module.exports = {
       throw error;
     }
   },
+  findDoc: async (req, res, next) => {
+    try {
+      let whereClause = {};
+      if (req.params.name) {
+        console.log("name is used");
+        whereClause.name = req.params.name;
+      }
+      if (req.params.MedicalInfo) {
+        console.log("medicalInfo is used");
+        whereClause.MedicalInfo = req.params.MedicalInfo;
+      }
+  
+      const doctorInfo = await Doctor.findAll({ where: whereClause });
+  
+      res.json({
+        status: "success",
+        message: "doctor found :D",
+        data: doctorInfo,
+      });
+    } catch (error) {
+      next(error);
+    }
+  },
+  
   addDoctor: async (req, res) => {
     try {
       const doctorInfo = await Doctor.bulkCreate(req.body);
@@ -19,7 +43,7 @@ module.exports = {
         data: doctorInfo,
       });
     } catch (err) {
-    throw err
+      throw err
     }
   },
   deleleteDoctor: async (req, res, next) => {
@@ -46,28 +70,28 @@ module.exports = {
           email: req.body.email,
         },
       });
-if (doctorInfo) {
-  
-  if (bcrypt.compareSync(req.body.password, doctorInfo.password)) {
-    const token = jwt.sign(
-          { id: doctorInfo.id },
-          req.app.get("TOKEN_SECRET"),
-          {
-            expiresIn: "24h",
-          }
+      if (doctorInfo) {
+
+        if (bcrypt.compareSync(req.body.password, doctorInfo.password)) {
+          const token = jwt.sign(
+            { id: doctorInfo.id },
+            req.app.get("TOKEN_SECRET"),
+            {
+              expiresIn: "24h",
+            }
           );
           res.json({
             status: "success",
             message: "doctor found!!!",
-          data: { doctor: doctorInfo, token },
-        });
-      } else {
-        res.json({
-          status: "error",
-          message: "Invalid email/password!!!",
-          data: "error",
-        });
-      }
+            data: { doctor: doctorInfo, token },
+          });
+        } else {
+          res.json({
+            status: "error",
+            message: "Invalid email/password!!!",
+            data: "error",
+          });
+        }
       }
     } catch (err) {
       next(err);

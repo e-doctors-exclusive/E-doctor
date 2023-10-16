@@ -1,115 +1,103 @@
 [
   {
     "AppointmentTime": "10:00",
-    "AppointmentStatus": "Scheduled",
-    "AppointmentDuration": 60,
+    "AppointmentStatus": "Pending",
     "Notes": "First appointment",
     "ReasonForVisit": "Routine check-up",
-    "UserId": 1,
+    "PatientId": 1,
     "DoctorId": 1
   },
   {
     "AppointmentTime": "11:00",
-    "AppointmentStatus": "Scheduled",
-    "AppointmentDuration": 60,
+    "AppointmentStatus": "Pending",
     "Notes": "Second appointment",
     "ReasonForVisit": "Follow-up visit",
-    "UserId": 2,
+    "PatientId": 2,
     "DoctorId": 1
   },
 
   {
     "AppointmentTime": "10:00",
-    "AppointmentStatus": "Scheduled",
-    "AppointmentDuration": 60,
+    "AppointmentStatus": "Pending",
     "Notes": "First appointment",
     "ReasonForVisit": "Routine check-up",
-    "UserId": 3,
+    "PatientId": 3,
     "DoctorId": 2
   },
   {
     "AppointmentTime": "11:00",
-    "AppointmentStatus": "Scheduled",
-    "AppointmentDuration": 60,
+    "AppointmentStatus": "Pending",
     "Notes": "Second appointment",
     "ReasonForVisit": "Follow-up visit",
-    "UserId": 4,
+    "PatientId": 4,
     "DoctorId": 2
   },
 
   {
     "AppointmentTime": "10:00",
-    "AppointmentStatus": "Scheduled",
-    "AppointmentDuration": 60,
+    "AppointmentStatus": "Pending",
     "Notes": "First appointment",
     "ReasonForVisit": "Routine check-up",
-    "UserId": 5,
+    "PatientId": 5,
     "DoctorId": 3
   },
   {
     "AppointmentTime": "11:00",
-    "AppointmentStatus": "Scheduled",
-    "AppointmentDuration": 60,
+    "AppointmentStatus": "Pending",
     "Notes": "Second appointment",
     "ReasonForVisit": "Follow-up visit",
-    "UserId": 6,
+    "PatientId": 6,
     "DoctorId": 3
   },
 
   {
     "AppointmentTime": "10:00",
-    "AppointmentStatus": "Scheduled",
-    "AppointmentDuration": 60,
+    "AppointmentStatus": "Pending",
     "Notes": "First appointment",
     "ReasonForVisit": "Routine check-up",
-    "UserId": 7,
+    "PatientId": 7,
     "DoctorId": 4
   },
   {
     "AppointmentTime": "11 :00 ",
-    "AppointmentStatus": "Scheduled ",
-    "AppointmentDuration": 60,
+    "AppointmentStatus": "Pending ",
     "Notes": "Second appointment ",
     "ReasonForVisit": "Follow-up visit ",
-    "UserId": 8,
+    "PatientId": 8,
     "DoctorId": 4
   },
 
   {
     "AppointmentTime": "10 :00 ",
-    "AppointmentStatus": "Scheduled ",
-    "AppointmentDuration": 60,
+    "AppointmentStatus": "Pending ",
     "Notes": "First appointment ",
     "ReasonForVisit": "Routine check-up ",
-    "UserId": 9,
+    "PatientId": 9,
     "DoctorId": 5
   },
   {
     "AppointmentTime": "11 :00 ",
-    "AppointmentStatus": "Scheduled ",
-    "AppointmentDuration": 60,
+    "AppointmentStatus": "Pending ",
     "Notes": "Second appointment ",
     "ReasonForVisit": "Follow-up visit ",
-    "UserId": 10,
+    "PatientId": 10,
     "DoctorId": 5
   },
 
   {
     "AppointmentTime": "10 :00 ",
-    "AppointmentStatus": "Scheduled ",
-    "AppointmentDuration": 60,
+    "AppointmentStatus": "Pending ",
     "Notes": "First appointment ",
     "ReasonForVisit": "Routine check-up ",
-    "UserId": 1,
+    "PatientId": 1,
     "DoctorId": 6
   },
   {
     "AppointmentTime": "11 :00 ",
-    "AppointmentStatus": "Scheduled ",
-    "AppointmentDuration": 60,
+    "AppointmentStatus": "Pending ",
     "Notes": "Second appointment ",
     "ReasonForVisit": "Follow-up visit ",
-    "UserId": 2,
+    "PatientId": 2,
     "DoctorId": 6
   }
 ]

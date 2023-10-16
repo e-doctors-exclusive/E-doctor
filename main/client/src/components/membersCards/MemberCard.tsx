@@ -39,6 +39,7 @@ interface objtype {
 interface props {
   data: objtype,
   appointmentTime:any
+  search:boolean
   // setDocId:any
 }
 
@@ -85,7 +86,7 @@ const MemberCard = (props: any) => {
       </div>
       {location.pathname === "/service" ? (
         <div className="make-appoitment-div-memberCard">
-          <button onClick={()=>{
+         { !props.search?<button onClick={()=>{
             dispatch(addAppointments({
               AppointmentTime:props.appointmentTime
               ,patientId,
@@ -93,7 +94,7 @@ const MemberCard = (props: any) => {
             }))
           }} className="make-appoitment-button-memberCard">
             Make an appoitment{" "}
-          </button>
+          </button>:null}
         </div>
       ) : null}
     </div>

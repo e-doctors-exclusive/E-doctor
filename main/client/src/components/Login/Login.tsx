@@ -36,11 +36,12 @@ const Login: React.FC<props> = ({ setIsLoggedIn }) => {
 
             try {
                 const task = await axios.post("http://localhost:3000/api/patient/authenticate", input)
-                console.log(task.data.data.token);
+                console.log(task.data);
                 localStorage.setItem("token", task.data.data.token)
                 localStorage.setItem("user", JSON.stringify(task.data.data.patient))
-                setIsLoggedIn(true)
-                navigate("/")
+                !(task.data.data==='error')?(
+                setIsLoggedIn(true),
+                navigate("/")):null
             } catch (error) {
                 // setAlert("incorrect password/email")
                 console.error(error);
