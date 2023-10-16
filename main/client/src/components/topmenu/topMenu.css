@@ -135,27 +135,22 @@
   cursor: pointer;
 }
 .icon-user_doctor {
-  width: 170px;
+  width: 176px;
   height: 55px;
   background: white;
-  border: none;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 1px;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 5px;
 }
 .name_doctor {
   flex-direction: column;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1px;
-}
-.unicode_icon {
-  display: flex;
   justify-content: center;
-  gap: 3px;
+  align-items: flex-start;
 }
+
 .name-user-icon_doctor {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -179,38 +174,4 @@
   height: 36px;
   border-radius: 36px;
   cursor: pointer;
-}
-.content_doctor_profil {
-  width: 22%;
-  height: 100%;
-  background-color: white;
-  padding: 1px;
-}
-.list_profil_doctor {
-  list-style-type: none;
-}
-.icon_list {
-  width: 170px;
-  height: 45px;
-  border-radius: 10%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 10px;
-  padding: 1px;
-
-  background-color: white;
-
-  cursor: pointer;
-}
-
-.active {
-  background: black;
-  color: white;
-  border-radius: 10px;
-  box-shadow: #0d0d0d;
-}
-
-.icon_list {
-  padding-left: 20px;
 }

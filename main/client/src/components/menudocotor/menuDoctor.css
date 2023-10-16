@@ -1,0 +1,40 @@
+.container_doctor_profil {
+  background-color: white;
+}
+
+/* menu bar */
+
+.content_doctor_profil {
+  width: 22%;
+  height: 100%;
+  background-color: white;
+  padding: 1px;
+}
+.list_profil_doctor {
+  list-style-type: none;
+}
+.icon_list {
+  width: 170px;
+  height: 45px;
+  border-radius: 10%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding: 1px;
+
+  background-color: white;
+
+  cursor: pointer;
+}
+
+.active {
+  background: black;
+  color: white;
+  border-radius: 10px;
+  box-shadow: #0d0d0d;
+}
+
+.icon_list {
+  padding-left: 20px;
+}
