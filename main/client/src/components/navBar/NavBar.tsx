@@ -25,7 +25,7 @@ const NavBar:React.FC<props> = ({setIsLoggedIn}) => {
       <div className='Navbar-Links'>
         {!(location.pathname === "/") ? <div><Link style={{ textDecoration: "none" }} to={"/"}><a>Home</a></Link></div> : null}
         {!(location.pathname === "/service") ? <div><Link style={{ textDecoration: "none" }} to={"/service"}><a>Service</a></Link></div> : null}
-        {!(location.pathname === "contactus")?<div> <Link style={{ textDecoration: "none" }} to="/contactus"><a>Contact Us</a></Link></div> : null}
+        {!(location.pathname === "/contactus")?<div> <Link style={{ textDecoration: "none" }} to="/contactus"><a>Contact Us</a></Link></div> : null}
         <div><a>Help</a></div>
         <div><a>Blogs</a></div>
       </div>
